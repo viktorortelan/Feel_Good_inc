@@ -12,7 +12,7 @@ export default function Home() {
                 <img src="/assets/images/loganfeelgood.png" alt="ovo" />
                 </div>
                 <Link to="/">Home</Link>
-                <Link to="/">Imoveis</Link>
+                <Link to="/imovel">Imoveis</Link>
                 <Link to="/">Corretor online</Link>
                 <Link to="/">Contatos</Link>
                 <Link to="/">Sobre nós</Link>

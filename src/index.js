@@ -5,12 +5,18 @@ import './index.scss';
 import Home from './pages/home'
 import InfoImovel from './pages/imovel';
 
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <InfoImovel/>
     
+    <BrowserRouter>
+       <Routes>
+        <Route path='/' element={<Home/>} />
+        <Route path='/imovel' element={<InfoImovel/>} />
+       </Routes>
+    </BrowserRouter>    
   </React.StrictMode>
 );
 

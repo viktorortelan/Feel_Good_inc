@@ -1,4 +1,5 @@
 import './index.scss'
+import { Link } from "react-router-dom"
 
 
 export default function InfoImovel() {
@@ -9,7 +10,7 @@ export default function InfoImovel() {
                 <img src="/assets/images/loganfeelgood.png" alt="" />
                 
                 
-                <label>HOME</label>
+                <Link to="/">HOME</Link>
                 <label>IMÓVEIS</label>
                 <label>CORRETOR ONLINE</label>
                 <label>CONTATOS</label>
