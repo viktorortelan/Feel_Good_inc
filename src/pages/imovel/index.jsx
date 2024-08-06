@@ -6,84 +6,56 @@ export default function InfoImovel() {
     return(
         <div className="info-imovel">
 
-            <div className="cabecalho">
-                <img src="/assets/images/loganfeelgood.png" alt="" />
-                
-                
-                <Link to="/">HOME</Link>
-                <label>IMÓVEIS</label>
-                <label>CORRETOR ONLINE</label>
-                <label>CONTATOS</label>
-                <label >SOBRE NÓS</label>
-                
+<div className="cabecalho">
+                <div className="img">
+                <img src="/assets/images/loganfeelgood.png" alt="ovo" />
+                </div>
+                <Link to="/">Home</Link>
+                <Link to="/imovel">Imoveis</Link>
+                <Link to="/">Corretor online</Link>
+                <Link to="/">Contatos</Link>
+                <Link to="/">Sobre nós</Link>
             </div>
 
             <div className="consulta">
-                <div className="imageGafisa">
+                
                    <img src="/assets/images/gafisa.jpg" alt="" /> 
+                
+                <div className="info">
+                    <Link to="/" id='pronto'>Pronto para morar</Link>
+                    <p id='local'>GRAJAU - SÃO PAULO | SP</p>
+                    <hr/>
+
+                    <div className="prediocama">
+                        <div className="esquerda">
+                            <img src="/assets/images/ap.png" alt="" />
+                            <p id="regiao">Porto Velho</p>
+                        </div>
+                        <div className="direita">
+                            <img src="/assets/images/cama.png" alt="" />
+                            <p id="regiao">3 suits</p>
+                        </div>
+                    </div>
+
+                    <div className="metrocar">
+                    <div className="esquerda2">
+                            <img src="/assets/images/planta.png" alt="" />
+                            <p id="tamanho">102m², 149m² e 192m² (Penthouse)</p>
+                        </div>
+                        <div className="direita2">
+                            <img src="/assets/images/carro.png" alt="" />
+                            <p id="vagas">2 vagas determinadas</p>
+                        </div>
+                    </div>
+
+                    <div className="risco"></div>
+                    <h1 id='preco'>Preço sob consulta </h1>
+                    <div className="risco"></div>
+                    <Link to="/" id='falaCorretor'>Pronto para morar</Link>
                 </div>
-
-                <div className="locais">
-                    <button>PRONTO PARA MORAR</button>
-
-                    <h5>GRAJAÚ- SÃO PAULO | SP</h5>
-
-                    <p className="borda"></p>
-
-                    
-                    <img src="/assets/images/ap.png" className='IMGAp' alt="" />
-
-                    <h6>PORTO VELHO</h6>
-
-                    <div className="suite">
-                       <img src="/assets/images/cama.png" alt="" className='imgcama' />
-                    
-                        <h6>2 e 3 Suítes</h6> 
-                    </div>
-
-                    <div className="parede">
-                        <img src="/assets/images/parede.png" alt="" />
-
-                        <h6 className='um'>102m², 149m² e </h6>
-                        <h6>192m² (Penthouse)</h6>
-                    </div>
-
-                    <div className="estacionamento">
-                        <img src="/assets/images/carro.png" alt="" />
-
-                        <h6 className='move'>2 vagas</h6>
-
-                        <h6>determinadas</h6>
-                    </div>
-
-                    <div className="Segundaborda">
-                        
-                    </div>
-
-                    <div className="preco">
-                        <p>Preço sob consulta</p>
-                    </div>
-
-                    <div className="Terceiraborda">
-
-                    </div>
-
-                    <div className="botao">
-                        <button>FALE COM UM CONSULTOR</button>
-                    </div>
-                </div>
+                
             </div>
 
-            <div className="galeria">
-                <p>GALERIA DE IMAGENS</p>
-            
-
-            <div className="Quartaborda">
-
-            </div>
-
-            <img src="public/assets/images/brinque.jpg" alt="" />
-            </div>
         </div>
     )
 }
