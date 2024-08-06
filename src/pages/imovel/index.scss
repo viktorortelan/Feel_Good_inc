@@ -1,0 +1,123 @@
+.info-imovel{
+    .cabecalho{
+        display: flex;
+        flex-direction: row;
+        gap: 70px;
+        background-color: #D81010;
+        height: 95px;
+        
+    }
+    .cabecalho img{
+        margin-left: 5vh;
+    }
+    .cabecalho nav{
+        font: 500 22px 'Poppins';
+        margin-top: 3.5vh;
+        color: #fff;
+    }
+    .consulta{
+        display: flex;
+    }
+    .consulta img{
+        width: 140vh;
+    }
+    .locais{
+        display: flex;
+        flex-direction: column;
+        border: 1px solid #F2F2F2;
+        justify-content: center;
+        align-items: center;
+        background-color: #F2F2F2;
+        width: 44vh;
+        height: 63.5vh;
+        
+    }
+    .locais button{
+        position: absolute;
+        font: 400 15px 'Poppins';
+        border-color: #252424;
+        background-color: #252424;
+        color: #fff;
+        width: 18.5vh;
+        height: 5vh;
+        margin-top: -49vh;
+    }
+    .locais h5{ 
+        font: 400 16px 'Poppins';
+        margin-top: 16vh;
+    }
+    .borda{
+        border: 1px solid #000;
+        width: 26vh;
+        margin-top: 3vh;
+    }
+
+    .locais img{
+        width: 45px;
+        height: 50px;
+        margin-right: 18vh;
+        margin-top: 1vh;
+    }
+    .locais h6{
+        font: 500 16px 'Poppins';
+        margin-right: 17vh;
+    }
+    .suite img{
+        transform: translate(19vh, -9vh);
+    }
+    .suite h6{
+        font: 500 16px 'Poppins';
+        transform: translate(17vh, -9.5vh);
+    }
+    .parede img{
+        transform: translate(6vh, -7vh);
+    }
+    .parede h6{
+        transform: translate(2vh, -7vh);
+    }
+    .um{
+        margin-left: 1vh;
+    }
+    .estacionamento img{
+        transform: translate(21.5vh, -19vh);
+    }
+    .estacionamento h6{
+        transform: translate(18vh, -19vh);
+    }
+    .move{
+        margin-left: 2.5vh;
+    }
+    .Segundaborda{
+        border: 1px solid #000;
+        width: 26vh;
+        transform: translate(0vh, -18vh);
+    }
+    .preco{
+        font: 500 21px 'Poppins';
+        transform: translate(0vh, -18vh);
+    }
+    .Terceiraborda{
+        border: 1px solid #000;
+        width: 26vh;
+        transform: translate(0vh, -18vh);
+    }
+    .botao button {
+        margin-left: -12vh;
+        width: 24vh;
+        margin-top: -15vh;
+    }
+
+    .galeria p{
+        font: 500 50px 'Poppins';
+        padding: 6vh;
+    }
+
+    .Quartaborda{
+        border: 1px solid #000000;
+        padding: 0vh;
+    }
+
+    .galeria img{
+        width: 100vh;
+    }
+}
