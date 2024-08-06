@@ -9,11 +9,11 @@ export default function InfoImovel() {
                 <img src="/assets/images/loganfeelgood.png" alt="" />
                 
                 
-                <nav>HOME</nav>
-                <nav>IMÓVEIS</nav>
-                <nav>CORRETOR ONLINE</nav>
-                <nav>CONTATOS</nav>
-                <nav >SOBRE NÓS</nav>
+                <label>HOME</label>
+                <label>IMÓVEIS</label>
+                <label>CORRETOR ONLINE</label>
+                <label>CONTATOS</label>
+                <label >SOBRE NÓS</label>
                 
             </div>
 
