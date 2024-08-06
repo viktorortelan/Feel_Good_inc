@@ -8,9 +8,14 @@ export default function Home() {
     return(
         <div className="pagina_home">
             <div className="cabecalho">
+                <div className="img">
                 <img src="/assets/images/loganfeelgood.png" alt="ovo" />
-                <a href="/">Home</a>
-                <Link to="/"></Link>
+                </div>
+                <Link to="/">Home</Link>
+                <Link to="/">Imoveis</Link>
+                <Link to="/">Corretor online</Link>
+                <Link to="/">Contatos</Link>
+                <Link to="/">Sobre nós</Link>
             </div>
         </div>
     )
