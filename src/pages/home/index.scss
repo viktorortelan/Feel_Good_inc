@@ -31,247 +31,303 @@
         }
     }
 
+    #lancamentos{
+        margin: 50px 60px ;
+        font: 400 50px poppins;
+    }
+
+    #um{  
+        text-align: center;
+        padding: 5px 15px;
+        background-color: #008000;
+        color: #fff;
+        border-radius: 15px;
+        font: 400 18px poppins;
+        position: absolute;
+        top: 1190px;
+        left: 665px;
+    }
+   
+    #dois{
+        text-align: center;
+        padding: 5px 15px;
+        background-color: #008000;
+        color: #fff;
+        border-radius: 15px;
+        font: 400 18px poppins;
+        position: absolute;
+        top: 1190px;
+        left: 1025px;
+    }
+    #tres{
+        text-align: center;
+        padding: 5px 15px;
+        background-color: #008000;
+        color: #fff;
+        border-radius: 15px;
+        font: 400 18px poppins;
+        position: absolute;
+        top: 1190px;
+        left: 1385px;
+    }
+
     .secao1{
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: center;
-        gap: 50px;
+        gap: 80px;
         margin-bottom: 20px;
-
-        .card{
-            display: flex;
-            flex-direction: column;
-            box-shadow: 2px 2px 5px gray;
-            background-color: #ffff;
-            gap: 10px;
-
-            img{
-                
-                padding: 10px;
-            }
-
-            #titulo_card{
-                margin: 0px 10px;
-                font:600 22px poppins ;
-            }
-            .info1{
-                display: flex;
-                flex-direction: row;
-                margin: 0px 10px;
-                gap: 150px;
-                #status{
-                    font:600 20px poppins ;
-                }
-                #tipo{
-                    padding: 10px 20px;
-                    background-color: #D81010;
-                    font:400 14px poppins ;
-                    border-radius: 20px;
-                    color: #ffff;
-                }
-            }
-            .infoLoca{
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-
-                h1{
-                    padding-bottom: 30px;
-                }
-            }
-            #loca{
-                margin-top: -30px ;
-            }
-            #localiza{
-                align-items: center;
-                margin-top: 10px 10px;
-                font:500 20px poppins ;
-            }
-            #cinza{
-                text-align: center;
-                font:400 18px poppins ;
-                padding: 4px;
-                width: 100%;
-                background-color:#D9D9D9;
-
-            }
-            .info2{
-                display: flex;
-                flex-direction: row;
-                margin-bottom: 10px;
-                #vagas{   
-                    padding: 5px 0px 0px 5px; 
-                    font:500 18px poppins ;
-                }
-                #saiba_mais{
-                    margin-left: 105px;
-                    text-decoration: none;
-                    padding: 10px 20px;
-                    background-color: #D81010;
-                    font:400 14px poppins ;
-                    border-radius: 20px;
-                    color: #ffff;
-                }
-            }
-        }
-
-        .card2{
-            display: flex;
-            flex-direction: column;
-            box-shadow: 2px 2px 5px gray;
-            background-color: #ffff;
-            gap: 10px;
-
-            img{
-                
-                padding: 10px;
-            }
-
-            #titulo_card{
-                margin: 0px 10px;
-                font:600 22px poppins ;
-            }
-            .info1{
-                display: flex;
-                flex-direction: row;
-                margin: 0px 10px;
-                gap: 150px;
-                #status{
-                    font:600 20px poppins ;
-                }
-                #tipo{
-                    padding: 10px 20px;
-                    background-color: #D81010;
-                    font:400 14px poppins ;
-                    border-radius: 20px;
-                    color: #ffff;
-                }
-            }
-            .infoLoca{
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-
-                h1{
-                    padding-bottom: 30px;
-                }
-            }
-            #loca{
-                margin-top: -30px ;
-            }
-            #localiza{
-                align-items: center;
-                margin-top: 10px 10px;
-                font:500 20px poppins ;
-            }
-            #cinza{
-                text-align: center;
-                font:400 18px poppins ;
-                padding: 4px;
-                width: 100%;
-                background-color:#D9D9D9;
-
-            }
-            .info2{
-                display: flex;
-                flex-direction: row;
-                margin-bottom: 10px;
-                #vagas{   
-                    padding: 5px 0px 0px 5px; 
-                    font:500 18px poppins ;
-                }
-                #saiba_mais{
-                    margin-left: 105px;
-                    text-decoration: none;
-                    padding: 10px 20px;
-                    background-color: #D81010;
-                    font:400 14px poppins ;
-                    border-radius: 20px;
-                    color: #ffff;
-                }
-            }
-        }
-
-        .card3{
-            display: flex;
-            flex-direction: column;
-            box-shadow: 2px 2px 5px gray;
-            background-color: #ffff;
-            gap: 10px;
-
-            img{
-                
-                padding: 10px;
-            }
-
-            #titulo_card{
-                margin: 0px 10px;
-                font:600 22px poppins ;
-            }
-            .info1{
-                display: flex;
-                flex-direction: row;
-                margin: 0px 10px;
-                gap: 150px;
-                #status{
-                    font:600 20px poppins ;
-                }
-                #tipo{
-                    padding: 10px 20px;
-                    background-color: #D81010;
-                    font:400 14px poppins ;
-                    border-radius: 20px;
-                    color: #ffff;
-                }
-            }
-            .infoLoca{
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-
-                h1{
-                    padding-bottom: 30px;
-                }
-            }
-            #loca{
-                margin-top: -30px ;
-            }
-            #localiza{
-                align-items: center;
-                margin-top: 10px 10px;
-                font:500 20px poppins ;
-            }
-            #cinza{
-                text-align: center;
-                font:400 18px poppins ;
-                padding: 4px;
-                width: 100%;
-                background-color:#D9D9D9;
-
-            }
-            .info2{
-                display: flex;
-                flex-direction: row;
-                margin-bottom: 10px;
-                #vagas{   
-                    padding: 5px 0px 0px 5px; 
-                    font:500 18px poppins ;
-                }
-                #saiba_mais{
-                    margin-left: 105px;
-                    text-decoration: none;
-                    padding: 10px 20px;
-                    background-color: #D81010;
-                    font:400 14px poppins ;
-                    border-radius: 20px;
-                    color: #ffff;
-                    
-                }
-            }
-        }
         
+
+       .card{
+        display: flex;
+        flex-direction: column;
+        background-color: #ffff;
+        box-shadow: 2px 2px 5px gray;
+        gap: 10px;
+        
+        img{
+            width: 280px;
+            padding: 10px;
+        }
+
+        #titulo{
+            font:500 20px poppins ;
+            padding: 0px 0px 0px 10px;
+        }
+
+        .info1{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 95px;
+
+            h1{
+                font:500 16px poppins;
+            padding: 0px 0px 0px 10px;
+            }
+            p{
+                font:500 14px poppins;
+                padding: 5px 15px;
+                color: #ffff;
+                border-radius: 3px;
+                background-color: #D81010;
+            }
+        }
+
+        .localizacao{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 2px;
+
+            img{
+                width: 36px;
+            }
+            p{
+                font:500 18px poppins;
+            }
+        }
+
+        #cinza{
+            font:500 14px poppins;
+            text-align: center;
+            background-color: #D9D9D9;
+            padding: 3px 0px;
+        }
+
+        .infoFinais{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-bottom: 10px;
+            gap: 2px;
+
+            img{
+                width: 42px;
+            }
+            p{
+                font:500 16px poppins;
+            }
+            a{
+                text-decoration: none;
+                margin-left: 50px;
+                font:500 14px poppins;
+                padding: 5px 15px;
+                color: #ffff;
+                border-radius: 15px;
+                background-color: #D81010;
+            }
+        }
+       } 
+
+       .card2{
+        display: flex;
+        flex-direction: column;
+        background-color: #ffff;
+        box-shadow: 2px 2px 5px gray;
+        gap: 10px;
+
+        img{
+            width: 280px;
+            padding: 10px;
+        }
+
+        #titulo{
+            font:500 20px poppins ;
+            padding: 0px 0px 0px 10px;
+        }
+
+        .info1{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 95px;
+
+            h1{
+                font:500 16px poppins;
+            padding: 0px 0px 0px 10px;
+            }
+            p{
+                font:500 14px poppins;
+                padding: 5px 15px;
+                color: #ffff;
+                border-radius: 3px;
+                background-color: #D81010;
+            }
+        }
+
+        .localizacao{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 2px;
+
+            img{
+                width: 36px;
+            }
+            p{
+                font:500 18px poppins;
+            }
+        }
+
+        #cinza{
+            font:500 14px poppins;
+            text-align: center;
+            background-color: #D9D9D9;
+            padding: 3px 0px;
+        }
+
+        .infoFinais{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-bottom: 10px;
+            gap: 2px;
+
+            img{
+                width: 42px;
+            }
+            p{
+                font:500 16px poppins;
+            }
+            a{
+                text-decoration: none;
+                margin-left: 50px;
+                font:500 14px poppins;
+                padding: 5px 15px;
+                color: #ffff;
+                border-radius: 15px;
+                background-color: #D81010;
+            }
+        }
+       } 
+
+       .card3{
+        display: flex;
+        flex-direction: column;
+        background-color: #ffff;
+        box-shadow: 2px 2px 5px gray;
+        gap: 10px;
+
+        img{
+            width: 280px;
+            padding: 10px;
+        }
+
+        #titulo{
+            font:500 20px poppins ;
+            padding: 0px 0px 0px 10px;
+        }
+
+        .info1{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 95px;
+
+            h1{
+                font:500 16px poppins;
+            padding: 0px 0px 0px 10px;
+            }
+            p{
+                font:500 14px poppins;
+                padding: 5px 15px;
+                color: #ffff;
+                border-radius: 3px;
+                background-color: #D81010;
+            }
+        }
+
+        .localizacao{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 2px;
+
+            img{
+                width: 36px;
+            }
+            p{
+                font:500 18px poppins;
+            }
+        }
+
+        #cinza{
+            font:500 14px poppins;
+            text-align: center;
+            background-color: #D9D9D9;
+            padding: 3px 0px;
+        }
+
+        .infoFinais{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-bottom: 10px;
+            gap: 2px;
+
+            img{
+                width: 42px;
+            }
+            p{
+                font:500 16px poppins;
+            }
+            a{
+                text-decoration: none;
+                margin-left: 50px;
+                font:500 14px poppins;
+                padding: 5px 15px;
+                color: #ffff;
+                border-radius: 15px;
+                background-color: #D81010;
+            }
+        }
+       } 
     }
+       
+       
 
    
 }

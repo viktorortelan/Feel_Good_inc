@@ -24,7 +24,7 @@ export default function InfoImovel() {
                 <div className="info">
                     <Link to="/" id='pronto'>Pronto para morar</Link>
                     <p id='local'>GRAJAU - SÃO PAULO | SP</p>
-                    <hr/>
+                    <div className="risco"></div>
 
                     <div className="prediocama">
                         <div className="esquerda">
