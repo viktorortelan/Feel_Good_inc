@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     background-color: #f0e6e6;
-    gap: 10px;
+    
 
     .cabecalho{
         display: flex;
@@ -730,7 +730,7 @@
         align-items: center;
         justify-content: center;
         gap: 40px;
-        margin-bottom: 20px;
+        margin-bottom: 50px;
         
 
        .card{
@@ -1067,5 +1067,95 @@
         position: fixed;
         bottom: 24px;
         right: 16px;
+    }
+
+
+    .rodape{
+        display: flex;
+        flex-direction: column;    
+        background-color: #2A2A2A;
+       
+
+        .rodainfo1{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin: 0px 100px 0px 30px;
+            padding: 30px;
+            
+            p{
+                font: 300 24px poppins;
+                color: #ffff;
+            }
+
+            .imagens{
+                display: flex;
+                gap: 10px;
+            }
+        }
+
+        .RiscoBranco{
+            border: 1px solid #787878;
+        }
+
+        .meioRodape{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            margin: 50px 0px;
+            gap: 30px;
+
+            .esquerda{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 5px;
+
+                h1{
+                    font: 600 30px poppins;
+                    color: #ffff;
+                }
+                a{
+                    text-decoration: none ;
+                    color: #787878;
+                }
+
+            }
+
+            .direita{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 5px;
+
+                h1{
+                    font: 600 30px poppins;
+                    color: #ffff;
+                }
+                a{
+                    text-decoration: none ;
+                    color: #787878;
+                }
+            }
+        }
+
+        .reta{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            .RiscoBranco2{
+                
+                width: 1400px;
+                border: 1px solid #787878;
+            }
+        }
+
+        #fimRodape{
+            padding: 20px;
+            text-align: center;
+            font: 400 18px poppins;
+            color: #ffff;
+        }
+
     }
 }
