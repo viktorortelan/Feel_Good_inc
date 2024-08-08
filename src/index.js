@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom/client';
 import './index.scss';
 import Home from './pages/home'
 import InfoImovel from './pages/imovel';
+import Contatos from './pages/contatos';
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
@@ -15,6 +16,7 @@ root.render(
        <Routes>
         <Route path='/' element={<Home/>} />
         <Route path='/imovel' element={<InfoImovel/>} />
+        <Route path='/contatos' element={<Contatos/>} />
        </Routes>
     </BrowserRouter>    
   </React.StrictMode>

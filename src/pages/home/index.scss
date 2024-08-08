@@ -36,8 +36,6 @@
         font: 400 50px poppins;
     }
 
-
-
     .secao1{
         display: flex;
         flex-direction: row;
@@ -1119,6 +1117,9 @@
                     text-decoration: none ;
                     color: #787878;
                 }
+                a:hover{
+                    color: #ffff;
+                }
 
             }
 
@@ -1135,6 +1136,9 @@
                 a{
                     text-decoration: none ;
                     color: #787878;
+                }
+                a:hover{
+                    color: #ffff;
                 }
             }
         }

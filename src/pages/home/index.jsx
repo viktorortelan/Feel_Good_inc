@@ -14,7 +14,7 @@ export default function Home() {
                 <Link to="/">Home</Link>
                 <Link to="/imovel">Imoveis</Link>
                 <Link to="/">Corretor online</Link>
-                <Link to="/">Contatos</Link>
+                <Link to="/contatos">Contatos</Link>
                 <Link to="/">Sobre nós</Link>
             </div>
             <div className="banners">
@@ -333,7 +333,7 @@ export default function Home() {
                             <h1>Paginas</h1>
                             <Link to="/">Home</Link>
                             <Link to="/">Corretor online</Link>
-                            <Link to="/">Contatos</Link>
+                            <Link to="/contato">Contatos</Link>
                             <Link to="/">Sobre nós</Link>
                         </div>
 

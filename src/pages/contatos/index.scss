@@ -1,0 +1,266 @@
+.paginaContatos{
+    display: flex;
+    flex-direction: column;
+    background-color: #f0e6e6;
+    
+
+    .cabecalho{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        background-color: #D90000;
+        width: 100%;
+        a{    
+            font: 400 22px poppins;
+            text-decoration: none;
+            color: #ffff;
+        }
+        .img{
+            img{
+                
+                 width: 146px;
+            }
+           
+        }
+    }
+
+
+    .secao1{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-bottom: 70px;
+        gap: 20px;
+
+        .cardzin{
+            display: flex;
+            flex-direction: column;
+            gap: 7px;
+            padding: 15px;
+            margin-top: 50px;
+            height: 150px;
+            background-color: #F5F5F5;
+            border-radius: 5px;
+            box-shadow:  3px 3px 8px gray;
+
+            .linha{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 5px;
+
+                h1{
+                    font: 400 16px poppins;
+                }
+            }
+        }
+
+
+        .informacoes{
+            display: flex;
+            flex-direction: column;
+            background-color: #FCFCFC;
+            box-shadow:  3px 3px 8px gray;
+            margin-top: 50px;
+            gap: 20px;
+            border-radius: 10px;
+            padding: 15px;
+
+            .nome{
+                display: flex;
+                flex-direction: column;
+                gap: 2px;
+                width: 500px;
+
+                h1{
+                    font: 500 22px poppins;
+                }
+                input{
+                    border: 1px solid black;
+                    border-radius: 7px;
+                    padding: 5px 10px;
+                }
+            }
+
+            .email{
+                display: flex;
+                flex-direction: column;
+                gap: 2px;
+                width: 500px;
+
+                h1{
+                    font: 500 22px poppins;
+                }
+                input{
+                    border: 1px solid black;
+                    border-radius: 7px;
+                    padding: 5px 10px;
+                }
+            }
+
+            .numero{
+                display: flex;
+                flex-direction: column;
+                gap: 2px;
+                width: 500px;
+
+                h1{
+                    font: 500 22px poppins;
+                }
+                input{
+                    border: 1px solid black;
+                    border-radius: 7px;
+                    padding: 5px 10px;
+                }
+            }
+
+            .mensagem{
+                display: flex;
+                flex-direction: column;
+                gap: 2px;
+                width: 500px;
+
+                h1{
+                    font: 500 22px poppins;
+                }
+                textarea{
+                    height: 100px;
+                    border: 1px solid black;
+                    border-radius: 7px;
+                    padding: 5px 10px;
+                }
+            }
+        }
+    }
+
+    .termos{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin: 0px 0px 40px 170px;
+        gap: 4px;
+
+        input{
+            width: 22px;
+        }
+        p{
+            font: 400 16px poppins;
+        }
+        a{
+            margin-left: 40px;
+            font:500 18px poppins;
+            padding: 10px 25px;
+            color: #ffff;
+            border-radius: 5px;
+            background-color: #D81010;
+            text-decoration: none;
+            
+        }
+
+    }
+
+    #suporte{
+        width: 100px;
+        position: fixed;
+        bottom: 24px;
+        right: 16px;
+    }
+
+    .rodape{
+        display: flex;
+        flex-direction: column;    
+        background-color: #2A2A2A;
+       
+
+        .rodainfo1{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin: 0px 100px 0px 30px;
+            padding: 30px;
+            
+            p{
+                font: 300 24px poppins;
+                color: #ffff;
+            }
+
+            .imagens{
+                display: flex;
+                gap: 10px;
+            }
+        }
+
+        .RiscoBranco{
+            border: 1px solid #787878;
+        }
+
+        .meioRodape{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            margin: 50px 0px;
+            gap: 30px;
+
+            .esquerda{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 5px;
+
+                h1{
+                    font: 600 30px poppins;
+                    color: #ffff;
+                }
+                a{
+                    text-decoration: none ;
+                    color: #787878;
+                }
+                
+                a:hover{
+                    color: #ffff;
+                }
+            }
+
+            .direita{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 5px;
+
+                h1{
+                    font: 600 30px poppins;
+                    color: #ffff;
+                }
+                a{
+                    text-decoration: none ;
+                    color: #787878;
+                }
+                a:hover{
+                    color: #ffff;
+                }
+            }
+        }
+
+        .reta{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            .RiscoBranco2{
+                
+                width: 1400px;
+                border: 1px solid #787878;
+            }
+        }
+
+        #fimRodape{
+            padding: 20px;
+            text-align: center;
+            font: 400 18px poppins;
+            color: #ffff;
+        }
+
+    }
+
+}  

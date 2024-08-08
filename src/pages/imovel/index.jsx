@@ -13,7 +13,7 @@ export default function InfoImovel() {
                 <Link to="/">Home</Link>
                 <Link to="/imovel">Imoveis</Link>
                 <Link to="/">Corretor online</Link>
-                <Link to="/">Contatos</Link>
+                <Link to="/contatos">Contatos</Link>
                 <Link to="/">Sobre nós</Link>
             </div>
 
