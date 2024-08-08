@@ -15,7 +15,7 @@ export default function Home() {
                 <Link to="/imovel">Imoveis</Link>
                 <Link to="/">Corretor online</Link>
                 <Link to="/contatos">Contatos</Link>
-                <Link to="/">Sobre nós</Link>
+                <Link to="/sobre">Sobre nós</Link>
             </div>
             <div className="banners">
                 <img src="/assets/images/banner 1.png" alt="banner1" />
@@ -334,7 +334,7 @@ export default function Home() {
                             <Link to="/">Home</Link>
                             <Link to="/">Corretor online</Link>
                             <Link to="/contato">Contatos</Link>
-                            <Link to="/">Sobre nós</Link>
+                            <Link to="/sobre">Sobre nós</Link>
                         </div>
 
                         <div className="direita">
