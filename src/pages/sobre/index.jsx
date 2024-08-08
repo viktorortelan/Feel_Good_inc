@@ -12,7 +12,7 @@ export default function Sobre() {
                 <Link to="/imovel">Imoveis</Link>
                 <Link to="/">Corretor online</Link>
                 <Link to="/contato">Contatos</Link>
-                <Link to="/">Sobre nós</Link>
+                <Link to="/sobre">Sobre nós</Link>
             </div>
 
             <div className="historia">
@@ -63,7 +63,7 @@ export default function Sobre() {
                     </p>
                 </div>
                     <div className="premiacoes">
-                        <img src="" alt="" />
+                        <img src="/assets/images/trofeu.png" alt="" id='imgTrofeu' />
                         <p>97 vezes premiada</p>
                     </div>
             </div>
