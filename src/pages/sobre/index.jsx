@@ -25,7 +25,7 @@ export default function Sobre() {
                         <p>A Feel Good Inc. nasceu da paixão de seus fundadores pelo  mercado imobiliário e o desejo de oferecer experiências únicas e  positivas aos seus clientes. Fundada em 2024, nossa empresa tem  como missão principal transformar o processo de compra, venda  e aluguel de imóveis em uma jornada memorável e gratificante.
                         </p>
                     </div>
-                    <hr />
+                    
 
                     <div className="imgFeelGood">
                         <img src="/assets/images/loganfeelgood.png" alt="" id='imgCoracao' />
