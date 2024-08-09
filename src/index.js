@@ -6,6 +6,7 @@ import Home from './pages/home'
 import InfoImovel from './pages/imovel';
 import Contatos from './pages/contatos';
 import Sobre from './pages/sobre';
+import NotFound from './pages/notfound';
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
@@ -19,6 +20,9 @@ root.render(
         <Route path='/imovel' element={<InfoImovel/>} />
         <Route path='/contatos' element={<Contatos/>} />
         <Route path='/sobre' element={<Sobre/>} />
+
+
+        <Route path='*' element={<NotFound/>} />
        </Routes>
     </BrowserRouter>    
   </React.StrictMode>
