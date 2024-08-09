@@ -12,7 +12,7 @@ export default function Sobre() {
                 <Link to="/imovel">Imoveis</Link>
                 <Link to="/">Corretor online</Link>
                 <Link to="/contato">Contatos</Link>
-                <Link to="/">Sobre nós</Link>
+                <Link to="/sobre">Sobre nós</Link>
             </div>
 
             <div className="historia">
@@ -21,25 +21,23 @@ export default function Sobre() {
                 <div className="apresentacao">
                     
                     <div className="textSobre">
-                        <h1>Sobre a Feel Good Inc.</h1>
+                        <h1 id='sobre'>Sobre a Feel Good Inc.</h1>
                         <p>A Feel Good Inc. nasceu da paixão de seus fundadores pelo  mercado imobiliário e o desejo de oferecer experiências únicas e  positivas aos seus clientes. Fundada em 2024, nossa empresa tem  como missão principal transformar o processo de compra, venda  e aluguel de imóveis em uma jornada memorável e gratificante.
                         </p>
                     </div>
 
-                    <div className="imgFeelGood">
+                    
                         <img src="/assets/images/loganfeelgood.png" alt="" id='imgCoracao' />
-                    </div>
+                    
                     
                 </div>
+
 
                 <div className="Origem">
                     <div className="textValores">
                         <h1>Origens e Valores:</h1>
 
-                        <p>A história da Feel Good Inc. começou quando seus fundadores, Victor Ortelan, Heitor Guimarões, Kauã Sousa, Matheus Moura, decidiram unir suas habilidades e conhecimentos para criar uma imobiliária com um diferencial marcante: não apenas atender às necessidades imobiliárias dos clientes, mas também superar suas expectativas, proporcionando um serviço personalizado e humano.
-                        
-                        <p className='um'>Nossos valores fundamentais são a transparência, a ética e o compromisso com a excelência. Acreditamos que cada cliente merece ser tratado com respeito e cuidado, e é por isso que investimos em relações de longo prazo, baseadas na confiança mútua e na honestidade.</p>
-                        </p>
+                        <p>A história da Feel Good Inc. começou quando seus fundadores, Victor Ortelan, Heitor Guimarões, Kauã Sousa, Matheus Moura, decidiram unir suas habilidades e conhecimentos para criar uma imobiliária com um diferencial marcante: não apenas atender às necessidades imobiliárias dos clientes, mas também superar suas expectativas, proporcionando um serviço personalizado e humano Nossos valores fundamentais são a transparência, a ética e o compromisso com a excelência. Acreditamos que cada cliente merece ser tratado com respeito e cuidado, e é por isso que investimos em relações de longo prazo, baseadas na confiança mútua e na honestidade.</p>
                     </div>
 
                     <div className="imgConstrucao">
@@ -62,9 +60,14 @@ export default function Sobre() {
                     <p>Especializada em residencial, a Feel Good Inc. oferece uma ampla gama de serviços que abrangem desde a consultoria personalizada até a gestão completa de imóveis. Nosso time de profissionais altamente qualificados está sempre pronto para guiar nossos clientes em cada etapa do processo, assegurando que suas necessidades sejam atendidas de maneira eficaz e eficiente.
                     </p>
                 </div>
+
+
                     <div className="premiacoes">
-                        <img src="" alt="" />
-                        <p>97 vezes premiada</p>
+                        <img src="/assets/images/trofeu.png" alt="trofeu" />
+                        <div className="texto">
+                        <p id='vermelho'>97 vezes </p>
+                        <p>premiada</p>
+                        </div>
                     </div>
             </div>
 

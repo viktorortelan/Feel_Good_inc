@@ -1,4 +1,5 @@
 .info-imovel{
+    background-color: #FAF9FA;
     .cabecalho{
         display: flex;
         flex-direction: row;
@@ -38,7 +39,7 @@
         
         .risco{
             border: 1px solid black;
-            width: 380px;
+            width: 85%;
         }
 
         #pronto{
