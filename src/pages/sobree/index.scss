@@ -122,12 +122,46 @@
             width: 70%;
             
 
+
             h1{
                 width: 80%;
                 font: 600 36px poppins;
             }
             p{
                 font: 400 20px poppins;
+
+            .textServicos{
+                display: flex;
+                flex-direction: column;
+                p{
+                    font: 400 27px poppins;
+                }
+            }   
+
+            .premiacoes{
+                display: flex;
+                align-items: center;
+                margin: 3vh;
+                p{
+                    font: 400 28px poppins;
+                    text-align: center;
+                    position: relative;
+                    left: 325px;
+                    top: 120px;
+                }
+                #imgTrofeu{
+                    width: 100px;
+                    position: relative;
+                    left: 470px;
+                }
+                .texto{
+                    width: 200px;
+                  .cor{
+                    color:#D90000;
+                    }  
+                }
+                
+
             }
         }
 
@@ -307,4 +341,5 @@
         }
 
     }
+}
 }

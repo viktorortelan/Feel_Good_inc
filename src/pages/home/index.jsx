@@ -334,7 +334,7 @@ export default function Home() {
                             <Link to="/">Home</Link>
                             <Link to="/">Corretor online</Link>
                             <Link to="/contato">Contatos</Link>
-                            <Link to="/sobre">Sobre nós</Link>
+                            <Link to="/sobree">Sobre nós</Link>
                         </div>
 
                         <div className="direita">

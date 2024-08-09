@@ -12,7 +12,7 @@ export default function Sobre() {
                 <Link to="/imovel">Imoveis</Link>
                 <Link to="/">Corretor online</Link>
                 <Link to="/contato">Contatos</Link>
-                <Link to="/sobre">Sobre nós</Link>
+                <Link to="/sobree">Sobre nós</Link>
             </div>
 
             <div className="historia">
@@ -25,6 +25,7 @@ export default function Sobre() {
                         <p>A Feel Good Inc. nasceu da paixão de seus fundadores pelo  mercado imobiliário e o desejo de oferecer experiências únicas e  positivas aos seus clientes. Fundada em 2024, nossa empresa tem  como missão principal transformar o processo de compra, venda  e aluguel de imóveis em uma jornada memorável e gratificante.
                         </p>
                     </div>
+                    
 
                     
                         <img src="/assets/images/loganfeelgood.png" alt="" id='imgCoracao' />
@@ -63,11 +64,20 @@ export default function Sobre() {
 
 
                     <div className="premiacoes">
+
                         <img src="/assets/images/trofeu.png" alt="trofeu" />
                         <div className="texto">
                         <p id='vermelho'>97 vezes </p>
                         <p>premiada</p>
                         </div>
+
+                        <img src="/assets/images/trofeu.png" alt="" id='imgTrofeu' />
+                        <div className="texto">
+                           <p className='cor'>97 vezes</p>
+                            <p>premiada</p> 
+                        </div>
+                        
+
                     </div>
             </div>
 

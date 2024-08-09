@@ -15,7 +15,7 @@ export default function Contatos() {
                 <Link to="/imovel">Imoveis</Link>
                 <Link to="/">Corretor online</Link>
                 <Link to="/contato">Contatos</Link>
-                <Link to="/sobre">Sobre nós</Link>
+                <Link to="/sobree">Sobre nós</Link>
             </div>
 
             <div className="secao1">
