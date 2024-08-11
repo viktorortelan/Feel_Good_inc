@@ -66,18 +66,13 @@ export default function Sobre() {
                     <div className="premiacoes">
 
                         <img src="/assets/images/trofeu.png" alt="trofeu" />
+
                         <div className="texto">
-                        <p id='vermelho'>97 vezes </p>
+                        <p id='cor'>97 vezes </p>
                         <p>premiada</p>
                         </div>
 
-                        <img src="/assets/images/trofeu.png" alt="" id='imgTrofeu' />
-                        <div className="texto">
-                           <p className='cor'>97 vezes</p>
-                            <p>premiada</p> 
-                        </div>
-                        
-
+        
                     </div>
             </div>
 

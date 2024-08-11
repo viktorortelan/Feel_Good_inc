@@ -156,7 +156,7 @@
                 }
                 .texto{
                     width: 200px;
-                  .cor{
+                  .p{
                     color:#D90000;
                     }  
                 }
@@ -182,9 +182,9 @@
                 flex-direction: column;
                 align-items: center;
                 font: 500 20px poppins;
-
-                #vermelho{
-                    color: #D90000;
+                color: #D90000;
+                .p{
+                    
                 }
             }
         }

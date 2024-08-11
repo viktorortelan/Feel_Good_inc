@@ -13,9 +13,9 @@ export default function Home() {
                 </div>
                 <Link to="/">Home</Link>
                 <Link to="/imovel">Imoveis</Link>
-                <Link to="/">Corretor online</Link>
+                <Link to="/adm">Corretor online</Link>
                 <Link to="/contatos">Contatos</Link>
-                <Link to="/sobre">Sobre nós</Link>
+                <Link to="/sobree">Sobre nós</Link>
             </div>
             <div className="banners">
                 <img src="/assets/images/banner 1.png" alt="banner1" />
