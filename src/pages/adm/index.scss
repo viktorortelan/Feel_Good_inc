@@ -86,9 +86,10 @@
             .img {
                 img {
                     width: 60px;
-                    margin: 0% -45vh;
-                    margin-top: 2vh;
                     height: 6vh;
+                    position: absolute;
+                    top: 2%;
+                    left: 95%;
                 }
             }
             h1 {
