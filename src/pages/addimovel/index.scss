@@ -8,7 +8,7 @@
     .esquerda{
         display: flex;
         flex-direction: column;
-        background-color: #F5F5F5;
+        background-color: #e2dfdf;
         align-items: center;
         padding-top: 50px;
         gap: 40px;
@@ -49,12 +49,12 @@
             a{
                 text-decoration: none; 
                 font: 400 18px poppins;
-                background-color: #ffff;
+                background-color: #e2dfdf;
                 color: #2A2A2A;
                 text-align: center;
                 width: 100%;
                 padding: 40px;
-                transition: .5s;
+                transition: .3s;
 
             }
             a:hover{
@@ -68,17 +68,19 @@
     .direita{
         display: flex;
         flex-direction: column;
+        align-items: center;
         width: 100%;
-        background-color: #F5F5F5;
+        background-color: #e2dfdf;
 
         .cabecalho{
             display: flex;
             flex-direction: row;
             background-color: #ffff;
             padding: 10px 0px 0px 0px;
-            gap: 500px;
+            gap: 800px;
             align-items: center;
             justify-content: space-around;
+            width: 100%;
 
             h1{
                 font: 500 20px poppins;
@@ -88,5 +90,67 @@
                 width: 100px;
             }
         }
+
+        .addimovel{
+            display: flex;
+            flex-direction: column;
+            margin-top: 100px;
+            border-radius: 20px;
+            padding: 40px 30px;
+            background-color: #ffffff;
+
+            .add{
+                display: flex;
+                flex-direction: row;
+                gap: 10px;
+
+                .botoes{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    gap: 20px;
+                    
+
+                    button{
+                        padding: 15px 30px;
+                        border-radius: 25px;
+                        border: none;
+                        background-color: #D81010;
+                        color: #F5F5F5;
+                        font: 400 14px poppins;
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            .infos{
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                align-items: center;
+
+                h1{
+                    font: 600 26px poppins;
+                }
+
+                input{
+                    width: 300px;
+                    height: 35px;
+                    border: 1px solid rgba(128, 128, 128, 0.527);
+                    border-radius: 7px;
+                }
+
+                button{
+                    padding: 12px 40px;
+                    border-radius: 25px;
+                    border: none;
+                    background-color: #2A2A2A;
+                    color: #F5F5F5;
+                    font: 400 14px poppins;
+                    cursor: pointer;
+                }
+            }
+        }
+
     }
 }

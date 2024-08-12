@@ -34,8 +34,17 @@ export default function TelaAdd() {
                     <button>EDITAR IMAGEM</button>
                 </div>
             </div>
-
             
+            <div className="infos">
+                <h1>ADICIONAR IMOVEL</h1>
+                <input type="text" placeholder='Nome do apartamento'  />
+                <input type="text"  placeholder='Status'/>
+                <input type="text"  placeholder='Localização'/>
+                <input type="text"  placeholder='Vagas de garagem'/>
+                <button>Cadastrar</button>
+            </div>
+
+
           </div>
         </div>
       </div>
