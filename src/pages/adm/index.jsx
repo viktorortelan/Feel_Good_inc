@@ -16,7 +16,7 @@ export default function TelaAdm() {
                 </div>
                     <div className="botoes">
                         
-                        <Link to="/" >ADICIONAR IMOVEL</Link>
+                        <Link to="/addimovel" >ADICIONAR IMOVEL</Link>
                         <Link to="/" >GESTÃO DE IMOVEIS</Link>
                         <Link to="/" >GESTÃO DE CLIENTE</Link>
                     </div>

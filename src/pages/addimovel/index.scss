@@ -1,211 +1,92 @@
-body{
-    background-color: #FAF9FA;
-   
-}
-.Tela-add {
+.Tela-add{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    background-color: #2A2A2A ;
+    gap: 15px;
 
-
-    .cabecalho {
+    .esquerda{
         display: flex;
-        flex-direction: row;
-        justify-content: center;
-        width: 100%;
-        margin: 1% 4%;
-        gap: 0.5%;
+        flex-direction: column;
+        background-color: #F5F5F5;
+        align-items: center;
+        padding-top: 50px;
+        gap: 40px;
+        width: 29%;
+        height: 100vh;
+
         
-        img {
-            width: 6%;
-            height: 1%;
-        }
-
-        .mae {
-            display: flex;
-            flex-direction: column;
-            margin: 0.5%;
-            .texto {
-                display: flex;
-                flex-direction: row;
-                text-align: center;
-                gap: 3%;
-                p {
-                    font: 200 19px poppins;
-                    text-align: right;
-                }
-            }
-            .feelgood {
-                h1 {
-                    font: 700 23px poppins;
-                    text-align: center;
-                    margin: 0% 0% 0% -68%;
-                }
-            }
-            .add {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                background-color: #D81010;
-                width: 60vh;
-                height: 10vh;
-                margin: 10% -40%;
-                text-align: center;
-                a {
-                    font: 300 24px poppins;
-                    text-decoration: none;
-                    color: #fff;
-                }
-            }
-
-            .gestao-imoveis {
-                margin: 0% -10%;
-                a {
-                    font: 300 24px poppins;
-                    text-decoration: none;
-                    color: #020202;
-                }
-            }
-
-            .gestao-cliente {
-                margin: 15% -10%;
-                a {
-                    font: 300 24px poppins;
-                    text-decoration: none;
-                    color: #020202;
-                }
-            }
-        }
-
-        #borda {
-            position: absolute;
-            height: 110vh; 
-            width: 2vh;
-            border: 1px solid #FAF9FA;
-            background-color: #fff;
-            margin: -5% -13%;
-            box-shadow: 0px 0px 14px 1px rgba(173, 173, 173, 0.25);
-        }
-
-        .tela-boasvindas {
+        .intro{
             display: flex;
             flex-direction: row;
-            justify-content: space-between;
+            align-items: center;
+
+            img{
+                width: 100px;
+            }
+            .texto{
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                h1{
+                    font: 800 20px poppins;
+                }
+                p{
+                    font: 400 18px poppins;
+                }
+            }
+        }
+
+
+        .botoes{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             width: 100%;
-            background-color: #fff;
-            height: 10vh;
-            margin: -1% -13%;
-            .img {
-                img {
-                    width: 60px;
-                    height: 6vh;
-                    position: absolute;
-                    top: 2%;
-                    left: 95%;
-                }
+           
+       
+
+            a{
+                text-decoration: none; 
+                font: 400 18px poppins;
+                background-color: #ffff;
+                color: #2A2A2A;
+                text-align: center;
+                width: 100%;
+                padding: 40px;
+                transition: .5s;
+
             }
-            h1 {
-                font: 500 24px poppins;
-                margin: 2% 5%;
+            a:hover{
+                color: #F5F5F5;
+                background-color: #FF0707;
+                
             }
         }
     }
-.principal{
-    .card {
+
+    .direita{
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        border: 1px solid #fff;
-        width: 700px;
-        height: 770px;
-        background-color: #fff; 
-        margin: 150px -160vh;
-        .mae2{
+        width: 100%;
+        background-color: #F5F5F5;
+
+        .cabecalho{
             display: flex;
             flex-direction: row;
-            justify-content: center;
+            background-color: #ffff;
+            padding: 10px 0px 0px 0px;
+            gap: 500px;
             align-items: center;
-            gap: 40px;
-            margin-top: 7vh;
+            justify-content: space-around;
 
-
-           .borda {
-            position: relative;
-            border: 3px solid #939598;
-            width: 20vh;
-            height: 20vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #fff;
-            margin-top: 50px;            
-            hr {
-                position: absolute;
-                background-color: #939598;
-                border: none;
+            h1{
+                font: 500 20px poppins;
             }
 
-            hr#um {
-                position: absolute;
-                width: 40%;
-                height: 5px;
-                margin: 0px -35px ;
-            }
-
-            hr#dois {
-                position: absolute;
-                width: 5px;
-                height: 40%;
-                margin: -3.5vh 0vh 2.5vh;
+            img{
+                width: 100px;
             }
         }
-        .texto{
-            display: flex;
-            flex-direction: column;
-        }
-
     }
-    .botoes{
-        display: flex;
-        flex-direction: column;
-        margin-top: -30px;
-        gap: 10px;
-        button{
-            background-color: #D81010;
-            color: #fff;
-            border-radius: 25px;
-            width: 201px;
-            height: 50px;
-            font: 300 13px poppins;
-            border: 1px solid #D81010;
-            cursor: pointer;
-        }
-        
-    } 
-    .cadastro{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 30px;
-        margin: 3vh 0vh 10vh;
-        text-align: center;
-
-        input{
-            width: 400px;
-            height: 50px;
-        }
-
-        button{
-            font: 500 12px poppins;
-            width: 20vh;
-            height: 5vh;
-            border-radius: 30px;
-            background-color: #020202;
-            color: #fff;
-        }
-    }
-    }
-        
-    }
-
 }
-    

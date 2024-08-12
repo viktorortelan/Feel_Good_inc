@@ -11,7 +11,7 @@ export default function Sobre() {
                 <Link to="/">Home</Link>
                 <Link to="/imovel">Imoveis</Link>
                 <Link to="/">Corretor online</Link>
-                <Link to="/contato">Contatos</Link>
+                <Link to="/contatos">Contatos</Link>
                 <Link to="/sobre">Sobre nós</Link>
             </div>
 

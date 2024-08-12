@@ -49,7 +49,7 @@
             a{
                 text-decoration: none; 
                 font: 400 18px poppins;
-                background-color: #F5F5F5;
+                background-color: #ffff;
                 color: #2A2A2A;
                 text-align: center;
                 width: 100%;
@@ -74,6 +74,7 @@
         .cabecalho{
             display: flex;
             flex-direction: row;
+            background-color: #ffff;
             padding: 10px 0px 0px 0px;
             gap: 500px;
             align-items: center;
