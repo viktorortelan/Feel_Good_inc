@@ -1,106 +1,112 @@
-.SobreNos{
-    .cabecalho{
+.SobreNos {
+    .cabecalho {
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: space-around;
         background-color: #D90000;
         width: 100%;
-        a{    
+
+        a {
             font: 400 22px poppins;
             text-decoration: none;
             color: #ffff;
         }
-        .img{
-            img{
-                
-                 width: 146px;
+
+        .img {
+            img {
+
+                width: 146px;
             }
-           
+
         }
     }
-    #suporte{
+
+    #suporte {
         width: 100px;
         position: fixed;
         bottom: 24px;
         right: 16px;
     }
-    .historia{
+
+    .historia {
         display: flex;
         flex-direction: column;
         margin: 5vh 12%;
 
-        h1{
+        h1 {
             font: 500 50px poppins;
             margin: 20px 0px 30px 0px;
-            
+
         }
 
-        .apresentacao{
+        .apresentacao {
             display: flex;
             flex-direction: row;
             width: 100%;
             margin-bottom: 50px;
-            .textSobre{
-            
-              #sobre{
-                font: 600 36px poppins;
-                width: 60%;
+
+            .textSobre {
+
+                #sobre {
+                    font: 600 36px poppins;
+                    width: 60%;
+                }
+
+                p {
+                    font: 400 20px poppins;
+                    width: 85%;
+
+                }
             }
-                p{
-                font: 400 20px poppins;
-                width: 85%;
-                
-                }  
-            }
-            
-            #imgCoracao{
+
+            #imgCoracao {
                 width: 30%;
                 height: 200px;
-                
+
             }
-            
+
         }
 
 
 
 
-        .Origem{
-         display: flex;
-         flex-direction: row;
-         justify-content: space-between;
-         gap: 50px;
-         width: 100%;
+        .Origem {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            gap: 50px;
+            width: 100%;
 
-            .textValores{
+            .textValores {
                 display: flex;
                 flex-direction: column;
                 width: 70%;
                 gap: 10px;
 
-                p{
+                p {
                     font: 400 20px poppins;
                 }
             }
 
-            .imgConstrucao{
+            .imgConstrucao {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 margin-top: 70px;
                 gap: 20px;
 
-                img{
+                img {
                     width: 120px;
                 }
 
-                .texto{
+                .texto {
                     display: flex;
                     flex-direction: column;
                     align-items: center;
                     font: 500 20px poppins;
 
-                    .cor{
+                    .cor {
                         color: #D90000;
                     }
                 }
@@ -108,238 +114,226 @@
 
         }
 
-        .especializacao{
-          display: flex;
-          flex-direction: row;
-          justify-content: space-between;
-          margin-top: 50px;
-          width: 100%;
-
-
-          .textServicos{
-            display: flex;
-            flex-direction: column;
-            width: 70%;
-            
-
-
-            h1{
-                width: 80%;
-                font: 600 36px poppins;
-            }
-            p{
-                font: 400 20px poppins;
-
-            .textServicos{
-                display: flex;
-                flex-direction: column;
-                p{
-                    font: 400 27px poppins;
-                }
-            }   
-
-            .premiacoes{
-                display: flex;
-                align-items: center;
-                margin: 3vh;
-                p{
-                    font: 400 28px poppins;
-                    text-align: center;
-                    position: relative;
-                    left: 325px;
-                    top: 120px;
-                }
-                #imgTrofeu{
-                    width: 100px;
-                    position: relative;
-                    left: 470px;
-                }
-                .texto{
-                    width: 200px;
-                  .p{
-                    color:#D90000;
-                    }  
-                }
-                
-
-            }
-        }
-
-        .premiacoes{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-top: 70px;
-            width: 13%;
-            gap: 20px;
-
-            img{
-                width: 120px;
-            }
-
-            .texto{
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                font: 500 20px poppins;
-                color: #D90000;
-                .p{
-                    
-                }
-            }
-        }
-
-
-
-
-        }
-
-        .compromisso{
-            h1{
-                width: 80%;
-                font: 600 36px poppins;
-            }
-            p{
-                width: 70%;
-                font: 400 20px poppins;
-            }
-        }
-
-        .visao{
-            h1{
-                width: 80%;
-                font: 600 36px poppins;
-            }
-            p{
-                width: 70%;
-                font: 400 20px poppins;
-            }
-        }
-        
-    }
-
-
-
-
-    .feedback{
-        margin: 5vh 12%;
-        h1{
-            font: 700 45px poppins;
-            line-height: 15vh;
-        }
-        .avaliar{
-            display: flex;
-            flex-direction: row;
-            gap: 20px;
-            margin: 2%;
-            p{
-                font: 400 24px poppins;
-                margin: 1px;
-            }
-            input{
-                width: 400px;
-                height: 40px;
-                border-radius: 7px;
-            }
-        }
-    }
-
-    
-
-    
-    .rodape{
-        display: flex;
-        flex-direction: column;    
-        background-color: #2A2A2A;
-       
-
-        .rodainfo1{
+        .especializacao {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
-            margin: 0px 100px 0px 30px;
-            padding: 30px;
-            
-            p{
-                font: 300 24px poppins;
-                color: #ffff;
-            }
+            margin-top: 50px;
+            width: 100%;
 
-            .imagens{
+            .premiacoes {
                 display: flex;
+                flex-direction: column;
+                align-items: center;
                 gap: 10px;
+
+                img {
+                    width: 120px;
+
+                }
+
+                .texto {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    font: 400 16px poppins;
+
+                    #cor {
+                        color: #D90000;
+                    }
+                }
             }
-        }
 
-        .RiscoBranco{
-            border: 1px solid #787878;
-        }
-
-        .meioRodape{
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            margin: 50px 0px;
-            gap: 30px;
-
-            .esquerda{
+            .textServicos {
                 display: flex;
                 flex-direction: column;
-                align-items: center;
-                gap: 5px;
+                width: 70%;
 
-                h1{
-                    font: 600 30px poppins;
-                    color: #ffff;
+
+
+                h1 {
+                    width: 80%;
+                    font: 600 36px poppins;
                 }
-                a{
-                    text-decoration: none ;
-                    color: #787878;
+
+                p {
+                    font: 400 20px poppins;
+
+                    .textServicos {
+                        display: flex;
+                        flex-direction: column;
+
+                        p {
+                            font: 400 27px poppins;
+                        }
+                    }
+
+
+
+
+
+
+                    .compromisso {
+                        h1 {
+                            width: 80%;
+                            font: 600 36px poppins;
+                        }
+
+                        p {
+                            width: 70%;
+                            font: 400 20px poppins;
+                        }
+                    }
+
+                    .visao {
+                        h1 {
+                            width: 80%;
+                            font: 600 36px poppins;
+                        }
+
+                        p {
+                            width: 70%;
+                            font: 400 20px poppins;
+                        }
+                    }
+
                 }
-                a:hover{
-                    color: #ffff;
+
+
+
+
+                .feedback {
+                    margin: 5vh 12%;
+
+                    h1 {
+                        font: 700 45px poppins;
+                        line-height: 15vh;
+                    }
+
+                    .avaliar {
+                        display: flex;
+                        flex-direction: row;
+                        gap: 20px;
+                        margin: 2%;
+
+                        p {
+                            font: 400 24px poppins;
+                            margin: 1px;
+                        }
+
+                        input {
+                            width: 400px;
+                            height: 40px;
+                            border-radius: 7px;
+                        }
+                    }
                 }
+
+
+
+
 
             }
 
-            .direita{
+            .rodape {
                 display: flex;
                 flex-direction: column;
-                align-items: center;
-                gap: 5px;
+                background-color: #2A2A2A;
 
-                h1{
-                    font: 600 30px poppins;
+
+                .rodainfo1 {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    margin: 0px 100px 0px 30px;
+                    padding: 30px;
+
+                    p {
+                        font: 300 24px poppins;
+                        color: #ffff;
+                    }
+
+                    .imagens {
+                        display: flex;
+                        gap: 10px;
+                    }
+                }
+
+                .RiscoBranco {
+                    border: 1px solid #787878;
+                }
+
+                .meioRodape {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    margin: 50px 0px;
+                    gap: 30px;
+
+                    .esquerda {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        gap: 5px;
+
+                        h1 {
+                            font: 600 30px poppins;
+                            color: #ffff;
+                        }
+
+                        a {
+                            text-decoration: none;
+                            color: #787878;
+                        }
+
+                        a:hover {
+                            color: #ffff;
+                        }
+
+                    }
+
+                    .direita {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        gap: 5px;
+
+                        h1 {
+                            font: 600 30px poppins;
+                            color: #ffff;
+                        }
+
+                        a {
+                            text-decoration: none;
+                            color: #787878;
+                        }
+
+                        a:hover {
+                            color: #ffff;
+                        }
+                    }
+                }
+
+                .reta {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+
+                    .RiscoBranco2 {
+
+                        width: 1400px;
+                        border: 1px solid #787878;
+                    }
+                }
+
+                #fimRodape {
+                    padding: 20px;
+                    text-align: center;
+                    font: 400 18px poppins;
                     color: #ffff;
                 }
-                a{
-                    text-decoration: none ;
-                    color: #787878;
-                }
-                a:hover{
-                    color: #ffff;
-                }
+
             }
         }
-
-        .reta{
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            .RiscoBranco2{
-                
-                width: 1400px;
-                border: 1px solid #787878;
-            }
-        }
-
-        #fimRodape{
-            padding: 20px;
-            text-align: center;
-            font: 400 18px poppins;
-            color: #ffff;
-        }
-
     }
-}
 }

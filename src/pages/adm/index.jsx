@@ -4,47 +4,32 @@ import { Link } from 'react-router-dom';
 export default function TelaAdm() {
     return(
         <div className="Tela-adm">
-            
+            <div className="esquerda">
+
+                <div className="intro">
+                    <img src="/assets/images/loganfeelgood.png" alt="logan" />
+                    <div className="texto">
+                        <h1> FEEL GOOD INC</h1>
+                        <p>ADMIN PAINEL</p>
+                    </div>
+
+                </div>
+                    <div className="botoes">
+                        
+                        <Link to="/" >ADICIONAR IMOVEL</Link>
+                        <Link to="/" >GESTÃO DE IMOVEIS</Link>
+                        <Link to="/" >GESTÃO DE CLIENTE</Link>
+                    </div>
+            </div>
+
+            <div className="direita">
                 <div className="cabecalho">
-                    <img src="/assets/images/loganfeelgood.png" alt="ovo" />
-                    <div className="mae">
-                        
-                       <div className="feelgood">
-                            <h1>FEEL GOOD INC</h1>
-                        </div>
-                    
+                    <h1>Seja bem-vindo, viktor!</h1>
+                    <img src="/assets/images/semfoto.png" alt="" />
+                </div>
+            </div>
 
-                        <div className="texto">
-                        
-                            <p>A D M I N</p>
-                            <p>P A I N E L </p>
-                        
-                        </div> 
-                        <div className="add">
-                            <Link to='/addimovel'>ADICIONAR IMÓVEIS</Link>
-                        </div>
-
-                        <div className="gestao-imoveis">
-                            <Link>GESTÃO DE IMÓVEIS</Link>
-                        </div>
-
-                        <div className="gestao-cliente">
-                            <Link>GESTÃO DE CLIENTE</Link>
-                        </div>
-                    </div>
-                    <div className="borda">
-                        <hr id='borda' /> 
-                    </div>   
-
-                    <div className="tela-boasvindas">
-                        <h1>Seja bem-vindo, Viktor!</h1>
-
-                        <div className="img">
-                           <img src="/assets/images/semfoto.png" alt="" />  {/* imagem ilustrativa*/}
-                        </div>
-
-                    </div>
-                </div>   
+                  
         </div>
     )
 }   
