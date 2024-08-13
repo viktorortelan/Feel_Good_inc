@@ -1,9 +1,10 @@
-import { Link } from 'react-router-dom';
-import './index.scss';
 
-export default function TelaAdd() {
+import './index.scss';
+import { Link } from 'react-router-dom';
+
+export default function GestaoImovel () {
     return (
-      <div className="Tela-add">
+      <div className="pagina_gestao">
         <div className="esquerda">
           <div className="intro">
             <img src="/assets/images/loganfeelgood.png" alt="logan" />
@@ -25,27 +26,32 @@ export default function TelaAdd() {
             <img src="/assets/images/semfoto.png" alt="" />
           </div>
 
-          <div className="addimovel">
 
-            <div className="add">
-                <img src="/assets/images/addimovel.png" alt="addimovel" />
-                <div className="botoes">
-                    <button>ADICIONAR IMAGEM</button>
-                    <button>EDITAR IMAGEM</button>
+          <div className="card">
+
+            <div className="cabe">
+                <div className="texto">
+                    <p>Nome</p>
+                    <p>Preço</p>
+                    <p>Categoria</p>
+                </div>
+                <div className="img">
+                    <img src="/assets/images/editar.png" alt="editor" />
+                    <img src="/assets/images/lixeira.png" alt="lixo" />
                 </div>
             </div>
-            
-            <div className="infos">
-                <h1>ADICIONAR IMOVEL</h1>
-                <input type="text" placeholder='Nome do apartamento'  />
-                <input type="text"  placeholder='Status'/>
-                <input type="text"  placeholder='Localização'/>
-                <input type="text"  placeholder='Vagas de garagem'/>
-                <button>Cadastrar</button>
+
+            <div className="info">
+                <input type="text"  />
+                <input type="text"  />
+                <input type="text"  />
+                <input type="text"  />
+                <input type="text"  />
+                <input type="text"  />
             </div>
-
-
           </div>
+
+
         </div>
       </div>
     );

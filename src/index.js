@@ -9,6 +9,7 @@ import Sobre from './pages/sobree';
 import NotFound from './pages/notfound';
 import TelaAdm from './pages/adm';
 import TelaAdd from './pages/addimovel';
+import GestaoImovel from './pages/gestao';
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
@@ -24,6 +25,7 @@ root.render(
         <Route path='/sobree' element={<Sobre/>} />
         <Route path='/adm' element={<TelaAdm/>} />
         <Route path='/addimovel' element={<TelaAdd/>} />
+        <Route path='/gestao' element={<GestaoImovel/>} />
 
 
         <Route path='*' element={<NotFound/>} />

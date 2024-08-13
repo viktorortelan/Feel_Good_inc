@@ -1,0 +1,142 @@
+.pagina_gestao{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    background-color: #2A2A2A ;
+    gap: 15px;
+
+    .esquerda{
+        display: flex;
+        flex-direction: column;
+        background-color: #e2dfdf;
+        align-items: center;
+        padding-top: 50px;
+        gap: 40px;
+        width: 29%;
+        height: 100vh;
+
+        
+        .intro{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            img{
+                width: 100px;
+            }
+            .texto{
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                h1{
+                    font: 800 20px poppins;
+                }
+                p{
+                    font: 400 18px poppins;
+                }
+            }
+        }
+
+
+        .botoes{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+           
+       
+
+            a{
+                text-decoration: none; 
+                font: 400 18px poppins;
+                background-color: #ffff;
+                color: #2A2A2A;
+                text-align: center;
+                width: 100%;
+                padding: 40px;
+                transition: .5s;
+
+            }
+            a:hover{
+                color: #F5F5F5;
+                background-color: #FF0707;
+                
+            }
+        }
+    }
+
+    .direita{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        background-color: #e2dfdf;
+
+        .cabecalho{
+            display: flex;
+            flex-direction: row;
+            background-color: #ffff;
+            padding: 10px 0px 0px 0px;
+            gap: 500px;
+            align-items: center;
+            justify-content: space-around;
+
+            h1{
+                font: 500 20px poppins;
+            }
+
+            img{
+                width: 100px;
+            }
+        }
+
+        .card{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            margin-top: 50px;
+            padding: 30px 20px;
+
+
+            .cabe{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 40px;
+
+                .texto{
+                    display: flex;
+                    flex-direction: row;
+                    gap: 10px;
+                    font: 400 22px poppins;
+                }
+
+                .img{
+                    display: flex;
+                    flex-direction: row;
+                    gap: 10px;
+
+                    img{
+                        width: 40px;
+                    }
+                }
+
+            }
+
+            .info{
+                display: flex;
+                flex-direction: column;
+                gap: 25px;
+
+                input{
+                    width: 410px;
+                    height: 35px;
+                    font: 400 16px poppins;
+                    border-radius: 10px;
+                    border: 1px solid rgba(128, 128, 128, 0.589);
+                }
+            }
+        }
+
+    }
+}
