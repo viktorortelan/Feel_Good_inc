@@ -9,8 +9,8 @@ export default function Cabecalho() {
         </div>
         <Link to="/">Home</Link>
         <Link to="/imovel">Imoveis</Link>
-        <Link to="/">Corretor online</Link>
-        <Link to="/contato">Contatos</Link>
+        <Link to="/adm">Corretor online</Link>
+        <Link to="/contatos">Contatos</Link>
         <Link to="/sobree">Sobre nós</Link>
     </div>
     )
