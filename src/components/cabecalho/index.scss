@@ -1,0 +1,20 @@
+.cabecalho{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #D90000;
+    width: 100%;
+    a{    
+        font: 400 22px poppins;
+        text-decoration: none;
+        color: #ffff;
+    }
+    .img{
+        img{
+            
+             width: 146px;
+        }
+       
+    }
+}
