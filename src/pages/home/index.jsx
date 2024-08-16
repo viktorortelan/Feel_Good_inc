@@ -40,7 +40,7 @@ export default function Home() {
                     <div className="infoFinais">
                         <img src="/assets/images/carrin.png" alt="carro" />
                         <p>2 vagas </p>
-                        <Link to="/">Saiba mais</Link>
+                        <Link to="/telalogin">Saiba mais</Link>
                     </div>
                   </div>
 
