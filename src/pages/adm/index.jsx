@@ -18,7 +18,7 @@ export default function TelaAdm() {
                         
                         <Link to="/addimovel" >ADICIONAR IMOVEL</Link>
                         <Link to="/gestao" >GESTÃO DE IMOVEIS</Link>
-                        <Link to="/telalogin" >GESTÃO DE CLIENTE</Link>
+                        <Link to="/gestaoCliente" >GESTÃO DE CLIENTE</Link>
                     </div>
             </div>
 

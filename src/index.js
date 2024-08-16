@@ -11,6 +11,8 @@ import TelaAdm from './pages/adm';
 import TelaAdd from './pages/addimovel';
 import GestaoImovel from './pages/gestao';
 import Telalogin from './pages/telalogin';
+import GestaoCliente from './pages/gestaoCliente';
+
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
@@ -28,6 +30,10 @@ root.render(
         <Route path='/addimovel' element={<TelaAdd/>} />
         <Route path='/gestao' element={<GestaoImovel/>} />
         <Route path='/telalogin' element={<Telalogin/>} />
+
+        <Route path='/gestaoCliente' element={<GestaoCliente/>} />
+
+
 
         <Route path='*' element={<NotFound/>} />
        </Routes>
