@@ -16,7 +16,7 @@ export default function GestaoImovel () {
           <div className="botoes">
             <Link to="/addimovel">ADICIONAR IMOVEL</Link>
             <Link to="/gestao">GESTÃO DE IMOVEIS</Link>
-            <Link to="/">GESTÃO DE CLIENTE</Link>
+            <Link to="/gestaoCliente">GESTÃO DE CLIENTE</Link>
           </div>
         </div>
 

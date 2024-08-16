@@ -1,0 +1,156 @@
+.gestaoCliente{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    background-color: #2A2A2A ;
+    gap: 15px;
+
+    .esquerda{
+        display: flex;
+        flex-direction: column;
+        background-color: #F5F5F5;
+        align-items: center;
+        padding-top: 50px;
+        gap: 40px;
+        width: 29%;
+        height: 100vh;
+
+        
+        .intro{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            img{
+                width: 100px;
+            }
+            .texto{
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                h1{
+                    font: 800 20px poppins;
+                }
+                p{
+                    font: 400 18px poppins;
+                }
+            }
+        }
+
+
+        .botoes{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+           
+       
+
+            a{
+                text-decoration: none; 
+                font: 400 18px poppins;
+                background-color: #ffff;
+                color: #2A2A2A;
+                text-align: center;
+                width: 100%;
+                padding: 40px;
+                transition: .5s;
+
+            }
+            a:hover{
+                color: #F5F5F5;
+                background-color: #FF0707;
+                
+            }
+        }
+    }
+
+    .direita{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        background-color: #F5F5F5;
+
+        .cabecalho{
+            display: flex;
+            flex-direction: row;
+            background-color: #ffff;
+            padding: 10px 0px 0px 0px;
+            gap: 500px;
+            align-items: center;
+            justify-content: space-around;
+
+            h1{
+                font: 500 20px poppins;
+            }
+
+            img{
+                width: 100px;
+            }
+        }
+
+        .tabela{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 70px;
+            padding: 30px 20px;
+
+
+            .cab{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 70px;
+
+                .texto1{
+                    display: flex;
+                    flex-direction: row;
+                    margin: 0px 50px 0px 0px;
+                    gap: 15px;
+                    
+                    h1{
+                        font: 400 22px poppins;
+                    }
+                }
+
+
+                .texto2{
+                    display: flex;
+                    flex-direction: row;
+                    gap: 15px;
+                    
+                    h1{
+                        font: 400 22px poppins;
+                    }
+                }
+
+                .fots{
+                    display: flex;
+                    flex-direction: row;
+                    gap: 10px;
+
+                    img{
+                        width: 40px;
+                    }
+                }
+            }
+
+            .infos{
+                display: flex;
+                flex-direction: column;
+                align-items: center; 
+                width: 100%;              
+                padding: 15px;
+                gap: 20px;
+
+               input{
+                width: 70%;
+                height: 40px;
+                border-radius: 7px;
+                border: 1px solid #80808094;
+               }
+            }
+        }
+    }
+}
