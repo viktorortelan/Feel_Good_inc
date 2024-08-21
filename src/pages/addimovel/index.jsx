@@ -1,7 +1,15 @@
 import { Link } from 'react-router-dom';
 import './index.scss';
+import { useState } from 'react';
+import NovoCard from '../../components/adcionaImovel';
+import RenderItemsOnly from '../../components/exbir';
 
-export default function TelaAdd() {
+
+const TelaAdd = ({ setExibir }) =>  {
+
+
+
+
     return (
       <div className="Tela-add">
         <div className="esquerda">
@@ -22,31 +30,15 @@ export default function TelaAdd() {
         <div className="direita">
           <div className="cabecalho">
             <h1>Seja bem-vindo, viktor!</h1>
-            <img src="/assets/images/semfoto.png" alt="" />
+            <img src="/assets/images/viktor.png" alt="" />
           </div>
 
-          <div className="addimovel">
+          <NovoCard setExibir={setExibir}/>   
 
-            <div className="add">
-                <img src="/assets/images/addimovel.png" alt="addimovel" />
-                <div className="botoes">
-                    <button>ADICIONAR IMAGEM</button>
-                    <button>EDITAR IMAGEM</button>
-                </div>
-            </div>
-            
-            <div className="infos">
-                <h1>ADICIONAR IMOVEL</h1>
-                <input type="text" placeholder='Nome do apartamento'  />
-                <input type="text"  placeholder='Status'/>
-                <input type="text"  placeholder='Localização'/>
-                <input type="text"  placeholder='Vagas de garagem'/>
-                <button>Cadastrar</button>
-            </div>
-
-
-          </div>
         </div>
+     
       </div>
     );
 }
+
+export default TelaAdd;

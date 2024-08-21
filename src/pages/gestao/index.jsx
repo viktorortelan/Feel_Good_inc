@@ -27,29 +27,7 @@ export default function GestaoImovel () {
           </div>
 
 
-          <div className="card">
-
-            <div className="cabe">
-                <div className="texto">
-                    <p>Nome</p>
-                    <p>Preço</p>
-                    <p>Categoria</p>
-                </div>
-                <div className="img">
-                    <img src="/assets/images/editar.png" alt="editor" />
-                    <img src="/assets/images/lixeira.png" alt="lixo" />
-                </div>
-            </div>
-
-            <div className="info">
-                <input type="text"  />
-                <input type="text"  />
-                <input type="text"  />
-                <input type="text"  />
-                <input type="text"  />
-                <input type="text"  />
-            </div>
-          </div>
+          
 
 
         </div>

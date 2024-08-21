@@ -8,7 +8,7 @@ export default function Cabecalho() {
         <img src="/assets/images/loganfeelgood.png" alt="ovo" />
         </div>
         <Link to="/">Home</Link>
-        <Link to="/imovel">Imoveis</Link>
+        <Link to="/addimovel">Imoveis</Link>
         <Link to="/adm">Corretor online</Link>
         <Link to="/contatos">Contatos</Link>
         <Link to="/sobree">Sobre nós</Link>
