@@ -4,10 +4,28 @@ import { Link } from "react-router-dom";
 import Rodape from '../../components/rodape';
 import Cabecalho from '../../components/cabecalho';
 import RenderItemsOnly from '../../components/exbir';
+import { useEffect, useState } from 'react';
+import axios from 'axios';
+import ItemCard from '../../components/itemCard';
 
 
 
-export default function Home( {exibir} ) {
+
+export default function Home({ exibir }) {
+    
+    const [array, setArray] = useState([]);
+    
+    const a = async () => {
+        
+        let b = await axios.get('http://localhost:8080/receber');
+        let values = b.data;
+        setArray(values);
+        console.log(array)
+
+    }
+
+    useEffect(() => { a() }, []);
+
 
     return(
         <div className="pagina_home">
@@ -133,8 +151,16 @@ export default function Home( {exibir} ) {
 
             <div className="secao2">
 
-            <RenderItemsOnly exibir={exibir} />
-            
+                {array.map(item =>
+                    
+                    
+                    <ItemCard
+                        nome={item.nome}
+                        status={item.status}
+                        localizacao={item.local}
+                        comodos={item.comodos}
+                        vagas={item.vagas}
+                    />)}
 
             </div>
 

@@ -12,6 +12,7 @@ export default function Cabecalho() {
         <Link to="/adm">Corretor online</Link>
         <Link to="/contatos">Contatos</Link>
         <Link to="/sobree">Sobre nós</Link>
+    
     </div>
     )
 }

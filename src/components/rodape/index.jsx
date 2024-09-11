@@ -30,7 +30,8 @@ export default function Rodape() {
                             <h1>Ajuda</h1>
                             <Link to="/">Reclame aqui</Link>
                             <Link to="/">Email de Contato</Link>
-                            <Link to="/">Sustentabilidade</Link>
+                    <Link to="/">Sustentabilidade</Link>
+                    <p>Fundado por Victor ortelan </p>
                         </div>
                     </div>
                     <div className="reta">

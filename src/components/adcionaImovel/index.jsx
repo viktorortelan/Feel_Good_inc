@@ -1,29 +1,26 @@
 import './index.scss';
 import { useState } from 'react';
 import ItemCard from '../itemCard';
+import axios from 'axios';
 
 export default function NovoCard({ setExibir }) {
+
     const [nomeApe, setNomeApe] = useState('');
     const [status, setStatus] = useState('');
     const [localiza, setLocaliza] = useState('');
     const [comodos, setComodos] = useState('');
     const [vagas, setVagas] = useState('');
 
-    function novoCard() {
-        let card = {
-            nome: nomeApe,
-            status: status,
-            localizacao: localiza,
-            comodos: comodos,
-            vagas: vagas
-        };
+    async function novoCard() {
 
-        setExibir(prevExibir => [...prevExibir, card]);
+        await axios.post(`http://localhost:8080/enviar/${nomeApe}/${status}/${localiza}/${comodos}/${vagas}`);
+
         setNomeApe('');
         setStatus('');
         setLocaliza('');
         setComodos('');
         setVagas('');
+
     }
 
     return (
