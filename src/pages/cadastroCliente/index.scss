@@ -1,0 +1,147 @@
+body {
+
+    background-color: #E9DDD1;
+}
+
+.cadastroLogin{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100vh;
+    overflow-y: hidden;
+
+    .esquerda {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 80px;
+        gap: 20px;
+        justify-content: center;
+        width: 50%;
+
+        .textin{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 10px;
+
+
+            img{
+                width: 80px;
+            }
+
+            h1{
+                font: 700 34px poppins;
+                color: rgb(46, 41, 41);
+            }
+        }
+
+        #façaLogin{
+            font: 700 32px poppins;
+            width: 400px;
+            margin-left: 80px;
+            text-align: left;
+            color: rgb(46, 41, 41);
+            line-height: 32px;
+
+            span{
+                color: #FF0000;
+            }
+        }
+        .cadastro {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+                width: 100%;
+    
+           .inputs{
+                display: flex;
+                flex-direction:column;
+                margin-bottom: -10px;
+                
+    
+                input[type='text'] {
+                    width: 300px;
+                    height: 40px;
+                    border-radius:5px;
+                    border: 1px solid #80808050;
+                    padding: 5px 10px 5px 35px;
+                    font: 400 16px poppins;
+                    outline: none;
+                }
+                #pessoa{
+                    width: 25px;
+                    position: relative;
+                    bottom: 30px;
+                    left: 5px;
+                   
+                }
+                #aviao{
+                    width: 22px;
+                    position: relative;
+                    bottom: 30px;
+                    left: 5px;
+                   
+                   
+                }
+                #tell{
+                    width: 22px;
+                    position: relative;
+                    bottom: 30px;
+                    left: 5px;
+                   
+                   
+                }
+           }
+    
+           button{
+            width: 300px;
+            margin-top: 5px;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            background-color: #FF0000;
+            color: #fff;
+            font: 600 18px poppins;
+            transition: .3s;
+            cursor: pointer;
+            border: 3px solid transparent;
+           }
+    
+           button:hover{
+            transform: scale(1.02);
+            border: 3px solid red;
+            background-color: transparent;
+            color: red;
+            
+           }
+           button:active{
+            transform: scale(1.0);
+            background-color: red;
+            color: #fff; 
+           }
+
+           a{
+            font: 500 18px poppins;
+            color: #000;
+           }
+        }
+    
+        #copyright{
+            width: 100%;
+            margin: 80px 0px 0px 100px;
+            font: 500 16px poppins;
+        }
+    }
+
+    .direita{
+        height: 100%;
+        width: 50%;
+        background-size: cover;
+        border-radius: 40px 0 0 40px;
+        
+       
+    }
+
+}

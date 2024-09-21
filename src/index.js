@@ -12,6 +12,8 @@ import GestaoImovel from './pages/gestao';
 import Telalogin from './pages/telalogin';
 import GestaoCliente from './pages/gestaoCliente';
 import NovoCard from './components/adcionaImovel';
+import CadastroCliente from './pages/cadastroCliente';
+import LoginCliente from './pages/loginCliente';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function App() {
@@ -30,6 +32,10 @@ function App() {
                 <Route path='/telalogin' element={<Telalogin />} />
                 <Route path='/gestaoCliente' element={<GestaoCliente />} />
                 <Route path='/addimovel' element={<TelaAdd setExibir={setExibir} />} />
+                <Route path='/cadastroCliente' element={<CadastroCliente/>} />
+                <Route path='/loginCliente' element={<LoginCliente/>} />
+
+
                 <Route path='*' element={<NotFound />} />
             </Routes>
         </BrowserRouter>

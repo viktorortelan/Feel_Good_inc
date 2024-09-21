@@ -13,18 +13,18 @@ import ItemCard from '../../components/itemCard';
 
 export default function Home({ exibir }) {
     
-    const [array, setArray] = useState([]);
+    // const [array, setArray] = useState([]);
     
-    const a = async () => {
+    // const a = async () => {
         
-        let b = await axios.get('http://localhost:8080/receber');
-        let values = b.data;
-        setArray(values);
-        console.log(array)
+    //     let b = await axios.get('http://localhost:8080/receber');
+    //     let values = b.data;
+    //     setArray(values);
+    //     console.log(array)
 
-    }
+    // }
 
-    useEffect(() => { a() }, []);
+    // useEffect(() => { a() }, []);
 
 
     return(
@@ -149,7 +149,7 @@ export default function Home({ exibir }) {
                 <p>Confira as oportunidades que separamos para você</p>
             </div>
 
-            <div className="secao2">
+            {/* <div className="secao2">
 
                 {array.map(item =>
                     
@@ -162,7 +162,7 @@ export default function Home({ exibir }) {
                         vagas={item.vagas}
                     />)}
 
-            </div>
+            </div> */}
 
            
             <Link to="/"><img src="/assets/images/loganfeelgood.png" alt="balão de suporte" id="suporte" /></Link>
