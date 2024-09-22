@@ -22,11 +22,42 @@ export default function GestaoImovel () {
 
         <div className="direita">
           <div className="cabecalho">
-            <h1>Seja bem-vindo, viktor!</h1>
-            <img src="/assets/images/semfoto.png" alt="" />
+            <h1>Seja bem-vindo, <span>viktor!</span></h1>
+            <img src="/assets/images/viktor.png" alt="" />
           </div>
 
+          <div className="lupa">
+            <input type="text" placeholder='Nome do imovel'/>
+            <img src="/assets/images/lupaaa.png" alt="lupa" />
+          </div>
 
+          <div className="table">
+                <table className=' tabela'>
+
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>nome do imovel</th>
+                            <th>Status</th>
+                            <th>Vendido</th>
+                         </tr>
+                    </thead>
+                    
+                    <tbody>
+                        
+                        <tr>
+                            <td>1</td>
+                            <td>morro da mandioca</td>
+                            <td>pronto</td>
+                            <td>Não</td>
+
+                        </tr>
+
+                       
+                    </tbody>
+                    
+                </table>
+            </div>
           
 
 

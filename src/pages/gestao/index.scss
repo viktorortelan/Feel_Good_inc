@@ -68,6 +68,7 @@
     .direita{
         display: flex;
         flex-direction: column;
+        align-items: center;
         width: 100%;
         background-color: #e2dfdf;
 
@@ -82,12 +83,88 @@
 
             h1{
                 font: 500 20px poppins;
+
+                span{
+                    color: #FF0707;
+                }
             }
 
             img{
                 width: 100px;
             }
         }
+
+        .lupa{
+            margin: 50px 0px 20px 0px;
+            position: relative;
+            input{
+                width: 400px;
+                height: 40px;
+                border-radius: 10px;
+                border: 1px solid gray;
+                padding: 8px 5px 8px 30px;
+                font: 400 20px poppins;
+                
+            }
+
+            img{
+                position: absolute;
+                top: 12px;
+                left: 10px;
+            }
+        }
+
+        .table{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        
+            .tabela{
+                border-collapse: collapse;
+                margin: 25px 0;
+                font-size: 0.9em;
+                min-width: 400px;
+                border-radius: 5px 5px 0 0 ;
+                overflow: hidden;
+                box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+        
+                thead tr {
+                    background-color: #FF0707;
+                    color: #fff;
+                    text-align: center;
+                    font: 500 16px poppins;
+                   
+                }
+                th{
+                    width: 200px;
+                    padding: 10px 0px;
+                }
+        
+                td{
+                    padding: 15px 15px;
+                    color: #000000;
+                    text-align: center;
+                    font: 500 16px poppins;
+        
+                }
+        
+                tbody tr {
+                    border-bottom: 1px solid #dddd;
+                }
+        
+                tbody tr:last-of-type {
+                    border-bottom: 2px solid #EF7C1D;
+                }
+        
+                tbody tr.active-row{
+                    font-weight: bold;
+                    color: #009879;
+                }
+        
+            }
+        
+          }
 
         .card{
             display: flex;

@@ -25,40 +25,45 @@ export default function GestaoCliente() {
 
             <div className="direita">
                 <div className="cabecalho">
-                    <h1>Seja bem-vindo, viktor!</h1>
-                    <img src="/assets/images/semfoto.png" alt="" />
+                    <h1>Seja bem-vindo, <span>viktor!</span></h1>
+                    <img src="/assets/images/viktor.png" alt="" />
                 </div>
 
-                <div className="tabela">
-                    <div className="cab">
+                <div className="lupa">
+            <input type="text" placeholder='Nome do imovel'/>
+            <img src="/assets/images/lupaaa.png" alt="lupa" />
+          </div>
 
-                        <div className="texto1">
-                            <h1>ID</h1>
-                            <h1>Nome</h1>
-                            <h1>Gmail</h1>
-                        </div>
+          <div className="table">
+                <table className=' tabela'>
 
-                        <div className="texto2">
-                            <h1>contato</h1>
-                            <h1>Data</h1>
-                        </div>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>nome do usuario</th>
+                            <th>Gmail</th>
+                            <th>telefone</th>
+                            <th>Data</th>
+                         </tr>
+                    </thead>
+                    
+                    <tbody>
+                        
+                        <tr>
+                            <td>1</td>
+                            <td>viktor vinsmoke</td>
+                            <td>jvortelan@gmail.com</td>
+                            <td>11 95930-6324</td>
+                            <td>2024-08-10</td>
 
-                        <div className="fots">
-                            <img src="/assets/images/editar.png" alt="editor" />
-                            <img src="/assets/images/lixeira.png" alt="lixeira" />
-                        </div>
+                        </tr>
 
-                    </div>
+                       
+                    </tbody>
+                    
+                </table>
+            </div>
 
-                    <div className="infos">
-                        <input type="text" />
-                        <input type="text" />
-                        <input type="text" />
-                        <input type="text" />
-                        <input type="text" />
-                        <input type="text" />
-                    </div>
-                </div>
             </div>
 
                   

@@ -19,6 +19,32 @@ body {
         justify-content: center;
         width: 50%;
 
+        #voltar {
+            text-decoration: none;
+            padding: 10px 30px;
+            background-color: #FF0000;
+            color: #E9DDD1;
+            border-radius: 13px;
+            font: 600 16px poppins;
+            transition: .3s;
+            position: absolute;
+            left: 20px;
+            top: 20px;
+        }
+
+        #voltar:hover{
+            transform: scale(1.02);
+            border: 3px solid red;
+            background-color: transparent;
+            color: red;
+            
+           }
+           #voltar:active{
+            transform: scale(1.0);
+            background-color: red;
+            color: #fff; 
+           }
+
         .textin{
             display: flex;
             flex-direction: row;

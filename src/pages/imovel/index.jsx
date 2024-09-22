@@ -50,6 +50,10 @@ export default function InfoImovel() {
                 
             </div>
 
+
+
+            <Rodape/>
+
         </div>
     )
 }

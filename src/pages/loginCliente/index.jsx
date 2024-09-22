@@ -1,7 +1,7 @@
 import './index.scss';
 import direita from '../../assets/images/imovelTelaLogin.png'
-import { useState } from 'react';
-import axios from 'axios';
+// import { useState } from 'react';
+// import axios from 'axios';
 import { Link } from 'react-router-dom';
 
 
@@ -12,6 +12,7 @@ export default function LoginCliente() {
     return (
         <div className="LoginCliente">
             <div className="esquerda">
+            <Link id='voltar' to="/"> Voltar</Link>
                 <div className="textin">
                     <img src="/assets/images/loganTCC7.png" alt="logo empresa" />  
                     <h1>Feel good inc.</h1>

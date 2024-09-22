@@ -24,7 +24,7 @@ export default function TelaAdm() {
 
             <div className="direita">
                 <div className="cabecalho">
-                    <h1>Seja bem-vindo, viktor!</h1>
+                    <h1>Seja bem-vindo, <span>viktor!</span></h1>
                     <img src="/assets/images/semfoto.png" alt="" />
                 </div>
             </div>

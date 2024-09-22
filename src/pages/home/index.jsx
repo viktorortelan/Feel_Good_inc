@@ -3,10 +3,10 @@ import './index.scss';
 import { Link } from "react-router-dom";
 import Rodape from '../../components/rodape';
 import Cabecalho from '../../components/cabecalho';
-import RenderItemsOnly from '../../components/exbir';
-import { useEffect, useState } from 'react';
-import axios from 'axios';
-import ItemCard from '../../components/itemCard';
+// import RenderItemsOnly from '../../components/exbir';
+// import { useEffect, useState } from 'react';
+// import axios from 'axios';
+// import ItemCard from '../../components/itemCard';
 
 
 
