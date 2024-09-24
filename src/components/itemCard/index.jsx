@@ -2,10 +2,10 @@
 import './index.scss';
 import { Link } from 'react-router-dom';
 
- const ItemCard = ({ nome, status, localizacao, comodos, vagas }) => {
+ const ItemCard = ({ nome, status, localizacao, comodos, vagas, capa }) => {
     return(
         <div className="cardImovel">
-        <img src="/assets/images/predios.jpg" alt="predios" />
+            <img src={`/imgs/${capa}`} alt="predios" />
         <h1 id='titulo'>{nome}</h1>
 
         <div className="info1">

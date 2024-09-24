@@ -3,50 +3,50 @@ import './index.scss';
 import { Link } from "react-router-dom";
 import Rodape from '../../components/rodape';
 import Cabecalho from '../../components/cabecalho';
-// import RenderItemsOnly from '../../components/exbir';
-// import { useEffect, useState } from 'react';
-// import axios from 'axios';
-// import ItemCard from '../../components/itemCard';
+import RenderItemsOnly from '../../components/exbir';
+import { useEffect, useState } from 'react';
+import axios from 'axios';
+import ItemCard from '../../components/itemCard';
 
 
 
 
 export default function Home({ exibir }) {
-    
-    // const [array, setArray] = useState([]);
-    
-    // const a = async () => {
-        
-    //     let b = await axios.get('http://localhost:8080/receber');
-    //     let values = b.data;
-    //     setArray(values);
-    //     console.log(array)
 
-    // }
+    const [array, setArray] = useState([]);
 
-    // useEffect(() => { a() }, []);
+    const a = async () => {
+
+        let b = await axios.get('http://localhost:8080/viewImoveis');
+        let values = b.data;
+        setArray(values);
+        console.log(array)
+
+    }
+
+    useEffect(() => { a() });
 
 
-    return(
+    return (
         <div className="pagina_home">
 
-            <Cabecalho/>
-            
-        
+            <Cabecalho />
+
+
             <div className="banners">
                 <img src="/assets/images/banner 1.png" alt="banner1" />
             </div>
 
             <h1 id='lancamentos'>ULTIMOS LANÇAMENTOS</h1>
-                    
-                    
+
+
 
             <div className="secao1">
 
-                 
-            
-                  
-            <div className="card">
+
+
+
+                <div className="card">
                     <img src="/assets/images/predios.jpg" alt="predios" />
                     <h1 id='titulo'>Folianopolis</h1>
 
@@ -67,8 +67,8 @@ export default function Home({ exibir }) {
                         <p>2 vagas </p>
                         <Link to="/">Saiba mais</Link>
                     </div>
-                  </div>
-                  <div className="card">
+                </div>
+                <div className="card">
                     <img src="/assets/images/predios.jpg" alt="predios" />
                     <h1 id='titulo'>Folianopolis</h1>
 
@@ -89,8 +89,8 @@ export default function Home({ exibir }) {
                         <p>2 vagas </p>
                         <Link to="/">Saiba mais</Link>
                     </div>
-                  </div>
-                  <div className="card">
+                </div>
+                <div className="card">
                     <img src="/assets/images/predios.jpg" alt="predios" />
                     <h1 id='titulo'>Folianopolis</h1>
 
@@ -111,14 +111,14 @@ export default function Home({ exibir }) {
                         <p>2 vagas </p>
                         <Link to="/">Saiba mais</Link>
                     </div>
-                  </div>
-                  
+                </div>
 
-                 
+
+
 
             </div>
-            
-            
+
+
 
             <div className="missoes">
                 <div className="missao1">
@@ -149,26 +149,27 @@ export default function Home({ exibir }) {
                 <p>Confira as oportunidades que separamos para você</p>
             </div>
 
-            {/* <div className="secao2">
+            { <div className="secao2">
 
                 {array.map(item =>
                     
                     
                     <ItemCard
-                        nome={item.nome}
-                        status={item.status}
-                        localizacao={item.local}
-                        comodos={item.comodos}
-                        vagas={item.vagas}
+                        capa={item.nm_imagem}
+                        nome={item.nm_apartamento}
+                        status={item.st_status}
+                        localizacao={item.lc_localizacao}
+                        comodos={item.com_tamanho}
+                        vagas={item.vg_vagas}
                     />)}
 
-            </div> */}
+            </div> }
 
-           
+
             <Link to="/"><img src="/assets/images/loganfeelgood.png" alt="balão de suporte" id="suporte" /></Link>
 
-           <Rodape/>
-           
+            <Rodape />
+
         </div>
     )
 }

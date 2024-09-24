@@ -1,7 +1,7 @@
 import './index.scss';
 import direita from '../../assets/images/imovelCadastro.png'
 import { useState } from 'react';
-// import axios from 'axios';
+import axios from 'axios';
 import { Link } from 'react-router-dom';
 
 
@@ -13,31 +13,31 @@ export default function CadastroCliente() {
      const [telefone, setTelefone] = useState('');
 
 
-    // function formatDate(data) {
-    //     const dia = String(data.getDate()).padStart(2, '0');
-    //     const mes = String(data.getMonth()).padStart(2, '0');
-    //     const ano = String(data.getFullYear());
+    function formatDate(data) {
+        const dia = String(data.getDate()).padStart(2, '0');
+        const mes = String(data.getMonth()).padStart(2, '0');
+        const ano = String(data.getFullYear());
 
-    //     return `${ano}-${mes}-${dia}`;
+        return `${ano}-${mes}-${dia}`;
 
-    // }
-
-
-    // function executar() {
-
-    //     const date = new Date();
-
-    //     const x = formatDate(date);
-    //     console.log(x);
-
-    //     axios.post(`http://localhost:5010/cadastroClient/${nome}/${email}/${telefone}/${x}`);
-
-    //     setNome('')
-    //     setTelefone('');
-    //     setEmail('');
+    }
 
 
-    // }
+    function executar() {
+
+        const date = new Date();
+
+        const x = formatDate(date);
+        console.log(x);
+
+        axios.post(`http://localhost:8080/addClient/${nome}/${email}/${telefone}/${x}`);
+
+        setNome('')
+        setTelefone('');
+        setEmail('');
+
+
+    }
 
 
 
@@ -73,7 +73,7 @@ export default function CadastroCliente() {
                         <img id='tell' src="/assets/images/tellIcon.png" alt="" />
                     </div>
                         {/* colocar a função, tirei pois estou sem o banco */}
-                    <button >Cadastrar</button>
+                    <button onClick={executar}>Cadastrar</button>
                     <Link to="/loginCliente">Ja tenho Conta</Link>
                 </div>
 
