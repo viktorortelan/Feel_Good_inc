@@ -18,44 +18,44 @@ export default function NovoCard({ setExibir }) {
      const [titulo, setTitulo] = useState('');
      const [sobre, setSobre] = useState('');
     
-    async function executar() {
+    // async function executar() {
 
-        const formData = new FormData();
-        formData.append('img', capa);
+    //     const formData = new FormData();
+    //     formData.append('img', capa);
 
-        let x = await axios.post('http://localhost:8080/multer', formData, {
-            headers: {
-                "Content-Type": "multipart/form-data"
-            }
-        });
+    //     let x = await axios.post('http://localhost:8080/multer', formData, {
+    //         headers: {
+    //             "Content-Type": "multipart/form-data"
+    //         }
+    //     });
 
-        const formData2 = new FormData();
-        formData2.append('img', galeria);
+    //     const formData2 = new FormData();
+    //     formData2.append('img', galeria);
 
-        let z = await axios.post('http://localhost:8080/multer', formData2, {
-            headers: {
-                "Content-Type": "multipart/form-data"
-            }
-        });
+    //     let z = await axios.post('http://localhost:8080/multer', formData2, {
+    //         headers: {
+    //             "Content-Type": "multipart/form-data"
+    //         }
+    //     });
 
-        let nomeCapa = x.data.fl
-        let nomeGaleria = z.data.fl
+    //     let nomeCapa = x.data.fl
+    //     let nomeGaleria = z.data.fl
 
-        await axios.post(`http://localhost:8080/addImoveis/${nomeCapa}/${nomeGaleria}/${nome}/${status}/${regiao}/${lugar}/${suites}/${comodos}/${vagas}/${titulo}/${sobre}`);
+    //     await axios.post(`http://localhost:8080/addImoveis/${nomeCapa}/${nomeGaleria}/${nome}/${status}/${regiao}/${lugar}/${suites}/${comodos}/${vagas}/${titulo}/${sobre}`);
 
-        setCapa(null);
-        setGaleria(null);
-        setNome('');
-        setStatus('');
-        setRegiao('');
-        setLugar('');
-        setSuites('');
-        setComodos('');
-        setVagas('');
-        setTitulo('');
-        setSobre('');
+    //     setCapa(null);
+    //     setGaleria(null);
+    //     setNome('');
+    //     setStatus('');
+    //     setRegiao('');
+    //     setLugar('');
+    //     setSuites('');
+    //     setComodos('');
+    //     setVagas('');
+    //     setTitulo('');
+    //     setSobre('');
 
-    }
+    // }
     
     
 
@@ -96,7 +96,7 @@ export default function NovoCard({ setExibir }) {
                 <textarea onChange={e => setSobre(e.target.value)} value={sobre}></textarea>
 
                 {/* coloca a função */}
-                <button onClick={executar}>Cadastrar</button>
+                <button >Cadastrar</button>
             </div>
         </div>
     );

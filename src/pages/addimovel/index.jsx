@@ -35,7 +35,7 @@ const TelaAdd = ({ setExibir }) =>  {
             <img src="/assets/images/viktor.png" alt="" />
           </div>
 
-          <NovoCard setExibir={setExibir}/>   
+          {/* <NovoCard setExibir={setExibir}/>    */}
 
         </div>
      
