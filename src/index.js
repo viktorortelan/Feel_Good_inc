@@ -14,6 +14,7 @@ import GestaoCliente from './pages/gestaoCliente';
 import NovoCard from './components/adcionaImovel';
 import CadastroCliente from './pages/cadastroCliente';
 import LoginCliente from './pages/loginCliente';
+import TelaCliente from './pages/telaCliente';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
                 <Route path='/addimovel' element={<TelaAdd setExibir={setExibir} />} />
                 <Route path='/cadastroCliente' element={<CadastroCliente/>} />
                 <Route path='/loginCliente' element={<LoginCliente/>} />
+                <Route path='/telaCliente' element={<TelaCliente/>} />
 
 
                 <Route path='*' element={<NotFound />} />

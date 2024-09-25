@@ -128,24 +128,37 @@ body {
             border-radius: 5px;
             border: none;
             background-color: #FF0000;
-            color: #fff;
-            font: 600 18px poppins;
+            
             transition: .3s;
             cursor: pointer;
             border: 3px solid transparent;
+
+            a{
+                color: #fff;
+                font: 600 18px poppins;
+                text-decoration: none;
+            }
            }
     
            button:hover{
             transform: scale(1.02);
             border: 3px solid red;
             background-color: transparent;
-            color: red;
+            
+
+            a{
+                color: red;
+            }
             
            }
            button:active{
             transform: scale(1.0);
             background-color: red;
             color: #fff; 
+
+            a{
+                color: #fff;
+            }
            }
 
            a{

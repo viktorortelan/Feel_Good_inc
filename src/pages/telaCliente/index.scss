@@ -1,0 +1,142 @@
+.pgcliente{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background-color: #E1DBDB;
+    gap: 70px;
+    .seccao1{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 80%;
+        background-color: #ffff;
+        padding: 25px 80px;
+        border-radius: 7px;
+        .texto{
+            display: flex;
+            flex-direction: row;
+            gap: 40px;
+            #usuario{
+                width: 120px;
+                height: 100px;
+            }
+            .intro{
+                display: flex;
+                flex-direction: column;
+    
+                h1{
+                    font: 700 36px poppins;
+    
+                    span{
+                        color:#D90000 ;
+                    }
+                }
+    
+                .email{
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    gap: 10px;
+                    font: 400 20px poppins;
+                }
+                
+            }
+            
+
+        } 
+        
+
+        .editar{
+            display: flex;
+            flex-direction: row;
+            gap: 30px;
+
+            button{
+                padding: 10px 30px;
+                font: 600 20px poppins;
+                color: #ffff;
+                background-color: #D90000;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: .3s;
+            }
+            button:hover{
+                background-color: #E1DBDB;
+                border: 1px solid #D90000;
+                color: #D90000;
+                transform: scale(1.1);
+            }
+            button:active{
+                background-color: #D90000;
+                border: none;
+                color: #E1DBDB;
+                transform: scale(1);
+            }
+        }
+    
+    }
+
+
+    #atalho{
+        font: 700 30px poppins;
+        width: 80%;
+    }
+
+    .seccao2 {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 40px;
+
+        a{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            background-color: #ffff;
+            text-decoration: none;
+            height: 300px;
+            padding: 0px 25px 30px 25px;
+            border-radius: 7px;
+            box-shadow: 0px 7px 15px gray;
+            margin-bottom: 200px;
+            transition: .3s;
+            h1{
+                text-align: center;
+                font: 500 24px poppins;
+                margin-bottom: -50px;
+                color: #D90000;
+                
+            }
+
+            .caixinha{
+                display: flex;
+                flex-direction: row;
+                gap: 50px;
+
+                p{
+                    width: 280px;
+                    color: #000000;
+                }
+            }
+
+            #contrato{
+                    width: 64px;
+                
+            }
+        }
+        a:hover{
+            transform: scale(1.1);
+            box-shadow: 0px 7px 15px #ffffff;
+            border:1px solid #D90000;
+        }
+        a:active{
+            transform: scale(1.0);
+            box-shadow: 0px 7px 15px #D90000;
+        }
+    }
+
+}

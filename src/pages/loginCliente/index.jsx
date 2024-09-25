@@ -34,7 +34,7 @@ export default function LoginCliente() {
                         <img id='tell' src="/assets/images/tellIcon.png" alt="" />
                     </div>
 
-                    <button >Entrar</button>
+                    <button ><Link to="/telaCliente">Entrar</Link></button>
                     <Link to="/cadastroCliente">Criar conta</Link>
                 </div>
 
