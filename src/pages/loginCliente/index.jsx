@@ -1,13 +1,47 @@
 import './index.scss';
 import direita from '../../assets/images/imovelTelaLogin.png'
-// import { useState } from 'react';
-// import axios from 'axios';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
+
+import { loginCliente } from '../../api/clienteApi.js';
+import { useNavigate } from 'react-router-dom';
+
+import storage from 'local-storage'
 
 
 
 export default function LoginCliente() {
 
+    const navigate = useNavigate();
+
+    const [email, setEmail] = useState();
+    const [telefone, setTelefone] = useState();
+
+    async function logar() {
+        
+        try {
+          
+            const r = await loginCliente(email, telefone);
+            storage('cliente-logado', r);
+
+            setTimeout(() => {
+                navigate('/telaCliente')
+            }, 1200);
+
+        } catch (err) {
+
+            if(err.response)
+                alert(err.response.data.erro);
+            else 
+                alert(err.message);
+
+            if(err.response.status === 404) {
+                alert("Credenciais invalidas")
+            }
+
+        }
+
+    }
  
     return (
         <div className="LoginCliente">
@@ -25,16 +59,16 @@ export default function LoginCliente() {
                     
                     <div className="inputs">
                         <p>Seu Email:</p>
-                        <input  type="text" placeholder='ex: user@gmail.com'/>
+                        <input type="text" placeholder='ex: user@gmail.com' value={email} onChange={e => setEmail(e.target.value)}/>
                         <img id='aviao' src="/assets/images/aviaozin249.png" alt="" />
                     </div>
                     <div className="inputs">
                         <p>Seu Telefone:</p>
-                        <input  type="text" placeholder='ex: 11 11111-1111' />
+                        <input  type="text" placeholder='ex: 11 11111-1111' value={telefone} onChange={e => setTelefone(e.target.value)} />
                         <img id='tell' src="/assets/images/tellIcon.png" alt="" />
                     </div>
 
-                    <button ><Link to="/telaCliente">Entrar</Link></button>
+                    <button onClick={logar}>Entrar</button>
                     <Link to="/cadastroCliente">Criar conta</Link>
                 </div>
 

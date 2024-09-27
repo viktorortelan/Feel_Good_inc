@@ -3,10 +3,30 @@ import Cabecalho from '../../components/cabecalho'
 import Rodape from '../../components/rodape'
 import { Link } from 'react-router-dom';
 
+import storage from 'local-storage';
+import { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 
 export default function TelaCliente() {
 
+    const navigate = useNavigate();
+
+    useEffect(() => {
+
+        if(storage('cliente-logado')) {
+            navigate('/telaCliente')
+        }
+        else {
+            navigate('/loginCliente')
+        }
+
+    }, [])
+
+    function sairClick() {
+        storage.remove('cliente-logado');
+        navigate('/loginCliente')
+    }
 
     return(
         <div className="pgcliente">
@@ -29,6 +49,7 @@ export default function TelaCliente() {
                 <div className="editar">
                     <img src="/assets/images/edit.png" alt="edit" />
                     <button>EDITAR DADOS</button>
+                    <button onClick={sairClick}>SAIR</button>
                 </div>
             </div>
 

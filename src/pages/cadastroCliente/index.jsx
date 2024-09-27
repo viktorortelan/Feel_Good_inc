@@ -3,6 +3,9 @@ import direita from '../../assets/images/imovelCadastro.png'
 import { useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+
+import { cadastroCliente } from '../../api/clienteApi';
 
 
 
@@ -39,7 +42,28 @@ export default function CadastroCliente() {
 
     // }
 
+    const navigate = useNavigate();
 
+    async function cadastrar() {
+        
+        try {
+            
+            await cadastroCliente(nome, email, telefone)
+
+            setTimeout(() => {
+                navigate('/loginCliente')
+            }, 1200);
+
+        } catch (err) {
+            
+            if(err.response)
+                alert(err.response.data.erro);
+            else 
+                alert(err.message);
+
+        }
+
+    }
 
     return (
         <div className="cadastroLogin">
@@ -73,7 +97,7 @@ export default function CadastroCliente() {
                         <img id='tell' src="/assets/images/tellIcon.png" alt="" />
                     </div>
                         {/* colocar a função, tirei pois estou sem o banco */}
-                    <button >Cadastrar</button>
+                    <button onClick={cadastrar}>Cadastrar</button>
                     <Link to="/loginCliente">Ja tenho Conta</Link>
                 </div>
 
