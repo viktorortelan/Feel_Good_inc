@@ -47,11 +47,11 @@ export default function TelaCliente() {
                 <div className="texto">
                     <img id='usuario' src="/assets/images/viktor.png" alt="usuario" />
                    <div className="intro">
-                                        {/* Substituir  apenas o nome do usuario, de acordo com o login dele.*/}
+                                    
                         <h1>Bem-vindo, <span>{nome}</span></h1>
                             <div className="email">
                                 <img src="/assets/images/gmail.png" alt="gmail" />
-                                {/* Substituir  apenas o email do usuario, de acordo com o login dele.*/}
+                            
                                 <p>{email}</p>
                             </div>
                    </div>
