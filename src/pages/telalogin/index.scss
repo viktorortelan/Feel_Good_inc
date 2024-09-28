@@ -6,7 +6,6 @@
     height: 100vh;
     background-size: cover;
   
-
     .cartao{
         display: flex;
         flex-direction: row;
@@ -14,8 +13,7 @@
         height: 600px;
         background-color: #ffff;
         border-radius: 15px;
-
-
+      
         .esquerda{
             img{
                 width: 650px;
@@ -29,30 +27,28 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            gap: 15px;
+            gap: 20px;
             width: 100%;
             height: 100%;
 
-            
         .textin{
             display: flex;
             flex-direction: row;
             align-items: center;
             gap: 10px;
 
-
             img{
                 width: 50px;
             }
 
             h1{
-                font: 700 28px poppins;
+                font: 700 26px poppins;
                 color: rgb(46, 41, 41);
             }
         }
 
         #façaLogin{
-            font: 700 24px poppins;
+            font: 700 22px poppins;
             width: 400px;
             text-align: center;
             color: rgb(46, 41, 41);
@@ -66,8 +62,6 @@
        .inputs{
             display: flex;
             flex-direction:column;
-            margin-bottom: -10px;
-            
 
             input[type='text'] {
                 width: 200px;
@@ -79,21 +73,11 @@
                 outline: none;
             }
            
-            #aviao{
+            #aviao, #tell {
                 width: 18px;
                 position: relative;
                 bottom: 30px;
                 left: 8px;
-               
-               
-            }
-            #tell{
-                width: 18px;
-                position: relative;
-                bottom: 30px;
-                left: 8px;
-               
-               
             }
        }
 
@@ -109,7 +93,6 @@
         border: 3px solid transparent;         
         color: #fff;
         font: 600 16px poppins;
-
        }
 
        button:hover{
@@ -117,17 +100,114 @@
         border: 3px solid red;
         background-color: transparent;
         color: red;
-      
-        
        }
+
        button:active{
         transform: scale(1.0);
         background-color: red;
-        color: #fff; 
         color: #fff;
-        
        }
+
+       #copyright{
+        width: 100%;
+        margin: 40px 0px 0px 80px;
+        font: 500 16px poppins;
+       }
+    }
+  }
+
+  /* Responsividade para telas grandes */
+  @media (max-width: 1200px) and (max-height: 700px) {
+    .cartao {
+        width: 900px;
+        height: 500px;
+
+        .esquerda img {
+            width: 450px;
+        }
+
+        .infos {
+            gap: 10px;
+
+            #façaLogin {
+                font-size: 18px;
+                width: 300px;
+            }
+
+            .inputs input[type='text'] {
+                width: 180px;
+                height: 35px;
+            }
+
+            button {
+                width: 180px;
+                font-size: 14px;
+            }
         }
     }
+  }
 
+  /* Responsividade para meu notebook */
+  @media (max-width: 1366px) and (max-height: 669px) {
+    .cartao {
+        width: 900px;
+        height: 500px;
+
+        .esquerda img {
+            width: 500px;
+            height: 100%;
+        }
+
+        .infos {
+            gap: 15px;
+
+            #façaLogin {
+                font-size: 20px;
+                width: 350px;
+            }
+
+            .inputs input[type='text'] {
+                width: 190px;
+                height: 38px;
+            }
+
+            button {
+                width: 190px;
+                font-size: 15px;
+            }
+        }
+    }
+  }
+
+  /* Ajustes para telas menores */
+  @media (max-width: 768px) {
+    .cartao {
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+
+        .esquerda img {
+            width: 100%;
+            height: 250px;
+            border-radius: 15px 15px 0px 0px;
+        }
+
+        .infos {
+            padding: 20px;
+
+            #façaLogin {
+                font-size: 16px;
+                width: 100%;
+            }
+
+            .inputs input[type='text'] {
+                width: 100%;
+            }
+
+            button {
+                width: 100%;
+            }
+        }
+    }
+  }
 }

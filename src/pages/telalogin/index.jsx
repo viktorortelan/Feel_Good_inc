@@ -39,7 +39,7 @@ export default function Telalogin() {
                     
                         </div>
 
-                <p id='copyright'> ©feelgoodind copyright</p>
+                            <p id='copyright'> ©feelgoodind copyright</p>
                         </div>
                 
             </div>
