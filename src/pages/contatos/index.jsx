@@ -64,7 +64,7 @@ export default function Contatos() {
 
             <Link to="/"><img src="/assets/images/loganfeelgood.png" alt="balão de suporte" id="suporte" /></Link>
 
-           <Rodape/>
+            <Rodape/>
 
         </div>
     )

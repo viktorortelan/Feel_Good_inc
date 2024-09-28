@@ -1,60 +1,133 @@
-.tela-login {
+.tela-login{
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    flex-direction: column;
     justify-content: center;
-    background-color: #744646;
+    align-items: center;
     height: 100vh;
+    background-size: cover;
+  
+
     .cartao{
         display: flex;
         flex-direction: row;
-        background-color: #ffffff;
         width: 1100px;
-        height: 700px;
-        width: 60%;
-        img{
-            width: 140px;
+        height: 600px;
+        background-color: #ffff;
+        border-radius: 15px;
+
+
+        .esquerda{
+            img{
+                width: 650px;
+                height: 100%;
+                border-radius: 15px 0px 0px 14px;
+            }
         }
 
-        .fosco{
-            width: 60%;
-            border: 3px solid #d3d3d3;
-            height: 100%;
-        }
         .infos{
             display: flex;
             flex-direction: column;
-            justify-content: center;
             align-items: center;
-            gap: 25px;
-            margin: 0% 0% 15%;
-            width: 40%;
-        }
-    }
-    
-        
-        input {
-            width: 100%; 
-            max-width: 300px; 
-            height: 50px;
-            border-radius: 30px;
-            background-color: #E3E3E3;
-            border: 1px solid #E3E3E3; 
-            padding: 15px;
-            outline: none;
-        }
-            
-        button {
-            width: 100%; 
-            max-width: 200px; 
-            height: 50px;
-            border-radius: 30px;
-            background-color: #E3E3E3;
-            border: 1px solid #E3E3E3; 
-            color: #000;
-            font-weight: bold;
-           
-        }
-    }
-    
+            justify-content: center;
+            gap: 15px;
+            width: 100%;
+            height: 100%;
 
+            
+        .textin{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 10px;
+
+
+            img{
+                width: 50px;
+            }
+
+            h1{
+                font: 700 28px poppins;
+                color: rgb(46, 41, 41);
+            }
+        }
+
+        #façaLogin{
+            font: 700 24px poppins;
+            width: 400px;
+            text-align: center;
+            color: rgb(46, 41, 41);
+            line-height: 32px;
+
+            span{
+                color: #FF0000;
+            }
+        }
+
+       .inputs{
+            display: flex;
+            flex-direction:column;
+            margin-bottom: -10px;
+            
+
+            input[type='text'] {
+                width: 200px;
+                height: 40px;
+                border-radius:5px;
+                border: 1px solid #80808050;
+                padding: 5px 10px 5px 38px;
+                font: 400 16px poppins;
+                outline: none;
+            }
+           
+            #aviao{
+                width: 18px;
+                position: relative;
+                bottom: 30px;
+                left: 8px;
+               
+               
+            }
+            #tell{
+                width: 18px;
+                position: relative;
+                bottom: 30px;
+                left: 8px;
+               
+               
+            }
+       }
+
+       button{
+        width: 200px;
+        margin-top: 5px;
+        padding: 5px;
+        border-radius: 5px;
+        border: none;
+        background-color: #FF0000;   
+        transition: .3s;
+        cursor: pointer;
+        border: 3px solid transparent;         
+        color: #fff;
+        font: 600 16px poppins;
+
+       }
+
+       button:hover{
+        transform: scale(1.02);
+        border: 3px solid red;
+        background-color: transparent;
+        color: red;
+      
+        
+       }
+       button:active{
+        transform: scale(1.0);
+        background-color: red;
+        color: #fff; 
+        color: #fff;
+        
+       }
+        }
+    }
+
+}
