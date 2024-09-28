@@ -96,7 +96,7 @@ export default function CadastroCliente() {
                         <input onChange={e => setTelefone(e.target.value)} value={telefone} type="text" placeholder='ex: 11 11111-1111' />
                         <img id='tell' src="/assets/images/tellIcon.png" alt="" />
                     </div>
-                        {/* colocar a função, tirei pois estou sem o banco */}
+                      
                     <button onClick={cadastrar}>Cadastrar</button>
                     <Link to="/loginCliente">Ja tenho Conta</Link>
                 </div>

@@ -26,3 +26,4 @@ export async function loginCliente(email, telefone) {
     return response.data;
 
 }
+

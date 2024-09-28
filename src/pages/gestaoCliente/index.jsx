@@ -1,22 +1,22 @@
 
 import './index.scss';
 import { Link } from 'react-router-dom';
-// import axios from 'axios';
-// import { useState } from 'react';
-// import { useEffect } from 'react';
+import axios from 'axios';
+import { useState } from 'react';
+import { useEffect } from 'react';
 
 export default function GestaoCliente() {
 
-    // const [array, setArray] = useState([]);
+    const [array, setArray] = useState([]);
 
-    // async function a() {
-    //     const a = await axios.get('http://localhost:8080/viewClient');
-    //     const value = a.data;
-    //     setArray(value);
-    //     console.log(array);
-    // }
+    async function a() {
+        const a = await axios.get('http://localhost:8080/viewClient');
+        const value = a.data;
+        setArray(value);
+        console.log(array);
+    }
 
-    // useEffect(() => { a() });
+    useEffect(() => { a() });
 
     return (
         <div className="gestaoCliente">
@@ -64,7 +64,7 @@ export default function GestaoCliente() {
 
                         <tbody>
 
-                            {/* {array.map(item =>
+                            {array.map(item =>
                                 <tr>
                                     <td>{item.id_cliete}</td>
                                     <td>{item.nm_nome}</td>
@@ -74,7 +74,7 @@ export default function GestaoCliente() {
                                 </tr>)
 
 
-                            } */}
+                            }
 
 
 

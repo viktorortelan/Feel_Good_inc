@@ -31,13 +31,9 @@ export default function LoginCliente() {
         } catch (err) {
 
             if(err.response)
-                alert(err.response.data.erro);
+                alert(err.response.data.err);
             else 
                 alert(err.message);
-
-            if(err.response.status === 404) {
-                alert("Credenciais invalidas")
-            }
 
         }
 
@@ -52,7 +48,6 @@ export default function LoginCliente() {
                     <h1>Feel good inc.</h1>
 
                 </div>
-
                 <h1 id='façaLogin'> <span> Olá</span> Seja bem vindo</h1>
                 
                 <div className="cadastro">

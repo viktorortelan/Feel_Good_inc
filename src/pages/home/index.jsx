@@ -4,27 +4,27 @@ import { Link } from "react-router-dom";
 import Rodape from '../../components/rodape';
 import Cabecalho from '../../components/cabecalho';
 import RenderItemsOnly from '../../components/exbir';
-// import { useEffect, useState } from 'react';
-// import axios from 'axios';
-// import ItemCard from '../../components/itemCard';
+import { useEffect, useState } from 'react';
+import axios from 'axios';
+import ItemCard from '../../components/itemCard';
 
 
 
 
 export default function Home({ exibir }) {
 
-    // const [array, setArray] = useState([]);
+    const [array, setArray] = useState([]);
 
-    // const a = async () => {
+    const a = async () => {
 
-    //     let b = await axios.get('http://localhost:8080/viewImoveis');
-    //     let values = b.data;
-    //     setArray(values);
-    //     console.log(array)
+        let b = await axios.get('http://localhost:8080/viewImoveis');
+        let values = b.data;
+        setArray(values);
+        console.log(array)
 
-    // }
+    }
 
-    // useEffect(() => { a() });
+    useEffect(() => { a() });
 
 
     return (
@@ -149,7 +149,7 @@ export default function Home({ exibir }) {
                 <p>Confira as oportunidades que separamos para você</p>
             </div>
 
-            {/* { <div className="secao2">
+            { <div className="secao2">
 
                 {array.map(item =>
                     
@@ -163,7 +163,7 @@ export default function Home({ exibir }) {
                         vagas={item.vg_vagas}
                     />)}
 
-            </div> } */}
+            </div> }
 
 
             <Link to="/"><img src="/assets/images/loganfeelgood.png" alt="balão de suporte" id="suporte" /></Link>

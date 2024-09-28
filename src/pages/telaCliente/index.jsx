@@ -6,9 +6,17 @@ import { Link } from 'react-router-dom';
 import storage from 'local-storage';
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useState } from 'react';
 
 
 export default function TelaCliente() {
+
+    const [nome, setNome] = useState('')
+    const [email, setEmail] = useState('')
+
+
+
+
 
     const navigate = useNavigate();
 
@@ -16,6 +24,9 @@ export default function TelaCliente() {
 
         if(storage('cliente-logado')) {
             navigate('/telaCliente')
+            const usuarioLogado = storage('cliente-logado');
+            setNome(usuarioLogado.nome);
+            setEmail(usuarioLogado.email);
         }
         else {
             navigate('/loginCliente')
@@ -37,11 +48,11 @@ export default function TelaCliente() {
                     <img id='usuario' src="/assets/images/viktor.png" alt="usuario" />
                    <div className="intro">
                                         {/* Substituir  apenas o nome do usuario, de acordo com o login dele.*/}
-                        <h1>Bem-vindo, <span>Viktor Ortelan</span></h1>
+                        <h1>Bem-vindo, <span>{nome}</span></h1>
                             <div className="email">
                                 <img src="/assets/images/gmail.png" alt="gmail" />
                                 {/* Substituir  apenas o email do usuario, de acordo com o login dele.*/}
-                                <p>jvortelan@gmail.com</p>
+                                <p>{email}</p>
                             </div>
                    </div>
                 </div>

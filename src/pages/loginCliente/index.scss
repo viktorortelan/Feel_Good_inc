@@ -89,33 +89,33 @@ body {
     
                 input[type='text'] {
                     width: 300px;
-                    height: 40px;
+                    height: 60px;
                     border-radius:5px;
                     border: 1px solid #80808050;
-                    padding: 5px 10px 5px 35px;
-                    font: 400 16px poppins;
+                    padding: 5px 10px 5px 38px;
+                    font: 400 20px poppins;
                     outline: none;
                 }
                 #pessoa{
                     width: 25px;
                     position: relative;
                     bottom: 30px;
-                    left: 5px;
+                    left: 6px;
                    
                 }
                 #aviao{
                     width: 22px;
                     position: relative;
-                    bottom: 30px;
-                    left: 5px;
+                    bottom: 38px;
+                    left: 8px;
                    
                    
                 }
                 #tell{
                     width: 22px;
                     position: relative;
-                    bottom: 30px;
-                    left: 5px;
+                    bottom: 40px;
+                    left: 8px;
                    
                    
                 }
@@ -127,38 +127,29 @@ body {
             padding: 10px;
             border-radius: 5px;
             border: none;
-            background-color: #FF0000;
-            
+            background-color: #FF0000;   
             transition: .3s;
             cursor: pointer;
-            border: 3px solid transparent;
+            border: 3px solid transparent;         
+            color: #fff;
+            font: 600 18px poppins;
 
-            a{
-                color: #fff;
-                font: 600 18px poppins;
-                text-decoration: none;
-            }
            }
     
            button:hover{
             transform: scale(1.02);
             border: 3px solid red;
             background-color: transparent;
-            
-
-            a{
-                color: red;
-            }
+            color: red;
+          
             
            }
            button:active{
             transform: scale(1.0);
             background-color: red;
             color: #fff; 
-
-            a{
-                color: #fff;
-            }
+            color: #fff;
+            
            }
 
            a{
