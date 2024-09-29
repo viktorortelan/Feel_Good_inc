@@ -1,7 +1,12 @@
 import './index.scss'
 import { Link } from 'react-router-dom';
+import CabecalhoADM from '../../components/cabecalhoADM';
+
+
 
 export default function TelaAdm() {
+   
+
     return(
         <div className="Tela-adm">
             <div className="esquerda">
@@ -23,10 +28,7 @@ export default function TelaAdm() {
             </div>
 
             <div className="direita">
-                <div className="cabecalho">
-                    <h1>Seja bem-vindo, <span>viktor!</span></h1>
-                    <img src="/assets/images/semfoto.png" alt="" />
-                </div>
+                <CabecalhoADM/>
             </div>
 
                   

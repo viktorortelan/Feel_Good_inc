@@ -1,6 +1,7 @@
 
 import './index.scss';
 import { Link } from 'react-router-dom';
+import CabecalhoADM from '../../components/cabecalhoADM';
 
 export default function GestaoImovel () {
     return (
@@ -21,10 +22,7 @@ export default function GestaoImovel () {
         </div>
 
         <div className="direita">
-          <div className="cabecalho">
-            <h1>Seja bem-vindo, <span>viktor!</span></h1>
-            <img src="/assets/images/viktor.png" alt="" />
-          </div>
+          <CabecalhoADM/>
 
           <div className="lupa">
             <input type="text" placeholder='Nome do imovel'/>

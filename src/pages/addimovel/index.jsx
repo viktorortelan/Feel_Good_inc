@@ -3,13 +3,9 @@ import './index.scss';
 import { useState } from 'react';
 import NovoCard from '../../components/adcionaImovel';
 import RenderItemsOnly from '../../components/exbir';
-
+import CabecalhoADM from '../../components/cabecalhoADM';
 
 const TelaAdd = ({ setExibir }) =>  {
-
-
-    
-
 
 
     return (
@@ -30,10 +26,7 @@ const TelaAdd = ({ setExibir }) =>  {
         </div>
 
         <div className="direita">
-          <div className="cabecalho">
-            <h1>Seja bem-vindo, <span>viktor!</span></h1>
-            <img src="/assets/images/viktor.png" alt="" />
-          </div>
+         <CabecalhoADM/>
 
           <NovoCard setExibir={setExibir}/>   
 

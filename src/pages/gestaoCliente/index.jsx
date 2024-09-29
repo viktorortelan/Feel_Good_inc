@@ -4,13 +4,14 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 import { useState } from 'react';
 import { useEffect } from 'react';
+import CabecalhoADM from '../../components/cabecalhoADM';
 
 export default function GestaoCliente() {
 
     const [array, setArray] = useState([]);
 
     async function a() {
-        const a = await axios.get('http://localhost:8080/viewClient');
+        const a = await axios.get('http://localhost:8080/buscar');
         const value = a.data;
         setArray(value);
         console.log(array);
@@ -39,10 +40,7 @@ export default function GestaoCliente() {
             </div>
 
             <div className="direita">
-                <div className="cabecalho">
-                    <h1>Seja bem-vindo, <span>viktor!</span></h1>
-                    <img src="/assets/images/viktor.png" alt="" />
-                </div>
+                <CabecalhoADM/>
 
                 <div className="lupa">
                     <input type="text" placeholder='Nome do imovel' />
@@ -66,10 +64,10 @@ export default function GestaoCliente() {
 
                             {array.map(item =>
                                 <tr>
-                                    <td>{item.id_cliete}</td>
-                                    <td>{item.nm_nome}</td>
-                                    <td>{item.em_email}</td>
-                                    <td>{item.tl_telefone}</td>
+                                    <td>{item.id_cliente}</td>
+                                    <td>{item.nm_cliente}</td>
+                                    <td>{item.ds_email}</td>
+                                    <td>{item.ds_telefone}</td>
                                     <td>{item.dt_cadastro.substring(0, 10)}</td>
                                 </tr>)
 

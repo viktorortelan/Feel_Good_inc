@@ -16,25 +16,19 @@ export default function CadastroCliente() {
      const [telefone, setTelefone] = useState('');
 
 
-    // function formatDate(data) {
-    //     const dia = String(data.getDate()).padStart(2, '0');
-    //     const mes = String(data.getMonth()).padStart(2, '0');
-    //     const ano = String(data.getFullYear());
+    function formatDate(data) {
+        const dia = String(data.getDate()).padStart(2, '0');
+        const mes = String(data.getMonth()+1).padStart(2, '0');
+        const ano = String(data.getFullYear());
 
-    //     return `${ano}-${mes}-${dia}`;
+        return `${ano}-${mes}-${dia}`;
 
-    // }
+    }
 
 
     // function executar() {
 
-    //     const date = new Date();
-
-    //     const x = formatDate(date);
-    //     console.log(x);
-
-    //     axios.post(`http://localhost:8080/addClient/${nome}/${email}/${telefone}/${x}`);
-
+       
     //     setNome('')
     //     setTelefone('');
     //     setEmail('');
@@ -48,11 +42,20 @@ export default function CadastroCliente() {
         
         try {
             
-            await cadastroCliente(nome, email, telefone)
+            await cadastroCliente(nome, email, telefone);
+
+            const date = new Date();
+
+            const x = formatDate(date);
+            console.log(x);
+    
+            axios.put(`http://localhost:8080/addClient/${x}/${email}`);
 
             setTimeout(() => {
                 navigate('/loginCliente')
             }, 1200);
+
+    
 
         } catch (err) {
             

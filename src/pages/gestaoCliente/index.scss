@@ -72,28 +72,6 @@
         width: 100%;
         background-color: #F5F5F5;
 
-        .cabecalho{
-            display: flex;
-            flex-direction: row;
-            background-color: #ffff;
-            padding: 10px 0px 0px 0px;
-            gap: 500px;
-            align-items: center;
-            justify-content: space-around;
-
-            h1{
-                font: 500 20px poppins;
-
-                span{
-                    color: #FF0707;
-                }
-            }
-
-            img{
-                width: 100px;
-            }
-        }
-
         .lupa{
             margin: 50px 0px 20px 0px;
             position: relative;
