@@ -1,142 +1,249 @@
-.pgcliente{
+.pgcliente {
     display: flex;
     flex-direction: column;
     align-items: center;
     height: 100vh;
     width: 100%;
     background-color: #E1DBDB;
-    gap: 70px;
-    .seccao1{
+    gap: 50px;
+    
+    .seccao1 {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        width: 80%;
+        width: 90%; 
+        max-width: 1200px;
         background-color: #ffff;
-        padding: 25px 80px;
+        padding: 20px 50px; 
         border-radius: 7px;
-        .texto{
+
+        .texto {
             display: flex;
             flex-direction: row;
-            gap: 40px;
-            #usuario{
-                width: 120px;
-                height: 100px;
+            gap: 20px;
+
+            #usuario {
+                width: 100px;
+                height: 80px;
             }
-            .intro{
+
+            .intro {
                 display: flex;
                 flex-direction: column;
-    
-                h1{
-                    font: 700 36px poppins;
-    
-                    span{
-                        color:#D90000 ;
+
+                h1 {
+                    font: 700 24px poppins;
+
+                    span {
+                        color: #D90000;
                     }
                 }
-    
-                .email{
+
+                .email {
                     display: flex;
                     flex-direction: row;
                     align-items: center;
                     gap: 10px;
-                    font: 400 20px poppins;
+                    font: 400 14px poppins;
                 }
-                
             }
-            
+        }
 
-        } 
-        
-
-        .editar{
+        .editar {
             display: flex;
             flex-direction: row;
-            gap: 30px;
+            gap: 20px;
 
-            button{
-                padding: 10px 30px;
-                font: 600 20px poppins;
+            button {
+                padding: 8px 20px;
+                font: 600 18px poppins;
                 color: #ffff;
                 background-color: #D90000;
                 border: none;
                 border-radius: 5px;
                 cursor: pointer;
-                transition: .3s;
-            }
-            button:hover{
-                background-color: #E1DBDB;
-                border: 1px solid #D90000;
-                color: #D90000;
-                transform: scale(1.1);
-            }
-            button:active{
-                background-color: #D90000;
-                border: none;
-                color: #E1DBDB;
-                transform: scale(1);
+                transition: 0.3s;
             }
         }
-    
     }
 
-
-    #atalho{
-        font: 700 30px poppins;
-        width: 80%;
+    #atalho {
+        font: 700 24px poppins;
+        width: 90%;
+        max-width: 1200px;
     }
 
     .seccao2 {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        gap: 40px;
+        gap: 20px;
+        width: 90%;
+        max-width: 1200px;
 
-        a{
+        a {
             display: flex;
             flex-direction: column;
             justify-content: space-around;
             background-color: #ffff;
             text-decoration: none;
-            height: 300px;
-            padding: 0px 25px 30px 25px;
+            height: 200px; 
+            width: calc(50% - 20px); 
+            padding: 15px; 
             border-radius: 7px;
             box-shadow: 0px 7px 15px gray;
-            margin-bottom: 200px;
-            transition: .3s;
-            h1{
+            transition: 0.3s;
+
+            h1 {
                 text-align: center;
-                font: 500 24px poppins;
-                margin-bottom: -50px;
+                font: 500 20px poppins;
                 color: #D90000;
-                
             }
 
-            .caixinha{
+            .caixinha {
                 display: flex;
                 flex-direction: row;
-                gap: 50px;
+                gap: 20px;
 
-                p{
-                    width: 280px;
+                p {
+                    width: auto;
                     color: #000000;
+                    font-size: 14px; 
                 }
             }
 
-            #contrato{
-                    width: 64px;
-                
+            #contrato {
+                width: 50px;
             }
         }
-        a:hover{
-            transform: scale(1.1);
+        
+        a:hover {
+            transform: scale(1.05); 
             box-shadow: 0px 7px 15px #ffffff;
-            border:1px solid #D90000;
+            border: 1px solid #D90000;
         }
-        a:active{
+
+        a:active {
             transform: scale(1.0);
             box-shadow: 0px 7px 15px #D90000;
         }
     }
+}
 
+/* Responsividade para 1400x800 */
+@media (max-width: 1400px) {
+    .pgcliente {
+        gap: 40px;
+    }
+
+    .seccao1 {
+        flex-direction: column;
+        padding: 15px;
+        width: 100%;
+
+        .texto {
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+
+            h1 {
+                font-size: 24px;
+            }
+
+            .email {
+                font-size: 16px;
+            }
+        }
+
+        .editar {
+            gap: 10px;
+
+            button {
+                font-size: 16px;
+                padding: 8px 20px;
+            }
+        }
+    }
+
+    .seccao2 a {
+        width: 100%;
+        height: 180px; /* Diminui ainda mais as caixinhas */
+    }
+}
+
+/* Para telas menores de 768px */
+@media (max-width: 768px) {
+    .pgcliente {
+        gap: 30px;
+    }
+
+    .seccao1 {
+        flex-direction: column;
+        padding: 10px 10px;
+        width: 100%;
+    }
+
+    .seccao2 {
+        flex-direction: column;
+        width: 100%;
+        gap: 20px;
+    }
+
+    .seccao2 a {
+        height: 150px; /* Diminui ainda mais a altura */
+        width: 100%;
+        padding: 10px;
+    }
+
+    /* Mover menu lateral para o topo */
+    .esquerda {
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        padding: 10px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .esquerda .intro {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .esquerda .botoes {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+
+/* Ajustes para telas pequenas (até 480px) */
+@media (max-width: 480px) {
+    .pgcliente {
+        gap: 20px;
+    }
+
+    .seccao1 {
+        padding: 10px;
+    }
+
+    .seccao2 a {
+        height: 130px; /* Reduzi ainda mais a altura */
+        padding: 8px;
+    }
+
+    .seccao2 a h1 {
+        font-size: 16px;
+    }
+
+    .caixinha p {
+        width: auto;
+        font-size: 12px; /* Ajustei o tamanho do texto nas caixinhas */
+    }
+
+    .esquerda {
+        flex-direction: column;
+        gap: 10px;
+    }
 }

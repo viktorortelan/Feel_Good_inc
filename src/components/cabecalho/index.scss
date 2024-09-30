@@ -1,20 +1,74 @@
-.cabecalho{
+.cabecalho {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
     background-color: #D90000;
     width: 100%;
-    a{    
-        font: 400 22px poppins;
+    padding: 8px 0; 
+
+    a {
+        font: 400 20px poppins;
         text-decoration: none;
         color: #ffff;
+        transition: font-size 0.3s;
     }
-    .img{
-        img{
-            
-             width: 146px;
+
+    .img {
+        img {
+            width: 120px; 
+            transition: width 0.3s;
         }
-       
+    }
+}
+
+/* Responsividade para telas até 1024px (notebooks e tablets maiores) */
+@media (max-width: 1024px) {
+    .cabecalho {
+        justify-content: space-between;
+        padding: 8px 15px;
+    }
+
+    a {
+        font-size: 18px; 
+    }
+
+    .img img {
+        width: 100px;
+    }
+}
+
+/* Responsividade para telas até 768px (tablets e notebooks menores) */
+@media (max-width: 768px) {
+    .cabecalho {
+        flex-direction: column;
+        padding: 10px 0;
+    }
+
+    a {
+        font-size: 16px; 
+        margin: 8px 0;
+    }
+
+    .img img {
+        width: 80px; 
+    }
+}
+
+/* Responsividade para telas até 480px (smartphones) */
+@media (max-width: 480px) {
+    .cabecalho {
+        flex-direction: column;
+        align-items: center;
+        padding: 5px 0; 
+    }
+
+    a {
+        font-size: 14px; 
+        margin: 5px 0;
+    }
+
+    .img img {
+        width: 60px; 
     }
 }
