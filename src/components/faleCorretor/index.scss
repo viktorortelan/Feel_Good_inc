@@ -1,0 +1,134 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+
+
+    .corretor{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        background-color: #FCFBFC;
+        width: 1000px;
+        padding: 50px 0px;
+        border-radius: 10px;
+
+        .titulo{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 10px;
+
+            h1{
+                font: 500 28px poppins;
+            }
+
+            img{
+                width: 50px;
+            }
+        }
+
+        #linha{
+            border: 1px solid black;
+            width: 50%;
+        }
+
+        .infos{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            .regiao{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 25px;
+
+                h1{
+                    font: 400 22px poppins;
+                }
+
+                select{
+                    padding: 5px 10px;
+                    outline: none;
+                    font: 400 16px poppins;
+                }
+            }
+
+            .perguntas{
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+
+                h1{
+                    font: 400 18px poppins;
+                    color: rgb(83, 81, 81);
+                }
+
+                input{
+                    padding: 5px 10px;
+                    outline: none;
+                    border: 1px solid gray;
+                    border-radius: 5px;
+                    font: 400 16px poppins;
+                }
+            }
+
+        }
+    }
+    .fim{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-top: 25px;
+        gap: 20px;
+
+        .termos{
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+
+            p{
+                font: 400 12px poppins;
+            }
+
+            input{
+                width: 20px;
+            }
+            
+        }
+
+        button{
+            margin-top: 5px;
+            padding: 10px 15px;
+            border-radius: 5px;
+            border: none;
+            background-color: #FF0000;   
+            transition: .3s;
+            cursor: pointer;
+            border: 3px solid transparent;         
+            color: #fff;
+            font: 400 14px poppins;
+
+           }
+    
+           button:hover{
+            transform: scale(1.02);
+            border: 3px solid red;
+            background-color: transparent;
+            color: red;
+          
+            
+           }
+           button:active{
+            transform: scale(1.0);
+            background-color: red;
+            color: #fff; 
+            color: #fff;
+            
+           }
+    }
+}

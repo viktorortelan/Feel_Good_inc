@@ -2,7 +2,7 @@ import './index.scss'
 import { Link } from "react-router-dom"
 import Rodape from '../../components/rodape';
 import Cabecalho from '../../components/cabecalho'
-
+import Balao from '../../components/balaoSup';
 
 export default function InfoImovel() {
     return(
@@ -51,7 +51,7 @@ export default function InfoImovel() {
             </div>
 
 
-
+            <Balao/>
             <Rodape/>
 
         </div>

@@ -15,6 +15,7 @@ import NovoCard from './components/adcionaImovel';
 import CadastroCliente from './pages/cadastroCliente';
 import LoginCliente from './pages/loginCliente';
 import TelaCliente from './pages/telaCliente';
+import Corretor from './components/faleCorretor';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function App() {
@@ -36,6 +37,7 @@ function App() {
                 <Route path='/cadastroCliente' element={<CadastroCliente/>} />
                 <Route path='/loginCliente' element={<LoginCliente/>} />
                 <Route path='/telaCliente' element={<TelaCliente/>} />
+                <Route path='/faleCorretor' element={<Corretor/>} />
 
 
                 <Route path='*' element={<NotFound />} />

@@ -7,11 +7,15 @@ import RenderItemsOnly from '../../components/exbir';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import ItemCard from '../../components/itemCard';
+import Balao from '../../components/balaoSup';
 
 
 
 
 export default function Home({ exibir }) {
+
+    
+
 
     const [array, setArray] = useState([]);
 
@@ -166,8 +170,8 @@ export default function Home({ exibir }) {
             </div> }
 
 
-            <Link to="/"><img src="/assets/images/loganfeelgood.png" alt="balão de suporte" id="suporte" /></Link>
-
+            {/* <Link to="/"><img src="/assets/images/loganfeelgood.png" alt="balão de suporte" id="suporte" /></Link> */}
+            <Balao/>
             <Rodape />
 
         </div>

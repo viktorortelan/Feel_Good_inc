@@ -1,0 +1,67 @@
+.balao {
+    position: fixed;
+    bottom: 24px;
+    right: 16px;
+
+    #suporte {
+        width: 100px;
+        cursor: pointer;
+        border: none; 
+        outline: none; 
+    }
+
+    .menu-button {
+        background: none;
+        border: none; 
+        outline: none; 
+        cursor: pointer;
+    }
+
+    .menu {
+        position: absolute;
+        bottom: 0;
+        right: 110px;
+        background-color: white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        z-index: 10;
+        width: 230px;
+        padding-bottom: 10px;
+        border: none; 
+    }
+
+    .menu ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .menu li {
+        margin: 10px 0;
+    }
+
+    .menu li a {
+        text-decoration: none;
+        color: #000;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        padding: 10px;
+        margin: 35px 0px -20px 0px;
+        display: block;
+    }
+
+    .menu li a:hover {
+        background-color: #FF0000; 
+        color: #ffffff; 
+    }
+
+    .close-button {
+        background: none;
+        border: none;
+        color: red;
+        font-size: 16px;
+        cursor: pointer;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        outline: none; 
+    }
+}

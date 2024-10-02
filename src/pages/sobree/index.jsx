@@ -2,6 +2,7 @@ import './index.scss'
 import { Link } from "react-router-dom"
 import Rodape from '../../components/rodape';
 import Cabecalho from '../../components/cabecalho'
+import Balao from '../../components/balaoSup';
 
 export default function Sobre() {
     return(
@@ -97,8 +98,8 @@ export default function Sobre() {
                 <input type="text" placeholder='Digite aqui...' />
             </div>
         </div>
-        <Link to="/"><img src="/assets/images/loganfeelgood.png" alt="balão de suporte" id="suporte" /></Link>
 
+            <Balao/>
             <Rodape/>
 
         </div>
