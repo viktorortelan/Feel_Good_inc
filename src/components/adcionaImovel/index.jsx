@@ -26,7 +26,7 @@ export default function NovoCard({ setExibir }) {
         const formData = new FormData();
         formData.append('img', capa);
 
-        let x = await axios.post('http://localhost:8080/multer', formData, {
+        let a = await axios.post('http://localhost:8080/multer', formData, {
             headers: {
                 "Content-Type": "multipart/form-data"
             }
@@ -35,19 +35,49 @@ export default function NovoCard({ setExibir }) {
         const formData2 = new FormData();
         formData2.append('img', galeria);
 
-        let z = await axios.post('http://localhost:8080/multer', formData2, {
+        let b = await axios.post('http://localhost:8080/multer', formData2, {
             headers: {
                 "Content-Type": "multipart/form-data"
             }
         });
 
-        let nomeCapa = x.data.fl
-        let nomeGaleria = z.data.fl
+        const formData3 = new FormData();
+        formData3.append('img', galeria2);
 
-        await axios.post(`http://localhost:8080/addImoveis/${nomeCapa}/${nomeGaleria}/${nome}/${status}/${regiao}/${lugar}/${suites}/${comodos}/${vagas}/${titulo}/${sobre}`);
+        let c = await axios.post('http://localhost:8080/multer', formData3, {
+            headers: {
+                "Content-Type": "multipart/form-data"
+            }
+        });
 
-        setCapa(null);
-        setGaleria(null);
+        const formData4 = new FormData();
+        formData4.append('img', galeria3);
+
+        let d = await axios.post('http://localhost:8080/multer', formData4, {
+            headers: {
+                "Content-Type": "multipart/form-data"
+            }
+        });
+
+        const formData5 = new FormData();
+        formData5.append('img', galeria4);
+
+        let e = await axios.post('http://localhost:8080/multer', formData5, {
+            headers: {
+                "Content-Type": "multipart/form-data"
+            }
+        });
+
+        let nomeCapa = a.data.fl
+        let nomeGaleria = b.data.fl
+        let nomeGaleria2 = c.data.fl
+        let nomeGaleria3 = d.data.fl
+        let nomeGaleria4 = e.data.fl
+
+        const galeriaFinal = `${nomeGaleria}, ${nomeGaleria2}, ${nomeGaleria3}, ${nomeGaleria4}`;
+
+        await axios.post(`http://localhost:8080/addImoveis/${nomeCapa}/${galeriaFinal}/${nome}/${status}/${regiao}/${lugar}/${suites}/${comodos}/${vagas}/${titulo}/${sobre}`);
+
         setNome('');
         setStatus('');
         setRegiao('');
