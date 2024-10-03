@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
  const ItemCard = ({ nome, status, localizacao, comodos, vagas, capa }) => {
     return(
         <div className="cardImovel">
-            <img src={`/imgs/${capa}`} alt="predios" />
+            <img className='intro' src={`/imgs/${capa}`} alt="predios" />
         <h1 id='titulo'>{nome}</h1>
 
         <div className="info1">
@@ -14,15 +14,17 @@ import { Link } from 'react-router-dom';
         </div>
 
         <div className="localizacao">
-            <img src="/assets/images/loca.png" alt="localizão" />
+            <img className='iconLo' src="/assets/images/loca.png" alt="localizão" />
             <p>{localizacao}</p>
         </div>
 
-        <h1 id='cinza'>{comodos}</h1>
+        <h1 id='cinza'>{comodos} comodos</h1>
 
         <div className="infoFinais">
-            <img src="/assets/images/carrin.png" alt="carro" />
-            <p>{vagas} vagas </p>
+           <div className="vg">
+                <img src="/assets/images/carrin.png" alt="carro" />
+                <p>{vagas} vagas </p>
+           </div>
             <Link to="/">Saiba mais</Link>
         </div>
       </div>

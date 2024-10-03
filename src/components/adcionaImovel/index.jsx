@@ -2,9 +2,9 @@ import './index.scss';
 import { useEffect, useState } from 'react';
 import ItemCard from '../itemCard';
 import axios from 'axios';
+import { useParams } from 'react-router-dom';
 
 export default function NovoCard({ setExibir }) {
-
 
     const [capa, setCapa] = useState(null);
     const [nome, setNome] = useState('');
@@ -76,7 +76,11 @@ export default function NovoCard({ setExibir }) {
 
         const galeriaFinal = `${nomeGaleria}, ${nomeGaleria2}, ${nomeGaleria3}, ${nomeGaleria4}`;
 
-        await axios.post(`http://localhost:8080/addImoveis/${nomeCapa}/${galeriaFinal}/${nome}/${status}/${regiao}/${lugar}/${suites}/${comodos}/${vagas}/${titulo}/${sobre}`);
+        const ret = await axios.post(`http://localhost:8080/addImoveis/${nomeCapa}/${galeriaFinal}/${nome}/${status}/${regiao}/${lugar}/${suites}/${comodos}/${vagas}/${titulo}/${sobre}`);
+        console.log(ret.data.id);
+
+        window.location.href = `/imovel/${ret.data.id}`;
+
 
         setNome('');
         setStatus('');

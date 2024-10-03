@@ -7,9 +7,11 @@
     width: 280px;
     gap: 10px;
     
-    img{
-        width: 280px;
+    .intro{
+        width: 100%;
+        height: 35vh;
         padding: 10px;
+        border-radius: 15px 15px 0px 0px;
     }
 
     #titulo{
@@ -21,11 +23,11 @@
         display: flex;
         flex-direction: row;
         align-items: center;
-        gap: 95px;
+        justify-content: space-between;
+        padding: 0px 12px;
 
         h1{
             font:500 16px poppins;
-        padding: 0px 0px 0px 10px;
         }
         p{
             font:500 14px poppins;
@@ -40,10 +42,12 @@
         display: flex;
         flex-direction: row;
         align-items: center;
-        gap: 2px;
+        gap: 5px;
+        padding: 0px 0px 0px 10px;
+        
 
-        img{
-            width: 36px;
+        .iconLo{
+            width: 18px;
         }
         p{
             font:500 18px poppins;
@@ -61,18 +65,24 @@
         display: flex;
         flex-direction: row;
         align-items: center;
+        justify-content: space-between;
+        padding: 0px 10px 0px 10px;
         margin-bottom: 10px;
-        gap: 2px;
 
-        img{
-            width: 42px;
-        }
-        p{
-            font:500 16px poppins;
+        .vg{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 5px;
+            img{
+                width: 22px;
+            }
+            p{
+                font:500 16px poppins;
+            }
         }
         a{
             text-decoration: none;
-            margin-left: 50px;
             font:500 14px poppins;
             padding: 5px 15px;
             color: #ffff;

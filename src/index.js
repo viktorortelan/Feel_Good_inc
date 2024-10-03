@@ -24,6 +24,7 @@ function App() {
             <Routes>
                 <Route path='/' element={<Home exibir={exibir} />} />
                 <Route path='/imovel' element={<InfoImovel />} />
+                <Route path='/imovel/:id' element={<InfoImovel />} />
                 <Route path='/contatos' element={<Contatos />} />
                 <Route path='/sobree' element={<Sobre />} />
                 <Route path='/adm' element={<TelaAdm />} />
