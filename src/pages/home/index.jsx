@@ -8,7 +8,7 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 import ItemCard from '../../components/itemCard';
 import Balao from '../../components/balaoSup';
-
+import CorretorPopup from '../../components/botaoPopup';
 
 
 

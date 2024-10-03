@@ -2,7 +2,8 @@ import './index.scss';
 import Cabecalho from '../../components/cabecalho'
 import Rodape from '../../components/rodape'
 import { Link } from 'react-router-dom';
-
+import CorretorPopup from '../../components/botaoPopup';
+import Balao from '../../components/balaoSup';
 import storage from 'local-storage';
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
@@ -43,6 +44,8 @@ export default function TelaCliente() {
         <div className="pgcliente">
             <Cabecalho/>
 
+        <Balao/>
+
             <div className="seccao1">
                 <div className="texto">
                     <img id='usuario' src="/assets/images/viktor.png" alt="usuario" />
@@ -78,8 +81,9 @@ export default function TelaCliente() {
                     <h1>Fale com um corretor</h1>
                     <div className="caixinha">
                         <img id='contrato' src="/assets/images/contratoo.png" alt="balão" />
-                        <p>Fale com um dos nossos corretores para poder fazer um orçamento.</p>
+                        <p>Fale com um dos nossos corretores clicando no balão para poder fazer um orçamento.</p>
                     </div>
+                        
                 </Link>
                 <Link to="/sobree">
                     <h1>Sobre nós</h1>

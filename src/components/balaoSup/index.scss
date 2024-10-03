@@ -38,6 +38,16 @@
     .menu li {
         margin: 10px 0;
     }
+   
+    .menu #corretor{
+        margin: 20px 0px -35px 0px;
+    }
+    
+    .menu #corretor:hover {
+        background-color: #FF0000; 
+        color: #ffffff; 
+    }
+
 
     .menu li a {
         text-decoration: none;
