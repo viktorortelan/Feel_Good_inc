@@ -1,7 +1,14 @@
 import './index.scss';
 import { useState } from 'react';
+import emailjs from 'emailjs-com';
 
 export default function Corretor() {
+
+    const [nome, setNome] = useState('');
+    const [email, setEmail] = useState('');
+    const [telefone, setTelefone] = useState('');
+    const [estado, setEstado] = useState('')
+    
 
     const [showPopup, setShowPopup] = useState(false);
 
@@ -10,7 +17,33 @@ export default function Corretor() {
         document.body.style.overflow = showPopup ? 'auto' : 'hidden'; 
     };
 
-    return(
+    const send = (e) => {
+        try {
+        const params = {
+          user_name: nome,
+          user_email: email,
+          user_phone: telefone,
+          my_phone: '11932899922',
+          my_name: 'Emite',
+          my_email: 'matheusmouragl549@gmail.com',
+          message: 'Olá, esta é uma mensagem de teste!',
+        };
+        
+        emailjs.send('service_8c7st3c', 'template_few7lr9', params, 'mrgLB4R-boLbQ_fZS')
+          .then(() => alert('Email enviado para: ' + email))
+          .catch(() => alert('Erro ao enviar email!'));
+          setEmail("") 
+          setTelefone("") 
+          setNome("") 
+          setEstado("") 
+        } 
+        catch (err) {
+            console.log(err.message)
+        }
+      };
+
+
+    return (
         <div className="Paginacorretor">
            
            <button onClick={togglePopup} className="open-popup-btn">
@@ -37,8 +70,8 @@ export default function Corretor() {
                     <div className="infos">
                         <div className="regiao">
                             <h1>Escolha a regional:</h1>
-                            <select >
-                                <option value="" disabled selected>Selecione o estado</option>
+                            <select onChange={e => setEstado(e.target.value)}>
+                                <option value="" disabled selected >Selecione o estado</option>
                                 <option value="AC">Acre</option>
                                 <option value="AL">Alagoas</option>
                                 <option value="AP">Amapá</option>
@@ -72,27 +105,27 @@ export default function Corretor() {
 
                         <div className="perguntas">
                             <h1>Qual é seu nome?</h1>
-                            <input type="text" placeholder='EX: João' />
+                            <input type="text" placeholder='EX: João' onChange={e => setNome(e.target.value)} value={nome}  />
                         </div>
 
                         <div className="perguntas">
                             <h1>qual é seu email?</h1>
-                            <input type="text" placeholder='EX: João1234@gmail.com' />
+                            <input type="text" placeholder='EX: João1234@gmail.com' onChange={e => setEmail(e.target.value)} value={email}  />
                         </div>
 
                         <div className="perguntas">
                             <h1>Qual é seu numero?</h1>
-                            <input type="text" placeholder='EX: 99 99999-9999' />
+                            <input type="text" placeholder='EX: 99 99999-9999' onChange={e => setTelefone(e.target.value)} value={telefone}  />
                         </div>
 
                     </div>
 
                     <div className="fim">
                         <div className="termos">
-                            <input type="checkbox"  />
-                            <p>Eu concordo com os termos de uso</p>
+                         
+                            <p>ao clicar eu concordo com os termos</p>
                         </div>
-                        <button>SOLICITAR CONTATO</button>
+                        <button onClick={send}>SOLICITAR CONTATO</button>
                     </div>
 
                     </div>

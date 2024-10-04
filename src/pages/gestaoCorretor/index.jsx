@@ -6,7 +6,7 @@ import { useState } from 'react';
 import { useEffect } from 'react';
 import CabecalhoADM from '../../components/cabecalhoADM';
 
-export default function GestaoCliente() {
+export default function GestaoCorretor() {
 
     const [array, setArray] = useState([]);
 
@@ -20,7 +20,7 @@ export default function GestaoCliente() {
     useEffect(() => { a() });
 
     return (
-        <div className="gestaoCliente">
+        <div className="gestaoCorretor">
             <div className="esquerda">
 
                 <div className="intro">

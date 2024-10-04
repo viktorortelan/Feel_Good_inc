@@ -14,6 +14,7 @@ import GestaoCliente from './pages/gestaoCliente';
 import CadastroCliente from './pages/cadastroCliente';
 import LoginCliente from './pages/loginCliente';
 import TelaCliente from './pages/telaCliente';
+import GestaoCorretor from './pages/gestaoCorretor';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import { ToastContainer } from 'react-toastify';
@@ -33,7 +34,7 @@ function App() {
             rtl={false}
             pauseOnFocusLoss
             draggable
-            pauseOnHover
+            pauseOnHover  
             theme="dark"
           />
             <Routes>
@@ -51,6 +52,7 @@ function App() {
                 <Route path='/cadastroCliente' element={<CadastroCliente/>} />
                 <Route path='/loginCliente' element={<LoginCliente/>} />
                 <Route path='/telaCliente' element={<TelaCliente/>} />
+                <Route path='/gestaoCorretor' element={<GestaoCorretor />} />
 
 
                 <Route path='*' element={<NotFound />} />

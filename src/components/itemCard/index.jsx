@@ -2,7 +2,7 @@
 import './index.scss';
 import { Link } from 'react-router-dom';
 
- const ItemCard = ({ nome, status, localizacao, comodos, vagas, capa }) => {
+ const ItemCard = ({ nome, status, localizacao, comodos, vagas, capa, id }) => {
     return(
         <div className="cardImovel">
             <img className='intro' src={`/imgs/${capa}`} alt="predios" />
@@ -25,7 +25,7 @@ import { Link } from 'react-router-dom';
                 <img src="/assets/images/carrin.png" alt="carro" />
                 <p>{vagas} vagas </p>
            </div>
-            <Link to="/">Saiba mais</Link>
+            <Link to={`/imovel/${id}`}>Saiba mais</Link>
         </div>
       </div>
     )

@@ -164,6 +164,7 @@ export default function Home({ exibir }) {
                         localizacao={item.lc_localizacao}
                         comodos={item.com_tamanho}
                         vagas={item.vg_vagas}
+                        id={item.id_cardImovel}
                     />)}
 
             </div> }

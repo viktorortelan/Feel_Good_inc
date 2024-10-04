@@ -18,6 +18,7 @@ export default function GestaoImovel () {
             <Link to="/addimovel">ADICIONAR IMOVEL</Link>
             <Link to="/gestao">GESTÃO DE IMOVEIS</Link>
             <Link to="/gestaoCliente">GESTÃO DE CLIENTE</Link>
+            <Link to="/gestaoCorretor" >GESTÃO DE CORRETORES</Link>
           </div>
         </div>
 
@@ -37,7 +38,9 @@ export default function GestaoImovel () {
                             <th>ID</th>
                             <th>nome do imovel</th>
                             <th>Status</th>
+                            <th>corretor</th>
                             <th>Vendido</th>
+
                          </tr>
                     </thead>
                     
@@ -47,6 +50,7 @@ export default function GestaoImovel () {
                             <td>1</td>
                             <td>morro da mandioca</td>
                             <td>pronto</td>
+                            <td>viktor</td>
                             <td>Não</td>
 
                         </tr>

@@ -4,7 +4,6 @@ import Rodape from '../../components/rodape';
 import Cabecalho from '../../components/cabecalho'
 import Balao from '../../components/balaoSup';
 import axios from 'axios';
-import Slider from 'react-slick';
 import { useEffect, useState } from 'react';
 
 export default function InfoImovel() {
@@ -23,7 +22,7 @@ export default function InfoImovel() {
             setObj(value[0]);
         }
 
-        useEffect(() => {verify()}, []);
+        useEffect(() => {verify()});
 
 
         const settings = {
