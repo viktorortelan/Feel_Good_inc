@@ -20,8 +20,11 @@ export default function NovoCard({ setExibir }) {
     const [galeria4, setGaleria4] = useState(null);
     const [titulo, setTitulo] = useState('');
     const [sobre, setSobre] = useState('');
+    const [funcionarios, setFuncionarios] = useState(0);
 
     async function executar() {
+
+        
 
         const formData = new FormData();
         formData.append('img', capa);
@@ -68,6 +71,10 @@ export default function NovoCard({ setExibir }) {
             }
         });
 
+
+
+        
+
         let nomeCapa = a.data.fl
         let nomeGaleria = b.data.fl
         let nomeGaleria2 = c.data.fl
@@ -76,10 +83,10 @@ export default function NovoCard({ setExibir }) {
 
         const galeriaFinal = `${nomeGaleria},${nomeGaleria2},${nomeGaleria3},${nomeGaleria4}`;
 
-        const ret = await axios.post(`http://localhost:8080/addImoveis/${nomeCapa}/${galeriaFinal}/${nome}/${status}/${regiao}/${lugar}/${suites}/${comodos}/${vagas}/${titulo}/${sobre}`);
+        const ret = await axios.post(`http://localhost:8080/addImoveis/${nomeCapa}/${galeriaFinal}/${nome}/${status}/${regiao}/${lugar}/${suites}/${comodos}/${vagas}/${titulo}/${sobre}/${Math.ceil(Math.random()*funcionarios)}`);
         console.log(ret.data.id);
 
-        window.location.href = `/imovel/${ret.data.id}`;
+        window.location.href = `/imovel/${ret.data.x}`;
 
 
         setNome('');
@@ -144,6 +151,13 @@ export default function NovoCard({ setExibir }) {
         }
     }
 
+    async function select() {
+        const a = await axios.get('http://localhost:8080/selectCount');
+        const f = a.data;
+        setFuncionarios(f.rows);
+        console.log(funcionarios);
+    }
+
     function testEx2() {
         if (capa != null || galeria != null) {
             ex2V1();
@@ -154,8 +168,12 @@ export default function NovoCard({ setExibir }) {
         }
     }
 
-    useEffect(() => { testEx2() });
+    
 
+    useEffect(() => {
+        testEx2()
+        select()});
+        
     return (
         <div className="addimovel">
             <div className="add">
@@ -174,6 +192,7 @@ export default function NovoCard({ setExibir }) {
                 <input type="text" placeholder='Suites' onChange={e => setSuites(e.target.value)} value={suites} />
                 <input type="text" placeholder='Qtd de cômodos e tamanho' onChange={e => setComodos(e.target.value)} value={comodos} />
                 <input type="text" placeholder='Vagas de garagem' onChange={e => setVagas(e.target.value)} value={vagas} />
+
                 <h1>Sobre o imovel</h1>
 
                 <p id='galeria'>Galeria de Fotos</p>

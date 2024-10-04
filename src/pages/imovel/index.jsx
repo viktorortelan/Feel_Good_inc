@@ -10,12 +10,14 @@ export default function InfoImovel() {
 
 
         const { id } = useParams();
+        
         const [obj, setObj] = useState({});
         const [galery, setGalery] = useState([]);
 
        async function verify() {
             const x = await axios.get(`http://localhost:8080/verifyId/${id}`);
             const value = x.data;
+            console.log(value[0])
             const ret = value[0].nm_galeria.split(',')
             setGalery(ret);
             console.log(galery[0]);
