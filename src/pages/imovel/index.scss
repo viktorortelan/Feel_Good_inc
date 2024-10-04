@@ -154,7 +154,7 @@
         }
 
         .carousel-container {
-            width: 50%;
+            width: 30%;
             margin: 0 auto;
             overflow: hidden;
             border-radius: 10px;
@@ -169,8 +169,8 @@
                 flex: 1 0 100%; 
                 transition: transform 0.5s ease-in-out;
                 img {
-                  width: 800px;
-                  height: 500px;
+                  width: 100%;
+                  height: 100%;
                   border-radius: 10px;
                 }
               }

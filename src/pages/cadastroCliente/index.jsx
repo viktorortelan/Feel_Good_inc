@@ -6,6 +6,8 @@ import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 
 import { cadastroCliente } from '../../api/clienteApi';
+import { toast, ToastContainer } from 'react-toastify';
+
 
 
 
@@ -49,7 +51,7 @@ export default function CadastroCliente() {
             const x = formatDate(date);
             console.log(x);
     
-            axios.put(`http://localhost:8080/addClient/${x}/${email}`);
+            await axios.put(`http://localhost:8080/addClient/${x}/${email}`);
 
             setTimeout(() => {
                 navigate('/loginCliente')
@@ -60,17 +62,17 @@ export default function CadastroCliente() {
         } catch (err) {
             
             if(err.response)
-                alert(err.response.data.erro);
+                toast.error(err.response.data.err);
             else 
-                alert(err.message);
+                toast.error(err.message);
 
         }
 
     }
 
+
     return (
         <div className="cadastroLogin">
-            
 
             <div className="esquerda">
             <Link id='voltar' to="/"> Voltar</Link>

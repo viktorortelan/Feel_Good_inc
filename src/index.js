@@ -16,11 +16,26 @@ import LoginCliente from './pages/loginCliente';
 import TelaCliente from './pages/telaCliente';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 function App() {
     const [exibir, setExibir] = useState([]);
 
     return (
         <BrowserRouter>
+          <ToastContainer
+            position="top-right"
+            autoClose={5000}
+            hideProgressBar={false}
+            newestOnTop={false}
+            closeOnClick
+            rtl={false}
+            pauseOnFocusLoss
+            draggable
+            pauseOnHover
+            theme="dark"
+          />
             <Routes>
                 <Route path='/' element={<Home exibir={exibir} />} />
                 <Route path='/imovel' element={<InfoImovel />} />

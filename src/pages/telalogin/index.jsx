@@ -5,6 +5,8 @@ import { useNavigate } from 'react-router-dom';
 import { loginADM } from '../../api/admApi';
 import storage from 'local-storage';
 
+import { toast } from 'react-toastify';
+
 export default function Telalogin() {
     const [email, setEmail] = useState('')
     const [senha, setSenha] = useState('')
@@ -21,9 +23,9 @@ export default function Telalogin() {
         } 
         catch (err) {
             if(err.response)
-                alert(err.response.data.err);
+                toast.error(err.response.data.err);
             else 
-                alert(err.message);
+                toast.error(err.message);
         }
 
     }

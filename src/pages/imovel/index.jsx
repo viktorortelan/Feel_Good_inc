@@ -12,14 +12,18 @@ export default function InfoImovel() {
 
         const { id } = useParams();
         const [obj, setObj] = useState({});
+        const [galery, setGalery] = useState([]);
 
        async function verify() {
             const x = await axios.get(`http://localhost:8080/verifyId/${id}`);
             const value = x.data;
+            const ret = value[0].nm_galeria.split(',')
+            setGalery(ret);
+            console.log(galery[0]);
             setObj(value[0]);
         }
 
-        useEffect(() => {verify()});
+        useEffect(() => {verify()}, []);
 
 
         const settings = {
@@ -84,16 +88,16 @@ export default function InfoImovel() {
                 <div className="carousel-container">
                     <div className="carousel-slider">
                         <div className="carousel-slide">
-                            <img src="/assets/images/viktor.png" alt="Image 1" />
+                            <img src={`/imgs/${galery[0]}`} />
                         </div>
                         <div className="carousel-slide">
-                            <img src="" alt="Image 2" />
+                            <img src={`/imgs/${galery[1]}`} />
                         </div>
                         <div className="carousel-slide">
-                            <img src="" alt="Image 3" />
+                            <img src={`/imgs/${galery[2]}`} />
                         </div>
                         <div className="carousel-slide">
-                             <img src="" alt="Image 4" />
+                             <img src={`/imgs/${galery[3]}`} />
                         </div>
                     </div>
                 </div>

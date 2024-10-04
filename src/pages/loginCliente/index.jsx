@@ -6,6 +6,8 @@ import { Link } from 'react-router-dom';
 import { loginCliente } from '../../api/clienteApi.js';
 import { useNavigate } from 'react-router-dom';
 
+import { toast } from 'react-toastify';
+
 import storage from 'local-storage'
 
 
@@ -31,9 +33,9 @@ export default function LoginCliente() {
         } catch (err) {
 
             if(err.response)
-                alert(err.response.data.err);
+                toast.error(err.response.data.err);
             else 
-                alert(err.message);
+                toast.error(err.message);
 
         }
 

@@ -74,7 +74,7 @@ export default function NovoCard({ setExibir }) {
         let nomeGaleria3 = d.data.fl
         let nomeGaleria4 = e.data.fl
 
-        const galeriaFinal = `${nomeGaleria}, ${nomeGaleria2}, ${nomeGaleria3}, ${nomeGaleria4}`;
+        const galeriaFinal = `${nomeGaleria},${nomeGaleria2},${nomeGaleria3},${nomeGaleria4}`;
 
         const ret = await axios.post(`http://localhost:8080/addImoveis/${nomeCapa}/${galeriaFinal}/${nome}/${status}/${regiao}/${lugar}/${suites}/${comodos}/${vagas}/${titulo}/${sobre}`);
         console.log(ret.data.id);
