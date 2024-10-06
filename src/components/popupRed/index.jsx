@@ -2,7 +2,7 @@ import './index.scss';
 import { useState } from 'react';
 import emailjs from 'emailjs-com';
 
-export default function Corretor() {
+export default function Corretoro() {
 
     const [nome, setNome] = useState('');
     const [email, setEmail] = useState('');
@@ -45,7 +45,7 @@ export default function Corretor() {
 
 
     return (
-        <div className="Paginacorretor">
+        <div className="Paginacorretoro">
            
            <button onClick={togglePopup} className="open-popup-btn">
                 Falar com Corretor

@@ -2,8 +2,23 @@
 import './index.scss';
 import { Link } from 'react-router-dom';
 import CabecalhoADM from '../../components/cabecalhoADM';
+import axios from 'axios';
+import { useState } from 'react';
+import { useEffect } from 'react';
 
 export default function GestaoImovel () {
+  const [pesquisa, setPesquisa] = useState('')
+  const [array, setArray] = useState([]);
+
+  async function a() {
+      const a = await axios.get('http://localhost:8080/buscarImovel');
+      const value = a.data;
+      setArray(value);
+      console.log(array);
+  }
+
+  useEffect(() => { a() });
+
     return (
       <div className="pagina_gestao">
         <div className="esquerda">
@@ -26,37 +41,39 @@ export default function GestaoImovel () {
           <CabecalhoADM/>
 
           <div className="lupa">
-            <input type="text" placeholder='Nome do imovel'/>
+            <input type="text" placeholder='pesquise aqui' value={pesquisa} onChange={e => setPesquisa(e.target.value)}/>
             <img src="/assets/images/lupaaa.png" alt="lupa" />
           </div>
 
           <div className="table">
                 <table className=' tabela'>
 
-                    <thead>
-                        <tr>
-                            <th>ID</th>
-                            <th>nome do imovel</th>
-                            <th>Status</th>
-                            <th>corretor</th>
-                            <th>Vendido</th>
-
-                         </tr>
-                    </thead>
-                    
-                    <tbody>
-                        
-                        <tr>
-                            <td>1</td>
-                            <td>morro da mandioca</td>
-                            <td>pronto</td>
-                            <td>viktor</td>
-                            <td>Não</td>
-
-                        </tr>
-
-                       
-                    </tbody>
+                <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>Imóvel</th>
+                    <th>Status</th>
+                    <th>Corretor</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {array
+                    .filter(item =>
+                      item.id.toString().includes(pesquisa) || 
+                      item.imovel.toLowerCase().includes(pesquisa.toLowerCase()) || 
+                      item.status.toLowerCase().includes(pesquisa.toLowerCase()) || 
+                      item.corretor.toLowerCase().includes(pesquisa.toLowerCase())  
+                    )
+                    .map(item => (
+                      <tr key={item.id}>
+                        <td>{item.id}</td>
+                        <td>{item.imovel}</td>
+                        <td>{item.status}</td>
+                        <td>{item.corretor}</td>
+                      </tr>
+                    ))
+                  }
+                </tbody>
                     
                 </table>
             </div>

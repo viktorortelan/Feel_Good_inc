@@ -7,6 +7,7 @@ import { useEffect } from 'react';
 import CabecalhoADM from '../../components/cabecalhoADM';
 
 export default function GestaoCliente() {
+    const [pesquisa, setPesquisa] = useState('')
 
     const [array, setArray] = useState([]);
 
@@ -44,42 +45,44 @@ export default function GestaoCliente() {
                 <CabecalhoADM/>
 
                 <div className="lupa">
-                    <input type="text" placeholder='Nome do imovel' />
+                    <input type="text" placeholder='pesquise' value={pesquisa} onChange={e => setPesquisa(e.target.value)} />
                     <img src="/assets/images/lupaaa.png" alt="lupa" />
                 </div>
 
                 <div className="table">
-                    <table className=' tabela'>
+                <table className='tabela'>
+                    <thead>
+                        <tr>
+                        <th>ID</th>
+                        <th>Nome do Usuário</th>
+                        <th>Gmail</th>
+                        <th>Telefone</th>
+                        <th>Data</th>
+                        </tr>
+                    </thead>
 
-                        <thead>
-                            <tr>
-                                <th>ID</th>
-                                <th>nome do usuario</th>
-                                <th>Gmail</th>
-                                <th>telefone</th>
-                                <th>Data</th>
+                    <tbody>
+                        {array
+                        .filter(item =>
+                            item.id_cliente.toString().includes(pesquisa) || 
+                            item.nm_cliente.toLowerCase().includes(pesquisa.toLowerCase()) || 
+                            item.ds_email.toLowerCase().includes(pesquisa.toLowerCase()) || 
+                            item.ds_telefone.toLowerCase().includes(pesquisa.toLowerCase()) || 
+                            item.dt_cadastro.toLowerCase().includes(pesquisa.toLowerCase()) 
+                        )
+                        .map(item => (
+                            <tr key={item.id_cliente}>
+                            <td>{item.id_cliente}</td>
+                            <td>{item.nm_cliente}</td>
+                            <td>{item.ds_email}</td>
+                            <td>{item.ds_telefone}</td>
+                            <td>{item.dt_cadastro.substring(0, 10)}</td>
                             </tr>
-                        </thead>
+                        ))
+                        }
+                    </tbody>
+                </table>
 
-                        <tbody>
-
-                            {array.map(item =>
-                                <tr>
-                                    <td>{item.id_cliente}</td>
-                                    <td>{item.nm_cliente}</td>
-                                    <td>{item.ds_email}</td>
-                                    <td>{item.ds_telefone}</td>
-                                    <td>{item.dt_cadastro.substring(0, 10)}</td>
-                                </tr>)
-
-
-                            }
-
-
-
-                        </tbody>
-
-                    </table>
                 </div>
 
             </div>

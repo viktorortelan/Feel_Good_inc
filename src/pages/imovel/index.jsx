@@ -4,6 +4,7 @@ import Rodape from '../../components/rodape';
 import Cabecalho from '../../components/cabecalho'
 import Balao from '../../components/balaoSup';
 import axios from 'axios';
+import CorretoroPopup from '../../components/red';
 import { useEffect, useState } from 'react';
 
 export default function InfoImovel() {
@@ -103,11 +104,27 @@ export default function InfoImovel() {
                     </div>
                 </div>
 
-    <div className="seccao2">
-        <h1 id='titulo'>{obj.tt_titulo}</h1>
+            </div>
+            <div className="seccao2">
+                <h1 id='titulo'>{obj.tt_titulo}</h1>
 
-        <p id='sobre'>{obj.sb_sobre}</p>
-    </div>
+                <p id='sobre'>{obj.sb_sobre}</p>
+            </div>
+            
+            <div className="seccao3">
+                <h1>Quer saber mais sobre as plantas e valores?</h1>
+
+                <div className="infos">
+                    <div className="esquerda">
+                        <img src="/assets/images/balaoImovel.png" alt="" />
+                        <CorretoroPopup/> 
+                    </div>
+                    <div className="direita">
+                        <img src="/assets/images/tellimovel.png" alt="" />
+                        <p>fale com a central de vendas</p>
+                        <h1>(11)9 59306324</h1>
+                    </div>
+                </div>
             </div>
 
             <Balao/>

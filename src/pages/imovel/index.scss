@@ -230,5 +230,49 @@
         }
 
     }
+
+    .seccao3{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 50px;
+      margin: 100px 0px;
+      width: 100%;
+
+      h1{
+        font: 500 30px poppins;
+      }
+
+      .infos{
+        display: flex;
+        flex-direction: row;
+        gap: 70px;
+
+        .esquerda{
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          align-items: center;
+        }
+        .direita{
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          align-items: center;
+
+          img{
+            width: auto;
+          }
+
+          p{
+            font: 400 15px/10px poppins;
+            color: red;
+          }
+          h1{
+            font: 400 32px poppins;
+          }
+        }
+      }
+    }
     
 }

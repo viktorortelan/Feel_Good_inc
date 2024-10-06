@@ -5,7 +5,7 @@ export default function Cabecalho() {
     return(
         <div className="cabecalho">
         <div className="img">
-        <img src="/assets/images/loganfeelgood.png" alt="ovo" />
+            <Link to="/"><img src="/assets/images/loganfeelgood.png" alt="ovo" /></Link>
         </div>
         <Link to="/">Home</Link>
         <Link to="/contatos">Contatos</Link>

@@ -119,8 +119,9 @@
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        margin: 0px 0px 40px 170px;
-        gap: 4px;
+        width: 100%;
+        margin: 50px 0px 40px 0px;
+        gap: 15px;
 
         input{
             width: 22px;
@@ -128,16 +129,33 @@
         p{
             font: 400 16px poppins;
         }
-        a{
-            margin-left: 40px;
-            font:500 18px poppins;
+        button{
+           
+            font:500 16px poppins;
             padding: 10px 25px;
             color: #ffff;
+            border: none;
             border-radius: 5px;
             background-color: #D81010;
-            text-decoration: none;
-            
+            text-decoration: 3px solid transparent;
+            transition: .3s;
+            cursor: pointer;
         }
+        button:hover{
+            transform: scale(1.01);
+            border: 3px solid red;
+            background-color: transparent;
+            color: red;
+          
+            
+           }
+           button:active{
+            transform: scale(1.0);
+            background-color: red;
+            color: #fff; 
+            color: #fff;
+            
+           }
 
     }
 

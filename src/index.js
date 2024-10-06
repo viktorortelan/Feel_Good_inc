@@ -6,7 +6,6 @@ import InfoImovel from './pages/imovel';
 import Contatos from './pages/contatos';
 import Sobre from './pages/sobree';
 import NotFound from './pages/notfound';
-import TelaAdm from './pages/adm';
 import TelaAdd from './pages/addimovel';
 import GestaoImovel from './pages/gestao';
 import Telalogin from './pages/telalogin';
@@ -43,7 +42,6 @@ function App() {
                 <Route path='/imovel/:id' element={<InfoImovel />} />
                 <Route path='/contatos' element={<Contatos />} />
                 <Route path='/sobree' element={<Sobre />} />
-                <Route path='/adm' element={<TelaAdm />} />
                 <Route path='/addimovel' element={<TelaAdd setExibir={setExibir} />} />
                 <Route path='/gestao' element={<GestaoImovel />} />
                 <Route path='/telalogin' element={<Telalogin />} />

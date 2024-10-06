@@ -18,7 +18,7 @@ export default function Telalogin() {
             
           const infos = await loginADM(email, senha);
           storage('adm-logado', infos); 
-          navigate('/adm');
+          navigate('/addimovel');
              
         } 
         catch (err) {

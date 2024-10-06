@@ -1,0 +1,193 @@
+.Paginacorretoro{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .open-popup-btn{
+        border: none;
+        background-color: #FF0000;
+        text-align: center;
+        padding: 10px 10px;
+        text-decoration: none;
+        color: #fff;
+        width: 100%;
+        display: block;
+        cursor: pointer;
+        font: 400 16px poppins;
+        border-radius: 10px;
+        transition: .0s;
+    }
+    
+    .open-popup-btn:hover {
+            transform: scale(1.01);
+            border: 3px solid red;
+            background-color: transparent;
+            color: red; 
+    }
+    .open-popup-btn:active{
+        transform: scale(1.0);
+        background-color: red;
+        color: #fff; 
+       }
+
+    
+    .popup{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);  
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 10;
+
+        .corretor{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            background-color: #FCFBFC;
+            width: 1000px;
+            padding: 50px 0px;
+            border-radius: 10px;
+            position: relative;
+
+            .close-icon {
+                position: absolute;
+                top: 15px;
+                right: 15px;
+                cursor: pointer;
+                color: #FF0000; 
+                transition: color 0.3s;
+            
+                &:hover {
+                    color: darkred; 
+                }
+            }
+        
+            .titulo{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 10px;
+        
+                h1{
+                    font: 500 28px poppins;
+                    color: #000;
+                }
+        
+                img{
+                    width: 50px;
+                }
+            }
+        
+            #linha{
+                border: 1px solid black;
+                width: 50%;
+                margin-bottom: 10px;
+            }
+        
+            .infos{
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+        
+                .regiao{
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    gap: 25px;
+        
+                    h1{
+                        font: 400 22px poppins;
+                        color: #000;
+                    }
+        
+                    select{
+                        padding: 5px 10px;
+                        outline: none;
+                        font: 400 16px poppins;
+                    }
+                }
+        
+                .perguntas{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 5px;
+        
+                    h1{
+                        font: 400 18px poppins;
+                        color: rgb(83, 81, 81);
+                    }
+        
+                    input{
+                        padding: 5px 10px;
+                        outline: none;
+                        border: 1px solid gray;
+                        border-radius: 5px;
+                        font: 400 16px poppins;
+                    }
+                }
+        
+            }
+        }
+        .fim{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-top: 25px;
+            gap: 20px;
+        
+            .termos{
+                display: flex;
+                flex-direction: row;
+                gap: 10px;
+        
+                p{
+                    font: 400 14px poppins;
+                    color: #000;
+                }
+        
+                
+                
+            }
+        
+            button{
+                margin-top: 5px;
+                padding: 10px 15px;
+                border-radius: 5px;
+                border: none;
+                background-color: #FF0000;   
+                transition: .3s;
+                cursor: pointer;
+                border: 3px solid transparent;         
+                color: #fff;
+                font: 400 14px poppins;
+        
+               }
+        
+               button:hover{
+                transform: scale(1.02);
+                border: 3px solid red;
+                background-color: transparent;
+                color: red;
+              
+                
+               }
+               button:active{
+                transform: scale(1.0);
+                background-color: red;
+                color: #fff; 
+                color: #fff;
+                
+               }
+        }
+
+
+    }
+
+
+}
