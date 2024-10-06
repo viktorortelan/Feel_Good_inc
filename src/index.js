@@ -14,6 +14,7 @@ import CadastroCliente from './pages/cadastroCliente';
 import LoginCliente from './pages/loginCliente';
 import TelaCliente from './pages/telaCliente';
 import GestaoCorretor from './pages/gestaoCorretor';
+import DashboardAdm from './pages/dashboardAdm';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import { ToastContainer } from 'react-toastify';
@@ -51,6 +52,7 @@ function App() {
                 <Route path='/loginCliente' element={<LoginCliente/>} />
                 <Route path='/telaCliente' element={<TelaCliente/>} />
                 <Route path='/gestaoCorretor' element={<GestaoCorretor />} />
+                <Route path='/dashboardAdm' element={<DashboardAdm />} />
 
 
                 <Route path='*' element={<NotFound />} />

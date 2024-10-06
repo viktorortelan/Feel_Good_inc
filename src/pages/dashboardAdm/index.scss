@@ -1,0 +1,127 @@
+.dashboard{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100vh  auto;
+    background-color: #2A2A2A ;
+    gap: 15px;
+
+    .esquerda{
+        display: flex;
+        flex-direction: column;
+        background-color: #e2dfdf;
+        align-items: center;
+        padding-top: 50px;
+        gap: 40px;
+        width: 29%;
+        height: 100% auto;
+
+        
+        .intro{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            img{
+                width: 100px;
+            }
+            .texto{
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                h1{
+                    font: 800 20px poppins;
+                }
+                p{
+                    font: 400 18px poppins;
+                }
+            }
+        }
+
+
+        .botoes{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+           
+       
+
+            a{
+                text-decoration: none; 
+                font: 400 18px poppins;
+                background-color: #e2dfdf;
+                color: #2A2A2A;
+                text-align: center;
+                width: 100%;
+                padding: 40px;
+                transition: .3s;
+
+            }
+            a:hover{
+                color: #F5F5F5;
+                background-color: #FF0707;
+                
+            }
+        }
+    }
+
+    .direita{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        background-color: #e2dfdf;
+
+        .infos{
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            width: 100%;
+            margin-top: 50px;
+
+            .reto{
+                display: flex;
+                flex-direction: row;
+                width: 100%;
+                align-items: center;
+                gap: 30px;
+
+                .bloco{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+
+                    h1{
+                        font: 400 28px poppins;
+                    }
+
+                    .card{
+                        background-color: #F5F5F5;
+                        border-radius: 10px;
+                        box-shadow: 0px 0px 1px gray;
+
+                        p{
+                            font: 400 22px poppins;
+                            padding: 40px 60px;
+                        }
+                    }
+                }
+            }
+
+            .grafico {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-top: 50px;
+        
+                h2 {
+                    font: 400 24px poppins;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+}
