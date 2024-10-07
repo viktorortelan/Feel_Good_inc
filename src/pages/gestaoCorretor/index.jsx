@@ -11,7 +11,7 @@ export default function GestaoCorretor() {
     const [array, setArray] = useState([]);
 
     async function a() {
-        const a = await axios.get('http://localhost:8080/buscar');
+        const a = await axios.get('http://localhost:8080/buscar/corretor');
         const value = a.data;
         setArray(value);
         console.log(array);
@@ -54,29 +54,26 @@ export default function GestaoCorretor() {
                     <thead>
                         <tr>
                         <th>ID</th>
-                        <th>Nome do Usuário</th>
+                        <th>Nome do Corretor</th>
                         <th>Gmail</th>
-                        <th>Telefone</th>
-                        <th>Data</th>
+                        <th>senha/protocolo</th>
                         </tr>
                     </thead>
 
                     <tbody>
                         {array
                         .filter(item =>
-                            item.id_cliente.toString().includes(pesquisa) || 
-                            item.nm_cliente.toLowerCase().includes(pesquisa.toLowerCase()) || 
+                            item.id_corretor.toString().includes(pesquisa) || 
+                            item.nm_adm.toLowerCase().includes(pesquisa.toLowerCase()) || 
                             item.ds_email.toLowerCase().includes(pesquisa.toLowerCase()) || 
-                            item.ds_telefone.toLowerCase().includes(pesquisa.toLowerCase()) || 
-                            item.dt_cadastro.toLowerCase().includes(pesquisa.toLowerCase()) 
+                            item.ds_senha.toLowerCase().includes(pesquisa.toLowerCase()) 
                         )
                         .map(item => (
-                            <tr key={item.id_cliente}>
-                            <td>{item.id_cliente}</td>
-                            <td>{item.nm_cliente}</td>
+                            <tr key={item.id_corretor}>
+                            <td>{item.id_corretor}</td>
+                            <td>{item.nm_adm}</td>
                             <td>{item.ds_email}</td>
-                            <td>{item.ds_telefone}</td>
-                            <td>{item.dt_cadastro.substring(0, 10)}</td>
+                            <td>{item.ds_senha}</td>
                             </tr>
                         ))
                         }

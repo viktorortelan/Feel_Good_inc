@@ -29,11 +29,12 @@ export default function GestaoImovel() {
 
   function fecharPopup() {
     setMostrarPopup(false);
-    setIdSelecionado(null);
+    setIdSelecionadoLixo(null);
   }
 
   async function confirmarRemocao() {
     try {
+      console.log(idSelecionadoLixo); 
       await axios.delete(`http://localhost:8080/deletar/imovel/${idSelecionadoLixo}`);
       fecharPopup();
       buscarImoveis();

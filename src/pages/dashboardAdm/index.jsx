@@ -7,16 +7,77 @@ import axios from 'axios';
 
 export default function DashboardAdm() {
     const [data, setData] = useState([]);
+    const [totalImoveis, setTotalImoveis] = useState(0);
+    const [totalCorretor, setTotalCorretor] = useState(0);
+    const [totalCliente, setTotalCliente] = useState(0);
+
+
+//total imovel
+    async function imoveisTotais() {
+        try {
+            const response = await axios.get('http://localhost:8080/total/imoveis');
+            console.log(response.data); 
+            if (response.data && response.data.total_imoveis !== undefined) {
+                setTotalImoveis(response.data.total_imoveis);
+            } else {
+                console.error('Resposta inesperada da API', response.data);
+            }
+        } catch (error) {
+            console.error('Erro ao buscar o total de imóveis:', error);
+        }
+    }
 
     useEffect(() => {
-        fetchData();
+        imoveisTotais();
     }, []);
 
+//total corretor
+async function corretorTotal() {
+    try {
+        const response = await axios.get('http://localhost:8080/total/corretor');
+        console.log(response.data); 
+        if (response.data && response.data.total_corretores !== undefined) {
+            setTotalCorretor(response.data.total_corretores);
+        } else {
+            console.error('Resposta inesperada da API', response.data);
+        }
+    } catch (error) {
+        console.error('Erro ao buscar o total de imóveis:', error);
+    }
+}    
+
+useEffect(() => {
+    corretorTotal();
+}, []);
+
+
+//total cliente
+
+async function clienteTotal() {
+    try {
+        const response = await axios.get('http://localhost:8080/total/cliente');
+        console.log(response.data); 
+        if (response.data && response.data.total_clientes !== undefined) {
+            setTotalCliente(response.data.total_clientes);
+        } else {
+            console.error('Resposta inesperada da API', response.data);
+        }
+    } catch (error) {
+        console.error('Erro ao buscar o total de imóveis:', error);
+    }
+}    
+
+useEffect(() => {
+    clienteTotal();
+}, []);
+
+
+// grafico
     async function fetchData() {
         try {
             const vendidosResponse = await axios.get('http://localhost:8080/buscaSim');
             const naoVendidosResponse = await axios.get('http://localhost:8080/buscaNao');
-
+            
             const vendidos = vendidosResponse.data.total_vendidos; 
             const naoVendidos = naoVendidosResponse.data.total_nao_vendidos;
 
@@ -28,6 +89,11 @@ export default function DashboardAdm() {
             console.error("Erro ao buscar dados: ", error);
         }
     }
+    
+    useEffect(() => {
+        fetchData();
+    }, []);
+
 
     const COLORS = ['#0088FE', '#FF8042']; 
 
@@ -57,19 +123,19 @@ export default function DashboardAdm() {
                         <div className="bloco">
                             <h1>Total de clientes</h1>
                             <div className="card">
-                                <p>58 clientes</p>
+                                <p>{totalCliente} clientes</p>
                             </div>
                         </div>
                         <div className="bloco">
                             <h1>Total de Corretores</h1>
                             <div className="card">
-                                <p>58 Corretores</p>
+                                <p>{totalCorretor}  Corretores</p>
                             </div>
                         </div>
                         <div className="bloco">
                             <h1>Total de Imoveis</h1>
                             <div className="card">
-                                <p>58 Imoveis</p>
+                                <p>{totalImoveis}  Imoveis</p>
                             </div>
                         </div>
                     </div>
