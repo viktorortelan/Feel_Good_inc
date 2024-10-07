@@ -2,13 +2,32 @@ import './index.scss';
 import CabecalhoADM from '../../components/cabecalhoADM';
 import { Link } from 'react-router-dom';
 import { PieChart, Pie, Cell, Tooltip, Legend } from 'recharts';
+import { useEffect, useState } from 'react';
+import axios from 'axios';
 
 export default function DashboardAdm() {
+    const [data, setData] = useState([]);
 
-    const data = [
-        { name: 'Vendidos', value: 100 }, 
-        { name: 'Não Vendidos', value: 50 },  
-    ];
+    useEffect(() => {
+        fetchData();
+    }, []);
+
+    async function fetchData() {
+        try {
+            const vendidosResponse = await axios.get('http://localhost:8080/buscaSim');
+            const naoVendidosResponse = await axios.get('http://localhost:8080/buscaNao');
+
+            const vendidos = vendidosResponse.data.total_vendidos; 
+            const naoVendidos = naoVendidosResponse.data.total_nao_vendidos;
+
+            setData([
+                { name: 'Vendidos', value: vendidos },
+                { name: 'Não Vendidos', value: naoVendidos }
+            ]);
+        } catch (error) {
+            console.error("Erro ao buscar dados: ", error);
+        }
+    }
 
     const COLORS = ['#0088FE', '#FF8042']; 
 
@@ -26,8 +45,8 @@ export default function DashboardAdm() {
                     <Link to="/addimovel">ADICIONAR IMOVEL</Link>
                     <Link to="/gestao">GESTÃO DE IMOVEIS</Link>
                     <Link to="/gestaoCliente">GESTÃO DE CLIENTE</Link>
-                    <Link to="/gestaoCorretor" >GESTÃO DE CORRETORES</Link>
-                    <Link to="/dashboardAdm" >DASHBOARD</Link>
+                    <Link to="/gestaoCorretor">GESTÃO DE CORRETORES</Link>
+                    <Link to="/dashboardAdm">DASHBOARD</Link>
                 </div>
             </div>
             <div className="direita">

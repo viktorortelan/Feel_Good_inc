@@ -21,6 +21,7 @@ export default function NovoCard({ setExibir }) {
     const [titulo, setTitulo] = useState('');
     const [sobre, setSobre] = useState('');
     const [funcionarios, setFuncionarios] = useState(0);
+    const [vendido, setVendido] = useState(false)
 
     async function executar() {
 
@@ -83,7 +84,7 @@ export default function NovoCard({ setExibir }) {
 
         const galeriaFinal = `${nomeGaleria},${nomeGaleria2},${nomeGaleria3},${nomeGaleria4}`;
 
-        const ret = await axios.post(`http://localhost:8080/addImoveis/${nomeCapa}/${galeriaFinal}/${nome}/${status}/${regiao}/${lugar}/${suites}/${comodos}/${vagas}/${titulo}/${sobre}/${Math.ceil(Math.random()*funcionarios)}`);
+        const ret = await axios.post(`http://localhost:8080/addImoveis/${nomeCapa}/${galeriaFinal}/${nome}/${status}/${regiao}/${lugar}/${suites}/${comodos}/${vagas}/${titulo}/${sobre}/${Math.ceil(Math.random()*funcionarios)}/${vendido? 1 : 0}`);
         console.log(ret.data.id);
 
         window.location.href = `/imovel/${ret.data.x}`;

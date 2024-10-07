@@ -102,7 +102,7 @@
                 border-collapse: collapse;
                 margin: 25px 0;
                 font-size: 0.9em;
-                min-width: 400px;
+                width: 85%;
                 border-radius: 5px 5px 0 0 ;
                 overflow: hidden;
                 box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
@@ -112,6 +112,7 @@
                     color: #fff;
                     text-align: center;
                     font: 500 16px poppins;
+                    
                    
                 }
                 th{
@@ -126,11 +127,22 @@
                     text-align: center;
                     font: 500 16px poppins;
                     background-color: #fff;
-        
+                    
+                    #lixeira {
+                        width: 30px;
+                        height: auto;
+                        cursor: pointer;
+                    }
+                    #editar {
+                        width: 30px;
+                        height: auto;
+                        cursor: pointer;
+                    }
                 }
         
                 tbody tr {
                     border-bottom: 1px solid #dddd;
+                    
                 }
         
                 tbody tr:last-of-type {
@@ -194,6 +206,102 @@
                 }
             }
         }
+
+        .popup {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+          
+          .popup-content {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            
+            h2 {
+              margin-bottom: 20px;
+              font: 400 20px poppins;
+            }
+
+            #direita {
+              margin: 10px;
+              padding: 10px 20px;
+              border-radius: 5px;
+              border: 1px solid transparent;
+              background-color: #e2dfdf;
+              font: 400 20px poppins;
+              cursor: pointer;
+            }
+
+            #esquerda {
+              margin: 10px;
+              padding: 10px 20px;
+              border-radius: 5px;
+              font: 400 20px poppins;
+              background-color: #FF0707;
+              border: 1px solid transparent;
+              color: #e2dfdf;
+              cursor: pointer;
+            }
+          }
+
+          .popup-content {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+          
+            h2 {
+              margin-bottom: 20px;
+              font: 400 20px poppins;
+            }
+          
+            label {
+              display: block;
+              margin: 10px 0;
+              font: 400 18px poppins;
+            }
+          
+            input[type='checkbox'] {
+              margin-right: 10px;
+            }
+          
+            .popup-buttons {
+              margin-top: 20px;
+                
+                #confirmar {
+                margin: 10px;
+                padding: 10px 20px;
+                border-radius: 5px;
+                border: 1px solid transparent;
+                font: 400 20px poppins;
+                cursor: pointer;
+                  background-color: #FF0707; 
+                  color: white;
+                }
+          
+                #cancelar {
+                margin: 10px;
+                padding: 10px 20px;
+                border-radius: 5px;
+                border: 1px solid transparent;
+                font: 400 20px poppins;
+                cursor: pointer;
+                  background-color: #e2dfdf; 
+                }
+              
+            }
+          }
+          
+          
+          
 
     }
 }
