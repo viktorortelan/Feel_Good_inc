@@ -9,6 +9,8 @@ import CabecalhoADM from '../../components/cabecalhoADM';
 export default function GestaoCorretor() {
     const [pesquisa, setPesquisa] = useState('')
     const [array, setArray] = useState([]);
+    const [showPopup, setShowPopup] = useState(false);
+    const [editCorretor, setEditCorretor] = useState({ id: '', nome: '', email: '', senha: '' });
 
     async function a() {
         const a = await axios.get('http://localhost:8080/buscar/corretor');
@@ -18,6 +20,29 @@ export default function GestaoCorretor() {
     }
 
     useEffect(() => { a() });
+
+    const handleEdit = (corretor) => {
+        setEditCorretor({
+            id: corretor.id_corretor,
+            nome: corretor.nm_adm,
+            email: corretor.ds_email,
+            senha: corretor.ds_senha
+        });
+        setShowPopup(true);
+    };
+
+    const handleUpdate = async () => {
+        try {
+            await axios.put(`http://localhost:8080/atualizar/corretor/${editCorretor.nome}/${editCorretor.email}/${editCorretor.senha}/${editCorretor.id}`);
+            setShowPopup(false);
+            a(); 
+        } catch (error) {
+            console.error('Erro ao atualizar corretor:', error);
+        }
+    };
+
+
+    
 
     return (
         <div className="gestaoCorretor">
@@ -57,6 +82,8 @@ export default function GestaoCorretor() {
                         <th>Nome do Corretor</th>
                         <th>Gmail</th>
                         <th>senha/protocolo</th>
+                        <th>Editar</th>
+                        <th>Excluir</th>
                         </tr>
                     </thead>
 
@@ -74,6 +101,8 @@ export default function GestaoCorretor() {
                             <td>{item.nm_adm}</td>
                             <td>{item.ds_email}</td>
                             <td>{item.ds_senha}</td>
+                            <td><img id='editar' src="/assets/images/edit.png" alt="edit" onClick={() => handleEdit(item)}/></td>
+                            <td><img id='lixeira' src="/assets/images/lixeira.png" alt="lixo" /></td>
                             </tr>
                         ))
                         }
@@ -84,6 +113,35 @@ export default function GestaoCorretor() {
 
             </div>
 
+            {showPopup && (
+                <div className="popup">
+                    <div className="popup-content">
+                        <h2>Editar Corretor</h2>
+                        <label>Nome:</label>
+                        <input
+                            type="text"
+                            value={editCorretor.nome}
+                            onChange={e => setEditCorretor({ ...editCorretor, nome: e.target.value })}
+                        />
+                        <label>Email:</label>
+                        <input
+                            type="email"
+                            value={editCorretor.email}
+                            onChange={e => setEditCorretor({ ...editCorretor, email: e.target.value })}
+                        />
+                        <label>Senha:</label>
+                        <input
+                            type="password"
+                            value={editCorretor.senha}
+                            onChange={e => setEditCorretor({ ...editCorretor, senha: e.target.value })}
+                        />
+                        <div className="popup-buttons">
+                            <button onClick={handleUpdate}>Confirmar</button>
+                            <button onClick={() => setShowPopup(false)}>Cancelar</button>
+                        </div>
+                    </div>
+                </div>
+            )}
 
         </div>
     )

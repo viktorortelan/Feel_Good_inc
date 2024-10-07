@@ -91,51 +91,146 @@
             }
         }
 
-        .table {
+        .table{
             width: 100%;
             display: flex;
             flex-direction: row;
             justify-content: center;
-
-            .tabela {
+        
+            .tabela{
                 border-collapse: collapse;
                 margin: 25px 0;
                 font-size: 0.9em;
-                min-width: 400px;
-                border-radius: 5px 5px 0 0;
+                width: 85%;
+                border-radius: 5px 5px 0 0 ;
                 overflow: hidden;
                 box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-
+        
                 thead tr {
                     background-color: #FF0707;
                     color: #fff;
                     text-align: center;
                     font: 500 16px poppins;
+                    
+                   
                 }
-
-                th {
+                th{
                     width: 200px;
                     padding: 10px 0px;
+                    
                 }
-
-                td {
+        
+                td{
                     padding: 15px 15px;
                     color: #000000;
                     text-align: center;
                     font: 500 16px poppins;
+                    background-color: #fff;
+                    
+                    #lixeira {
+                        width: 30px;
+                        height: auto;
+                        cursor: pointer;
+                    }
+                    #editar {
+                        width: 30px;
+                        height: auto;
+                        cursor: pointer;
+                    }
                 }
-
+        
                 tbody tr {
                     border-bottom: 1px solid #dddd;
+                    
                 }
-
+        
                 tbody tr:last-of-type {
                     border-bottom: 2px solid #EF7C1D;
                 }
-
-                tbody tr.active-row {
+        
+                tbody tr.active-row{
                     font-weight: bold;
                     color: #009879;
+                }
+        
+            }
+        
+          }
+    }
+
+    .popup {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.5); // Fundo transparente escuro
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1000; // Para garantir que fique por cima dos outros elementos
+
+        .popup-content {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); // Sombra
+            width: 400px;
+            max-width: 90%;
+            text-align: center;
+
+            h2 {
+                margin-bottom: 20px;
+                color: #333;
+                font-size: 24px;
+            }
+
+            label {
+                display: block;
+                font-size: 14px;
+                margin-bottom: 5px;
+                text-align: left;
+                color: #666;
+            }
+
+            input {
+                width: 100%;
+                padding: 10px;
+                margin-bottom: 15px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                font-size: 16px;
+            }
+
+            .popup-buttons {
+                display: flex;
+                justify-content: space-between;
+
+                button {
+                    padding: 10px 20px;
+                    border: none;
+                    border-radius: 5px;
+                    font-size: 16px;
+                    cursor: pointer;
+                    transition: background-color 0.3s;
+
+                    &:first-child {
+                        background-color: #28a745; 
+                        color: white;
+                    }
+
+                    &:first-child:hover {
+                        background-color: #218838;
+                    }
+
+                    &:last-child {
+                        background-color: #dc3545; 
+                        color: white;
+                    }
+
+                    &:last-child:hover {
+                        background-color: #c82333;
+                    }
                 }
             }
         }
