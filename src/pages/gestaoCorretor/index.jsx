@@ -11,6 +11,9 @@ export default function GestaoCorretor() {
     const [array, setArray] = useState([]);
     const [showPopup, setShowPopup] = useState(false);
     const [editCorretor, setEditCorretor] = useState({ id: '', nome: '', email: '', senha: '' });
+    const [showDeletePopup, setShowDeletePopup] = useState(false); // Estado para o popup de remoção
+    const [corretorToDelete, setCorretorToDelete] = useState(null); 
+
 
     async function a() {
         const a = await axios.get('http://localhost:8080/buscar/corretor');
@@ -43,6 +46,24 @@ export default function GestaoCorretor() {
 
 
     
+
+    function handleDeleteClick(id) {
+        setCorretorToDelete(id); 
+        setShowDeletePopup(true); 
+    }
+
+    // Função para remover o corretor
+    async function confirmDelete() {
+        try {
+            await axios.delete(`http://localhost:8080/remover/corretor/${corretorToDelete}`);
+            alert('Corretor removido com sucesso!');
+            setShowDeletePopup(false); 
+            a(); 
+        } catch (error) {
+            console.error('Erro ao remover corretor:', error);
+            alert('Erro ao remover corretor.');
+        }
+    }
 
     return (
         <div className="gestaoCorretor">
@@ -102,7 +123,7 @@ export default function GestaoCorretor() {
                             <td>{item.ds_email}</td>
                             <td>{item.ds_senha}</td>
                             <td><img id='editar' src="/assets/images/edit.png" alt="edit" onClick={() => handleEdit(item)}/></td>
-                            <td><img id='lixeira' src="/assets/images/lixeira.png" alt="lixo" /></td>
+                            <td><img id='lixeira' src="/assets/images/lixeira.png" alt="lixo" onClick={() => handleDeleteClick(item.id_corretor)} /></td>
                             </tr>
                         ))
                         }
@@ -141,6 +162,19 @@ export default function GestaoCorretor() {
                         </div>
                     </div>
                 </div>
+            )}
+
+            {showDeletePopup && (
+                    <div className="delete-popup">
+                        <div className="popup-content">
+                            <h2>Confirmar Remoção</h2>
+                            <p>Tem certeza de que deseja remover este corretor?</p>
+                            <div className="popup-buttons">
+                                <button onClick={confirmDelete}>Confirmar</button>
+                                <button onClick={() => setShowDeletePopup(false)}>Cancelar</button>
+                            </div>
+                        </div>
+                    </div>
             )}
 
         </div>

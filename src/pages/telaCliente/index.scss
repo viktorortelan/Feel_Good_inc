@@ -132,6 +132,76 @@
         }
         
     }
+
+    .edit-popup {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1000;
+
+        .popup-content {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            width: 400px;
+            max-width: 90%;
+            text-align: center;
+
+            h2 {
+                margin-bottom: 20px;
+                font-size: 24px;
+                color: #333;
+            }
+
+            input {
+                width: 100%;
+                padding: 10px;
+                margin-bottom: 10px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                font-size: 16px;
+            }
+
+            .popup-buttons {
+                display: flex;
+                justify-content: space-between;
+
+                button {
+                    padding: 10px 20px;
+                    border: none;
+                    border-radius: 5px;
+                    font-size: 16px;
+                    cursor: pointer;
+                    transition: background-color 0.3s;
+
+                    &:first-child {
+                        background-color: #28a745; // Verde para confirmar
+                        color: white;
+                    }
+
+                    &:first-child:hover {
+                        background-color: #218838;
+                    }
+
+                    &:last-child {
+                        background-color: #dc3545; // Vermelho para cancelar
+                        color: white;
+                    }
+
+                    &:last-child:hover {
+                        background-color: #c82333;
+                    }
+                }
+            }
+        }
+    }
 }
 
 /* Responsividade para 1400x800 */

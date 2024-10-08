@@ -8,6 +8,7 @@ import storage from 'local-storage';
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
+import axios from 'axios';
 
 
 export default function TelaCliente() {
@@ -15,7 +16,12 @@ export default function TelaCliente() {
     const [nome, setNome] = useState('')
     const [email, setEmail] = useState('')
 
-
+    const [nomee, setNnome] = useState('');
+    const [eemail, setEemail] = useState('');
+    const [telefone, setTelefone] = useState('');
+    const [id, setId] = useState('');
+    
+    const [showEditPopup, setShowEditPopup] = useState(false); 
 
 
 
@@ -40,6 +46,31 @@ export default function TelaCliente() {
         navigate('/loginCliente')
     }
 
+    function handleEditClick() {
+        setShowEditPopup(true);
+    }
+
+    
+    async function handleConfirmEdit() {
+        try {
+            await axios.put(`/atualizar/cliente/${encodeURIComponent(nome)}/${encodeURIComponent(email)}/${encodeURIComponent(telefone)}/${id}`);
+            alert('Dados atualizados com sucesso!');
+            setShowEditPopup(false); 
+            const clienteAtualizado = { nomee, eemail, telefone, id };
+            storage('cliente-logado', clienteAtualizado);
+        } catch (error) {
+            console.error('Erro ao atualizar dados:', error);
+            alert('Erro ao atualizar os dados.');
+        }
+    }
+
+
+    function handleCancelEdit() {
+        setShowEditPopup(false); 
+    }
+
+    
+
     return(
         <div className="pgcliente">
             <Cabecalho/>
@@ -62,7 +93,7 @@ export default function TelaCliente() {
 
                 <div className="editar">
                     <img src="/assets/images/edit.png" alt="edit" />
-                    <button>EDITAR DADOS</button>
+                    <button onClick={handleEditClick}>EDITAR DADOS</button>
                     <button onClick={sairClick}>SAIR</button>
                 </div>
             </div>
@@ -102,6 +133,36 @@ export default function TelaCliente() {
                 
             </div>
 
+
+            {showEditPopup && (
+                <div className="edit-popup">
+                    <div className="popup-content">
+                        <h2>Editar Dados</h2>
+                        <input
+                            type="text"
+                            placeholder="Nome"
+                            value={nomee}
+                            onChange={e => setNnome(e.target.value)}
+                        />
+                        <input
+                            type="email"
+                            placeholder="Email"
+                            value={eemail}
+                            onChange={e => setEemail(e.target.value)}
+                        />
+                        <input
+                            type="text"
+                            placeholder="Telefone"
+                            value={telefone}
+                            onChange={e => setTelefone(e.target.value)}
+                        />
+                        <div className="popup-buttons">
+                            <button onClick={handleConfirmEdit}>Confirmar</button>
+                            <button onClick={handleCancelEdit}>Cancelar</button>
+                        </div>
+                    </div>
+                </div>
+            )}
 
             <Rodape/>
 
